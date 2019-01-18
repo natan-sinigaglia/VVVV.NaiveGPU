@@ -1,0 +1,175 @@
+
+// -----------------------------------------------------------------------------
+// PARAMETERS:
+// -----------------------------------------------------------------------------
+
+float2 invCtrlRes = 1;
+float tessFactor = 1;
+float ScaleSurfaceUV = 1;
+
+Texture2D posTex <string uiname="Position Texture";>; 
+Texture2D normTex <string uiname="Normals Texture";>; 
+
+SamplerState sampPos : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Clamp;
+    AddressV = Clamp;
+};
+
+struct VS_IN
+{
+	float2 cpoint : POSITION;
+};
+
+struct VS_OUTPUT
+{
+	float2 cpoint : CPOINT;
+};
+
+// -----------------------------------------------------------------------------
+// VERTEX SHADER:
+// -----------------------------------------------------------------------------
+
+//Recall that the vertex shader is run once per control point. For this example, we just pass the control points through to the next stage.
+
+VS_OUTPUT VS(VS_IN In)
+{
+    VS_OUTPUT Out;
+	
+    Out.cpoint = In.cpoint;
+
+	return Out;
+}
+
+// -----------------------------------------------------------------------------
+// HULL SHADER:
+// -----------------------------------------------------------------------------
+
+//The patch constant function (HSConst below) is executed once per patch (a cubic curve in our case). Recall that the patch constant function must at least output tessellation factors. The control point function (HS below) is executed once per output control point. In our case, we just pass the control points through unmodified.
+
+struct HS_CONSTANT_OUTPUT
+{
+    float edges[4]        : SV_TessFactor;
+    float inside[2]       : SV_InsideTessFactor;
+};
+
+struct HS_OUTPUT
+{
+    float2 cpoint : CPOINT;
+};
+
+HS_CONSTANT_OUTPUT HSConst()
+{
+    HS_CONSTANT_OUTPUT Out = (HS_CONSTANT_OUTPUT)tessFactor;
+
+    return Out;
+}
+
+[domain("quad")]
+// "integer" / "fractional_even" / "fractional_even"
+[partitioning("fractional_even")]
+[outputtopology("triangle_cw")]
+[outputcontrolpoints(1)]
+[patchconstantfunc("HSConst")]
+HS_OUTPUT HS(InputPatch<VS_OUTPUT, 1> ip, uint id : SV_OutputControlPointID)
+{
+    HS_OUTPUT Out;
+    Out.cpoint = ip[id].cpoint;
+    //Out.iv = ip[id].iv;
+	return Out;
+}
+
+
+// -----------------------------------------------------------------------------
+// DOMAIN SHADER:
+// -----------------------------------------------------------------------------
+
+struct DS_OUTPUT
+{
+	float4 posW : POSITION ;
+	float3 normW : NORMAL ;
+	float4 texCd : TEXCOORD ;
+};
+
+[domain("quad")]
+DS_OUTPUT DS(HS_CONSTANT_OUTPUT input, OutputPatch<HS_OUTPUT, 1> op, float2 uv : SV_DomainLocation)
+{
+    DS_OUTPUT Out;
+	
+	float2 subUV = (uv-0.5) * invCtrlRes;
+	float2 finalUV = op[0].cpoint + subUV;
+	finalUV *= ScaleSurfaceUV;
+	
+	float4 posW = posTex.SampleLevel(sampPos,finalUV,0);
+	
+	Out.posW = float4(posW.xyz, 1);
+	Out.normW = normalize(normTex.SampleLevel(sampPos,finalUV,0).xyz);
+	Out.texCd = float4(finalUV,0,1);
+
+    return Out;
+}
+
+//==============================================================================
+// GEOMETRY SHADER =============================================================
+//==============================================================================
+
+[maxvertexcount(3)]
+void GS(triangle DS_OUTPUT input[3], inout TriangleStream<DS_OUTPUT>GSOut)
+{
+	DS_OUTPUT Out;
+
+	for(uint i=0;i<3;i++)
+	{
+		Out = input[i];
+		GSOut.Append(Out);
+	}
+}
+
+[maxvertexcount(3)]
+void GS_face(triangle DS_OUTPUT In[3], inout TriangleStream<DS_OUTPUT>GSOut)
+{
+	DS_OUTPUT Out;
+
+	float3 faceEdgeA = In[1].posW.xyz - In[0].posW.xyz;
+    float3 faceEdgeB = In[2].posW.xyz - In[0].posW.xyz;
+    float3 FaceNorm = normalize( cross(faceEdgeA, faceEdgeB) );
+
+    for( uint i=0; i<3; i++ )
+    {
+        Out.posW = In[i].posW;
+        Out.normW = FaceNorm;
+    	Out.texCd = In[i].texCd;
+
+        GSOut.Append( Out );
+    }
+    GSOut.RestartStrip();
+}
+//==============================================================================
+// TECHNIQUES ==================================================================
+//==============================================================================
+
+GeometryShader StreamOutGS = ConstructGSWithSO( CompileShader( gs_5_0, GS() ), "POSITION.xyzw;NORMAL.xyz;TEXCOORD.xyzw" );
+GeometryShader StreamOutGS_face = ConstructGSWithSO( CompileShader( gs_5_0, GS_face() ), "POSITION.xyzw;NORMAL.xyz;TEXCOORD.xyzw" );
+
+technique11 Tessel
+{
+	pass P0
+	{
+		SetVertexShader( CompileShader( vs_5_0, VS() ) );
+		SetHullShader( CompileShader( hs_5_0, HS() ) );
+		SetDomainShader( CompileShader( ds_5_0, DS() ) );
+	    SetGeometryShader( StreamOutGS );
+	}
+}
+
+technique11 Tessel_TriFace
+{
+	pass P0
+	{
+		SetVertexShader( CompileShader( vs_5_0, VS() ) );
+		SetHullShader( CompileShader( hs_5_0, HS() ) );
+		SetDomainShader( CompileShader( ds_5_0, DS() ) );
+	    SetGeometryShader( StreamOutGS_face );
+	}
+}

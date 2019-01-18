@@ -1,0 +1,117 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha37.1.dtd" >
+   <PATCH nodename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\Deformers\Initialization\DeformersInitialization.v4p" systemname="Initialization" filename="C:\Users\MLF\Dropbox (MLF)\0158_Distortions_in_Spacetime_01_Build_Natan\vvvv\patches\contents\Gea.ParticlesGPU\modules\deformers\Initialization\Initialization.v4p">
+   <BOUNDS type="Window" left="9570" top="5040" width="3435" height="5085">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="435" top="870" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="3">
+   <BOUNDS type="Box" left="435" top="300" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="435" top="300" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Buffers">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Output Node" dstnodeid="4" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="885" top="1320" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Output Node" dstnodeid="2" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1335" top="1770" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Output Node" dstnodeid="1" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1785" top="2220" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Output Node" dstnodeid="0" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="InitializeBuffers (DX11.Effect)" filename="dx11\InitializeBuffers.fx" nodename="InitializeBuffers (DX11.Effect)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="525" top="3150" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="In_Buffer1" visible="1">
+   </PIN>
+   <PIN pinname="In_Buffer2" visible="1">
+   </PIN>
+   <PIN pinname="In_Buffer3" visible="1">
+   </PIN>
+   <PIN pinname="In_Buffer4" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output Node" dstnodeid="8" dstpinname="In_Buffer_posLifeT">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output Node" dstnodeid="8" dstpinname="In_Buffer_velMass">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output Node" dstnodeid="8" dstpinname="In_Buffer_force">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Output Node" dstnodeid="8" dstpinname="In_Buffer_col">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="9">
+   <BOUNDS type="Box" left="525" top="3705" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="525" top="3705" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Layer" dstnodeid="9" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Output Node" dstnodeid="8" dstpinname="In_Buffer1">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output Node" dstnodeid="8" dstpinname="In_Buffer2">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output Node" dstnodeid="8" dstpinname="In_Buffer3">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Output Node" dstnodeid="8" dstpinname="In_Buffer4">
+   </LINK>
+   <NODE systemname="DispatchAllGroups (Gea.NaiveGPU)" filename="..\..\Utils\DispatchAllGroups (Gea.NaiveGPU).v4p" nodename="DispatchAllGroups (Gea.NaiveGPU)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="840" top="2655" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="12750" top="7575" width="3885" height="4545">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Geometry Out" dstnodeid="8" dstpinname="Geometry">
+   </LINK>
+   <PACK Name="dx11.particles" Version="1.0.3">
+   </PACK>
+   </PATCH>

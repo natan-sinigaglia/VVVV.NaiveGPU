@@ -1,0 +1,457 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha37.1.dtd" >
+   <PATCH nodename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\05_Constraints\Ground\Ground (Gea.NaiveGPU).v4p" systemname="Ground (Gea.NaiveGPU)" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\05_Constraints\Ground\Ground (Gea.NaiveGPU).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="1500" top="2505" width="16695" height="7665">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="dx11.particles" Version="1.0.3">
+   </PACK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="49" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="450" top="5445" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="450" top="5445" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Layer Out|">
+   </PIN>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="48" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6600" top="90" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6600" top="90" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="DispatcherX (DX11.Drawer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DispatcherX (DX11.Drawer)" componentmode="Hidden" id="47">
+   <BOUNDS type="Node" left="450" top="2925" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="450" top="2925" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   <PIN pinname="Count X" visible="1" slicecount="3" values="8,2048,4096">
+   </PIN>
+   <PIN pinname="Thread Group X" visible="1" slicecount="1" values="64">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="46">
+   <BOUNDS type="Box" left="450" top="135" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="450" top="135" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="NaiveGPU">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="devnul">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="String2Enum (Enumerations)" nodename="String2Enum (Enumerations)" componentmode="Hidden" id="45">
+   <BOUNDS type="Node" left="450" top="480" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="String Value" visible="1">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="46" srcpinname="Output String" dstnodeid="45" dstpinname="String Value">
+   </LINK>
+   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="44">
+   <BOUNDS type="Node" left="450" top="855" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Display Channel" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Receive String" visible="1">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="45" srcpinname="Enum" dstnodeid="44" dstpinname="Receive String">
+   </LINK>
+   <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="43">
+   <BOUNDS type="Node" left="4860" top="2595" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Ord Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="42" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="6045" top="3120" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="48" srcpinname="Y Output Value" dstnodeid="42" dstpinname="Input 2" hiddenwhenlocked="1">
+   </LINK>
+   <NODE systemname="Enabled (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Enabled (DX11.Layer)" componentmode="Hidden" id="41">
+   <BOUNDS type="Node" left="450" top="4170" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="450" top="4170" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="42" srcpinname="Output" dstnodeid="41" dstpinname="Enabled" hiddenwhenlocked="1">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="37">
+   <BOUNDS type="Box" left="5745" top="5580" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5745" top="5580" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Query">
+   </PIN>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (Node Input)" nodename="Switch (Node Input)" componentmode="Hidden" id="36" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="5745" top="5115" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="36" srcpinname="Output" dstnodeid="37" dstpinname="Input Node" hiddenwhenlocked="1">
+   </LINK>
+   <NODE id="38" systemname="GroundCS (DX11.Effect)" filename="dx11\GroundCS.fx" nodename="GroundCS (DX11.Effect)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="450" top="3660" width="4905" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="105" top="30" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="0" width="6000" height="4500">
+   </BOUNDS>
+   <PIN pinname="Query" visible="1">
+   </PIN>
+   <PIN pinname="Technique" visible="1">
+   </PIN>
+   <PIN pinname="Ground_Level" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Ground_BounceCoef" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Ground_Friction" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Layer" dstnodeid="41" dstpinname="Layer In">
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Output" dstnodeid="38" dstpinname="Enabled" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="47" srcpinname="Geometry Out" dstnodeid="38" dstpinname="Geometry">
+   </LINK>
+   <LINK srcnodeid="38" srcpinname="Query" dstnodeid="36" dstpinname="Input 2" hiddenwhenlocked="1">
+   </LINK>
+   <NODE systemname="GetGroundSettings (Gea.NaiveGPU)" filename="..\..\..\vl\Gea.NaiveGPU.vl" nodename="GetGroundSettings (Gea.NaiveGPU)" componentmode="Hidden" id="51">
+   <BOUNDS type="Node" left="450" top="1710" width="4905" height="270">
+   </BOUNDS>
+   <PIN pinname="GroundLevel" visible="1">
+   </PIN>
+   <PIN pinname="BounceCoef" visible="1">
+   </PIN>
+   <PIN pinname="Friction" visible="1">
+   </PIN>
+   <PIN pinname="Enable" visible="1">
+   </PIN>
+   <PIN pinname="Euler/Verlet" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="44" srcpinname="Input Value" dstnodeid="51" dstpinname="NaiveGPU">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Element Count" dstnodeid="47" dstpinname="Count X">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="QueryShadersEnable" dstnodeid="36" dstpinname="Switch" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="MassMult" dstnodeid="38" dstpinname="MassMult">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="DragMult" dstnodeid="38" dstpinname="DragMult">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="GravityXYZ" dstnodeid="38" dstpinname="GravityXYZ">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="tStepMult" dstnodeid="38" dstpinname="tStepMult">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Last Index" dstnodeid="38" dstpinname="GroupLastIndex">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Element Count" dstnodeid="38" dstpinname="GroupCount">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Index Offset" dstnodeid="38" dstpinname="GroupIndexOffset">
+   </LINK>
+   <LINK srcnodeid="43" srcpinname="Enum" dstnodeid="38" dstpinname="Technique">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="GroundLevel" dstnodeid="38" dstpinname="Ground_Level">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="BounceCoef" dstnodeid="38" dstpinname="Ground_BounceCoef">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Friction" dstnodeid="38" dstpinname="Ground_Friction">
+   </LINK>
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="52" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="6045" top="2655" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="51" srcpinname="Enable" dstnodeid="52" dstpinname="Input" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="52" srcpinname="Output" dstnodeid="42" dstpinname="Input 1" hiddenwhenlocked="1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="53">
+   <BOUNDS type="Box" left="6450" top="3735" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6450" top="3735" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="42" srcpinname="Output" dstnodeid="53" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="54">
+   <BOUNDS type="Box" left="5265" top="990" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5265" top="990" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Euler/Verlet">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="False">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="54" srcpinname="Y Output Value" dstnodeid="51" dstpinname="Euler/Verlet">
+   </LINK>
+   <LINK srcnodeid="54" srcpinname="Y Output Value" dstnodeid="43" dstpinname="Ord Value">
+   </LINK>
+   <NODE systemname="DispatcherX (DX11.Drawer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DispatcherX (DX11.Drawer)" componentmode="Hidden" id="63">
+   <BOUNDS type="Node" left="7650" top="2925" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7650" top="2925" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   <PIN pinname="Count X" visible="1" slicecount="1" values="262144">
+   </PIN>
+   <PIN pinname="Thread Group X" visible="1" slicecount="1" values="64">
+   </PIN>
+   </NODE>
+   <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="62">
+   <BOUNDS type="Node" left="12060" top="2595" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Ord Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="61" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="13245" top="3120" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="48" srcpinname="Y Output Value" dstnodeid="61" dstpinname="Input 2" hiddenwhenlocked="1">
+   </LINK>
+   <NODE systemname="Enabled (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Enabled (DX11.Layer)" componentmode="Hidden" id="60">
+   <BOUNDS type="Node" left="7650" top="4170" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7650" top="4170" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="61" srcpinname="Output" dstnodeid="60" dstpinname="Enabled" hiddenwhenlocked="1">
+   </LINK>
+   <NODE id="59" systemname="GroundCS (DX11.Effect)" filename="dx11\GroundCS.fx" nodename="GroundCS (DX11.Effect)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="7650" top="3660" width="4905" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7305" top="30" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="0" width="6000" height="4500">
+   </BOUNDS>
+   <PIN pinname="Query" visible="1">
+   </PIN>
+   <PIN pinname="Technique" visible="1">
+   </PIN>
+   <PIN pinname="Ground_Level" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Ground_BounceCoef" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Ground_Friction" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="59" srcpinname="Layer" dstnodeid="60" dstpinname="Layer In">
+   </LINK>
+   <LINK srcnodeid="61" srcpinname="Output" dstnodeid="59" dstpinname="Enabled" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="63" srcpinname="Geometry Out" dstnodeid="59" dstpinname="Geometry">
+   </LINK>
+   <NODE systemname="GetGroundSettings (Gea.NaiveGPU)" filename="..\..\..\vl\Gea.NaiveGPU.vl" nodename="GetGroundSettings (Gea.NaiveGPU)" componentmode="Hidden" id="58">
+   <BOUNDS type="Node" left="7650" top="1710" width="4905" height="270">
+   </BOUNDS>
+   <PIN pinname="GroundLevel" visible="1">
+   </PIN>
+   <PIN pinname="BounceCoef" visible="1">
+   </PIN>
+   <PIN pinname="Friction" visible="1">
+   </PIN>
+   <PIN pinname="Enable" visible="1">
+   </PIN>
+   <PIN pinname="Euler/Verlet" visible="1" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="44" srcpinname="Input Value" dstnodeid="58" dstpinname="NaiveGPU">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="Element Count" dstnodeid="63" dstpinname="Count X">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="MassMult" dstnodeid="59" dstpinname="MassMult">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="DragMult" dstnodeid="59" dstpinname="DragMult">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="GravityXYZ" dstnodeid="59" dstpinname="GravityXYZ">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="tStepMult" dstnodeid="59" dstpinname="tStepMult">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="Last Index" dstnodeid="59" dstpinname="GroupLastIndex">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="Element Count" dstnodeid="59" dstpinname="GroupCount">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="Index Offset" dstnodeid="59" dstpinname="GroupIndexOffset">
+   </LINK>
+   <LINK srcnodeid="62" srcpinname="Enum" dstnodeid="59" dstpinname="Technique">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="GroundLevel" dstnodeid="59" dstpinname="Ground_Level">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="BounceCoef" dstnodeid="59" dstpinname="Ground_BounceCoef">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="Friction" dstnodeid="59" dstpinname="Ground_Friction">
+   </LINK>
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="57" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="13245" top="2655" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="58" srcpinname="Enable" dstnodeid="57" dstpinname="Input" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Output" dstnodeid="61" dstpinname="Input 1" hiddenwhenlocked="1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="56">
+   <BOUNDS type="Box" left="13650" top="3735" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13650" top="3735" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="61" srcpinname="Output" dstnodeid="56" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="55">
+   <BOUNDS type="Box" left="12465" top="990" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12465" top="990" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Euler/Verlet">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="False">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="55" srcpinname="Y Output Value" dstnodeid="58" dstpinname="Euler/Verlet">
+   </LINK>
+   <LINK srcnodeid="55" srcpinname="Y Output Value" dstnodeid="62" dstpinname="Ord Value">
+   </LINK>
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="64">
+   <BOUNDS type="Node" left="480" top="4800" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="480" top="4800" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="41" srcpinname="Layer Out" dstnodeid="64" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="64" srcpinname="Layer Out" dstnodeid="49" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="60" srcpinname="Layer Out" dstnodeid="64" dstpinname="Layer 2">
+   </LINK>
+   </PATCH>
