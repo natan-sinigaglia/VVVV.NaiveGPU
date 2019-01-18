@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha37.1.dtd" >
-   <PATCH nodename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\03_Modifiers\Brownian\Brownian (Gea.NaiveGPU).v4p" systemname="Brownian (Gea.NaiveGPU)" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\03_Modifiers\Brownian\Brownian (Gea.NaiveGPU).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\conature\Documents\REPOS\VVVV.Gea.NaiveGPU\nodes\modules\03_Modifiers\Brownian\Brownian (Gea.NaiveGPU).v4p" systemname="Brownian (Gea.NaiveGPU)" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\03_Modifiers\Brownian\Brownian (Gea.NaiveGPU).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="480" top="3105" width="7860" height="6015">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.2">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE systemname="Random (Value)" nodename="Random (Value)" componentmode="Hidden" id="38">
    <BOUNDS type="Node" left="3870" top="2820" width="100" height="100">
@@ -153,7 +153,7 @@
    </BOUNDS>
    <PIN pinname="Brownian_IndexShift" visible="1">
    </PIN>
-   <PIN pinname="Brownian_StrenghtXYZ" visible="1">
+   <PIN pinname="Brownian_StrenghtXYZ" visible="1" slicecount="3" values="0,0,0">
    </PIN>
    </NODE>
    <LINK srcnodeid="52" srcpinname="Geometry Out" dstnodeid="55" dstpinname="Geometry">
@@ -168,7 +168,35 @@
    </LINK>
    <LINK srcnodeid="38" srcpinname="Output" dstnodeid="55" dstpinname="Brownian_IndexShift">
    </LINK>
-   <NODE systemname="GetBrownianSettings (Gea.NaiveGPU)" filename="..\..\..\vl\Gea.NaiveGPU.vl" nodename="GetBrownianSettings (Gea.NaiveGPU)" componentmode="Hidden" id="43">
+   <PACK Name="dx11.particles" Version="1.0.3">
+   </PACK>
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="56" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="5325" top="2355" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="56" srcpinname="Output" dstnodeid="48" dstpinname="Input 1" hiddenwhenlocked="1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="57">
+   <BOUNDS type="Box" left="5805" top="3330" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5805" top="3330" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="57" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="GetBrownianSettings (Gea.NaiveGPU)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\vl\Gea.NaiveGPU.vl" nodename="GetBrownianSettings (Gea.NaiveGPU)" componentmode="Hidden" id="43">
    <BOUNDS type="Node" left="1170" top="1620" width="4215" height="270">
    </BOUNDS>
    <PIN pinname="StrengthXYZ" visible="1">
@@ -212,34 +240,6 @@
    </LINK>
    <LINK srcnodeid="43" srcpinname="StrengthXYZ" dstnodeid="55" dstpinname="Brownian_StrenghtXYZ">
    </LINK>
-   <PACK Name="dx11.particles" Version="1.0.3">
-   </PACK>
-   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="56" hiddenwhenlocked="1">
-   <BOUNDS type="Node" left="5325" top="2355" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="43" srcpinname="Enable" dstnodeid="56" dstpinname="Input" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="56" srcpinname="Output" dstnodeid="48" dstpinname="Input 1" hiddenwhenlocked="1">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="57">
-   <BOUNDS type="Box" left="5805" top="3330" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="5805" top="3330" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="57" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
-   <PATCH nodename="D:\REPOS\Aion_Scent\vvvv\vvvv_50beta37_x64\packs\Gea.NaiveGPU\nodes\modules\02_Emitters\EmittedAccumulator\EmittedAccumulator (Gea.ParticlesGPU).v4p" scrollx="0" scrolly="0" systemname="EmittedAccumulator" filename="C:\Users\MLF\Dropbox (MLF)\0158_Distortions_in_Spacetime_01_Build_Natan\vvvv\Gea.ParticlesGPU\modules\02_emission\EmittedAccumulator.v4p">
-   <BOUNDS type="Window" left="2310" top="465" width="11940" height="13935">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\conature\Documents\REPOS\VVVV.Gea.NaiveGPU\nodes\modules\02_Emitters\EmittedAccumulator\EmittedAccumulator (Gea.ParticlesGPU).v4p" scrollx="0" scrolly="-360" systemname="EmittedAccumulator" filename="C:\Users\MLF\Dropbox (MLF)\0158_Distortions_in_Spacetime_01_Build_Natan\vvvv\Gea.ParticlesGPU\modules\02_emission\EmittedAccumulator.v4p">
+   <BOUNDS type="Window" left="2310" top="465" width="14925" height="13935">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.3.1.1">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE systemname="Dispatcher (DX11.Drawer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Dispatcher (DX11.Drawer)" componentmode="Hidden" id="16">
    <BOUNDS type="Node" left="6870" top="8565" width="100" height="100">
@@ -237,7 +237,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="ParticlesCount" visible="1" slicecount="1" values="6">
+   <PIN pinname="ParticlesCount" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="pCount" visible="1" slicecount="1" values="1048576">
    </PIN>
@@ -547,9 +547,9 @@
    </PIN>
    <PIN pinname="groupIndexOffset" visible="1">
    </PIN>
-   <PIN pinname="GroupIndexOffset" visible="1">
+   <PIN pinname="GroupIndexOffset" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="GroupCount" visible="1">
+   <PIN pinname="GroupCount" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Enabled" visible="1">
    </PIN>
@@ -674,24 +674,6 @@
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
    </NODE>
-   <NODE systemname="Group (Gea.NaiveGPU Split)" filename="..\..\..\vl\Gea.NaiveGPU.vl" nodename="Group (Gea.NaiveGPU Split)" componentmode="Hidden" id="136">
-   <BOUNDS type="Node" left="7155" top="2445" width="3900" height="270">
-   </BOUNDS>
-   <PIN pinname="Group_R" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Index Offset" visible="1">
-   </PIN>
-   <PIN pinname="Count" visible="1">
-   </PIN>
-   <PIN pinname="ResolutionXY" visible="1">
-   </PIN>
-   <PIN pinname="Thickness" visible="1">
-   </PIN>
-   <PIN pinname="Element Count" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="7155" top="2445">
-   </BOUNDS>
-   </NODE>
    <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="135">
    <BOUNDS type="Node" left="7155" top="1995" width="100" height="100">
    </BOUNDS>
@@ -702,8 +684,6 @@
    <PIN pinname="Index" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="135" srcpinname="Output Node" dstnodeid="136" dstpinname="Group_R">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="134">
    <BOUNDS type="Box" left="9270" top="1815" width="795" height="240">
    </BOUNDS>
@@ -742,12 +722,6 @@
    </NODE>
    <LINK srcnodeid="119" srcpinname="Output" dstnodeid="149" dstpinname="Y Input Value">
    </LINK>
-   <LINK srcnodeid="136" srcpinname="Element Count" dstnodeid="124" dstpinname="GroupCount">
-   </LINK>
-   <LINK srcnodeid="136" srcpinname="Index Offset" dstnodeid="124" dstpinname="GroupIndexOffset">
-   </LINK>
-   <LINK srcnodeid="136" srcpinname="Element Count" dstnodeid="0" dstpinname="ParticlesCount">
-   </LINK>
    <NODE systemname="SelectGroupsByType (Gea.NaiveGPU)" filename="%VVVV%\packs\Gea.NaiveGPU\nodes\vl\Gea.NaiveGPU.vl" nodename="SelectGroupsByType (Gea.NaiveGPU)" componentmode="Hidden" id="138">
    <BOUNDS type="Node" left="7155" top="1575" width="100" height="100">
    </BOUNDS>
@@ -775,5 +749,31 @@
    <LINK srcnodeid="138" srcpinname="Found Any" dstnodeid="119" dstpinname="Input 3" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="138" srcpinname="Output" dstnodeid="135" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Group (Gea.NaiveGPU Split)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\vl\Gea.NaiveGPU.vl" nodename="Group (Gea.NaiveGPU Split)" componentmode="Hidden" id="136">
+   <BOUNDS type="Node" left="7155" top="2445" width="3900" height="270">
+   </BOUNDS>
+   <PIN pinname="Group_R" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Index Offset" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   <PIN pinname="ResolutionXY" visible="1">
+   </PIN>
+   <PIN pinname="Thickness" visible="1">
+   </PIN>
+   <PIN pinname="Element Count" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="7155" top="2445">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="135" srcpinname="Output Node" dstnodeid="136" dstpinname="Group_R">
+   </LINK>
+   <LINK srcnodeid="136" srcpinname="Element Count" dstnodeid="124" dstpinname="GroupCount">
+   </LINK>
+   <LINK srcnodeid="136" srcpinname="Index Offset" dstnodeid="124" dstpinname="GroupIndexOffset">
+   </LINK>
+   <LINK srcnodeid="136" srcpinname="Element Count" dstnodeid="0" dstpinname="ParticlesCount">
    </LINK>
    </PATCH>

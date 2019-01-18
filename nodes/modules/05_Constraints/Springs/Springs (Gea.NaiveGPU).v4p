@@ -1,17 +1,17 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha37.1.dtd" >
-   <PATCH nodename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\05_Constraints\Springs\Springs (Gea.NaiveGPU).v4p" systemname="SpringsCS" filename="D:\REPOS\Gea.Springs\vvvv\modules\SpringsCS.v4p" scrollx="0" scrolly="30">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\conature\Documents\REPOS\VVVV.Gea.NaiveGPU\nodes\modules\05_Constraints\Springs\Springs (Gea.NaiveGPU).v4p" systemname="SpringsCS" filename="D:\REPOS\Gea.Springs\vvvv\modules\SpringsCS.v4p" scrollx="0" scrolly="30">
    <BOUNDS type="Window" left="2145" top="930" width="13620" height="7890">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.2">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="9342" top="4455" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" slicecount="1" visible="1" values="2">
+   <PIN pinname="Input 2" slicecount="3" visible="1" values="8,8,8">
    </PIN>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="4">
+   <PIN pinname="Input 1" visible="1" slicecount="3" values="4,12,12">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -59,7 +59,7 @@
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
-   <PIN pinname="Count X" visible="1" slicecount="1" values="1024">
+   <PIN pinname="Count X" visible="1" slicecount="3" values="1024,2048,512">
    </PIN>
    <PIN pinname="Thread Group X" visible="1" slicecount="1" values="64">
    </PIN>
@@ -187,17 +187,17 @@
    </PIN>
    <PIN pinname="PassesBuffer" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="GroupPassesCount" visible="1" slicecount="1" values="4">
+   <PIN pinname="GroupPassesCount" visible="1" slicecount="3" values="4,12,12">
    </PIN>
-   <PIN pinname="UnfoldStiffnessMult" visible="1" slicecount="1" values="1">
+   <PIN pinname="UnfoldStiffnessMult" visible="1" slicecount="3" values="1,1,1">
    </PIN>
    <PIN pinname="PairsBuffer" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="BufferPassOffset" visible="1" slicecount="1" values="0">
+   <PIN pinname="BufferPassOffset" visible="1" slicecount="3" values="0,4,16">
    </PIN>
-   <PIN pinname="StiffnessMult" visible="1" slicecount="1" values="1">
+   <PIN pinname="StiffnessMult" visible="1" slicecount="3" values="1,1,1">
    </PIN>
-   <PIN pinname="RestLengthMult" visible="1" slicecount="1" values="1">
+   <PIN pinname="RestLengthMult" visible="1" slicecount="3" values="1,1,1">
    </PIN>
    <PIN pinname="Defines" visible="-1" slicecount="1" pintype="Input" values="||">
    </PIN>
@@ -209,7 +209,7 @@
    </PIN>
    <PIN pinname="Query" visible="1">
    </PIN>
-   <PIN pinname="RndRestLength" visible="1">
+   <PIN pinname="RndRestLength" visible="1" slicecount="3" values="0,0,0">
    </PIN>
    </NODE>
    <LINK srcnodeid="174" srcpinname="Geometry Out" dstnodeid="194" dstpinname="Geometry">
@@ -240,7 +240,21 @@
    </NODE>
    <LINK srcnodeid="170" srcpinname="Output" dstnodeid="203" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="GetSpringsSettings (Gea.NaiveGPU)" filename="..\..\..\vl\Gea.NaiveGPU.vl" nodename="GetSpringsSettings (Gea.NaiveGPU)" componentmode="Hidden" id="208">
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="194" dstpinname="Iteration Count">
+   </LINK>
+   <NODE systemname="UploadBuffer (DX11.Buffer)" filename="%VVVV%\lib\packs\VL.VVVV.DirectX11.0.93.22-g20b1dd0a01\vvvv\nodes\plugins\VL.VVVV.DirectX11.dll" nodename="UploadBuffer (DX11.Buffer)" componentmode="Hidden" id="234">
+   <BOUNDS type="Node" left="8070" top="3705" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8070" top="3705" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Buffer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="234" srcpinname="Buffer" dstnodeid="194" dstpinname="SpheresData2Buffer">
+   </LINK>
+   <LINK srcnodeid="234" srcpinname="Buffer" dstnodeid="194" dstpinname="PairsBuffer">
+   </LINK>
+   <NODE systemname="GetSpringsSettings (Gea.NaiveGPU)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\vl\Gea.NaiveGPU.vl" nodename="GetSpringsSettings (Gea.NaiveGPU)" componentmode="Hidden" id="208">
    <BOUNDS type="Node" left="1050" top="1395" width="9465" height="270">
    </BOUNDS>
    <PIN pinname="MaxThreadsCount" visible="1">
@@ -315,20 +329,6 @@
    <LINK srcnodeid="208" srcpinname="PassesBuffer_Count" dstnodeid="194" dstpinname="GroupPassesCount">
    </LINK>
    <LINK srcnodeid="208" srcpinname="PassesBuffer_Count" dstnodeid="1" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="194" dstpinname="Iteration Count">
-   </LINK>
-   <NODE systemname="UploadBuffer (DX11.Buffer)" filename="%VVVV%\lib\packs\VL.VVVV.DirectX11.0.93.22-g20b1dd0a01\vvvv\nodes\plugins\VL.VVVV.DirectX11.dll" nodename="UploadBuffer (DX11.Buffer)" componentmode="Hidden" id="234">
-   <BOUNDS type="Node" left="8070" top="3705" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="8070" top="3705" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Buffer" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="234" srcpinname="Buffer" dstnodeid="194" dstpinname="SpheresData2Buffer">
-   </LINK>
-   <LINK srcnodeid="234" srcpinname="Buffer" dstnodeid="194" dstpinname="PairsBuffer">
    </LINK>
    <LINK srcnodeid="208" srcpinname="SpringPairsBuffer" dstnodeid="234" dstpinname="Buffer Description">
    </LINK>

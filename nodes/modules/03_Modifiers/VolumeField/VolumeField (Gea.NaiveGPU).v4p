@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha37.1.dtd" >
-   <PATCH nodename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\03_Modifiers\VolumeField\VolumeField (Gea.NaiveGPU).v4p" systemname="VolumeField (Gea.NaiveGPU)" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\03_Modifiers\VolumeField\VolumeField (Gea.NaiveGPU).v4p" scrollx="0" scrolly="-360">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\conature\Documents\REPOS\VVVV.Gea.NaiveGPU\nodes\modules\03_Modifiers\VolumeField\VolumeField (Gea.NaiveGPU).v4p" systemname="VolumeField (Gea.NaiveGPU)" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\03_Modifiers\VolumeField\VolumeField (Gea.NaiveGPU).v4p" scrollx="0" scrolly="-360">
    <BOUNDS type="Window" left="4380" top="5295" width="8160" height="6465">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.2">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="22" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="675" top="4920" width="795" height="240">
@@ -45,7 +45,7 @@
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
-   <PIN pinname="Count X" visible="1" slicecount="1" values="1">
+   <PIN pinname="Count X" visible="1" slicecount="4" values="65536,2048,4096,1024">
    </PIN>
    <PIN pinname="Thread Group X" visible="1" slicecount="1" values="64">
    </PIN>
@@ -141,11 +141,11 @@
    <NODE systemname="VolumeFieldCS (DX11.Effect)" filename="dx11\VolumeFieldCS.fx" nodename="VolumeFieldCS (DX11.Effect)" componentmode="Hidden" id="30">
    <BOUNDS type="Node" left="675" top="3885" width="4905" height="270">
    </BOUNDS>
-   <PIN pinname="VolumeField_StrengthXYZ" visible="1" slicecount="3" values="1,1,1">
+   <PIN pinname="VolumeField_StrengthXYZ" visible="1" slicecount="3" values="50,50,50">
    </PIN>
    <PIN pinname="VolumeTexture3D" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Transform In" visible="1">
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="20" srcpinname="Geometry Out" dstnodeid="30" dstpinname="Geometry">
@@ -156,7 +156,59 @@
    </LINK>
    <LINK srcnodeid="30" srcpinname="Query" dstnodeid="13" dstpinname="Input 2" hiddenwhenlocked="1">
    </LINK>
-   <NODE systemname="GetVolumeFieldSettings (Gea.NaiveGPU)" filename="..\..\..\vl\Gea.NaiveGPU.vl" nodename="GetVolumeFieldSettings (Gea.NaiveGPU)" componentmode="Hidden" id="31">
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="36" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="4200" top="2775" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4200" top="2775" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="VolumeTexture3D">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="36" srcpinname="Output Node" dstnodeid="30" dstpinname="VolumeTexture3D">
+   </LINK>
+   <PACK Name="dx11.particles" Version="1.0.3">
+   </PACK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="37" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="2865" top="2775" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2865" top="2775" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|VolumeField tW|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="37" srcpinname="Output Node" dstnodeid="30" dstpinname="Transform In">
+   </LINK>
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="38" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="5520" top="2925" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Output" dstnodeid="16" dstpinname="Input 1" hiddenwhenlocked="1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="39">
+   <BOUNDS type="Box" left="6150" top="3900" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6150" top="3900" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="39" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="GetVolumeFieldSettings (Gea.NaiveGPU)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\vl\Gea.NaiveGPU.vl" nodename="GetVolumeFieldSettings (Gea.NaiveGPU)" componentmode="Hidden" id="31">
    <BOUNDS type="Node" left="1365" top="1650" width="4215" height="270">
    </BOUNDS>
    <PIN pinname="tW" visible="1">
@@ -204,58 +256,6 @@
    </LINK>
    <LINK srcnodeid="31" srcpinname="StrengthXYZ" dstnodeid="30" dstpinname="VolumeField_StrengthXYZ">
    </LINK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="36" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="4200" top="2775" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="4200" top="2775" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="VolumeTexture3D">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="36" srcpinname="Output Node" dstnodeid="30" dstpinname="VolumeTexture3D">
-   </LINK>
-   <PACK Name="dx11.particles" Version="1.0.3">
-   </PACK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="37" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="2865" top="2775" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="2865" top="2775" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Node" visible="1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|VolumeField tW|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="37" srcpinname="Output Node" dstnodeid="30" dstpinname="Transform In">
-   </LINK>
-   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="38" hiddenwhenlocked="1">
-   <BOUNDS type="Node" left="5520" top="2925" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="31" srcpinname="Enable" dstnodeid="38" dstpinname="Input" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="38" srcpinname="Output" dstnodeid="16" dstpinname="Input 1" hiddenwhenlocked="1">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="39">
-   <BOUNDS type="Box" left="6150" top="3900" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="6150" top="3900" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="39" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

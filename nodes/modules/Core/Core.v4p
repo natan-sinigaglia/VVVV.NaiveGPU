@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
-   <PATCH nodename="D:\REPOS\Aion_Scent\vvvv\vvvv_50beta37_x64\packs\Gea.NaiveGPU\nodes\modules\Core\Core.v4p" systemname="Core" filename="C:\Users\MLF\Dropbox (MLF)\0158_Distortions_in_Spacetime_01_Build_Natan\vvvv\Gea.ParticlesGPU\modules\core\Core.v4p" scrollx="0" scrolly="-228">
-   <BOUNDS type="Window" left="6840" top="825" width="18165" height="14400">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\conature\Documents\REPOS\vvvv_50beta38.1_x64\packs\VVVV.Gea.NaiveGPU\nodes\modules\Core\Core.v4p" systemname="Core" filename="C:\Users\MLF\Dropbox (MLF)\0158_Distortions_in_Spacetime_01_Build_Natan\vvvv\Gea.ParticlesGPU\modules\core\Core.v4p" scrollx="0" scrolly="-360">
+   <BOUNDS type="Window" left="1395" top="735" width="18165" height="14400">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.3.1.1">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="1">
    <BOUNDS type="Box" left="540" top="1680" width="795" height="240">
@@ -868,7 +868,15 @@
    </LINK>
    <LINK srcnodeid="158" srcpinname="Y Output Value" dstnodeid="153" dstpinname="Input" hiddenwhenlocked="1">
    </LINK>
-   <NODE systemname="GetCoreBuffersSettings (Gea.NaiveGPU)" filename="%VVVV%\packs\Gea.NaiveGPU\nodes\vl\Gea.NaiveGPU.vl" nodename="GetCoreBuffersSettings (Gea.NaiveGPU)" componentmode="Hidden" id="155">
+   <NODE systemname="Perlin_Semantic (Gea)" filename="%VVVV%\packs\Gea.NaiveGPU\nodes\modules\Utils\Perlin_Semantics\Perlin_Semantic (Gea).v4p" nodename="Perlin_Semantic (Gea)" componentmode="Hidden" id="140">
+   <BOUNDS type="Node" left="11265" top="9645" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Semantics Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="140" srcpinname="Semantics Output" dstnodeid="59" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="GetCoreBuffersSettings (Gea.NaiveGPU)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\vl\Gea.NaiveGPU.vl" nodename="GetCoreBuffersSettings (Gea.NaiveGPU)" componentmode="Hidden" id="155">
    <BOUNDS type="Node" left="2235" top="2385" width="10365" height="270">
    </BOUNDS>
    <PIN pinname="GroupsBinSize" visible="1">
@@ -901,13 +909,5 @@
    <LINK srcnodeid="155" srcpinname="ElementCount" dstnodeid="172" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="155" srcpinname="Force Build" dstnodeid="154" dstpinname="Input 2" hiddenwhenlocked="1">
-   </LINK>
-   <NODE systemname="Perlin_Semantic (Gea)" filename="%VVVV%\packs\Gea.NaiveGPU\nodes\modules\Utils\Perlin_Semantics\Perlin_Semantic (Gea).v4p" nodename="Perlin_Semantic (Gea)" componentmode="Hidden" id="140">
-   <BOUNDS type="Node" left="11265" top="9645" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Semantics Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="140" srcpinname="Semantics Output" dstnodeid="59" dstpinname="Input 3">
    </LINK>
    </PATCH>

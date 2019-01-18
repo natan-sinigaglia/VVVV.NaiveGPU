@@ -1,12 +1,12 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha37.1.dtd" >
-   <PATCH nodename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\05_Constraints\Constrains.v4p" systemname="Constrains" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\05_Constraints\Constrains.v4p" scrollx="0" scrolly="690">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\conature\Documents\REPOS\VVVV.Gea.NaiveGPU\nodes\modules\05_Constraints\Constrains.v4p" systemname="Constrains" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\05_Constraints\Constrains.v4p" scrollx="0" scrolly="690">
    <BOUNDS type="Window" left="2340" top="10515" width="11685" height="4665">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.2">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
    <PACK Name="dx11.particles" Version="1.0.3">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="1">
    <BOUNDS type="Box" left="585" top="3915" width="795" height="240">

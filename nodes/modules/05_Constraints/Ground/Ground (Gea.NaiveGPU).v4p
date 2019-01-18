@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha37.1.dtd" >
-   <PATCH nodename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\05_Constraints\Ground\Ground (Gea.NaiveGPU).v4p" systemname="Ground (Gea.NaiveGPU)" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\05_Constraints\Ground\Ground (Gea.NaiveGPU).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\conature\Documents\REPOS\VVVV.Gea.NaiveGPU\nodes\modules\05_Constraints\Ground\Ground (Gea.NaiveGPU).v4p" systemname="Ground (Gea.NaiveGPU)" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\05_Constraints\Ground\Ground (Gea.NaiveGPU).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="1500" top="2505" width="16695" height="7665">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.2">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
@@ -49,7 +49,7 @@
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
-   <PIN pinname="Count X" visible="1" slicecount="3" values="8,2048,4096">
+   <PIN pinname="Count X" visible="1" slicecount="1" values="65536">
    </PIN>
    <PIN pinname="Thread Group X" visible="1" slicecount="1" values="64">
    </PIN>
@@ -161,9 +161,9 @@
    </PIN>
    <PIN pinname="Ground_Level" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Ground_BounceCoef" visible="1" slicecount="1" values="1">
+   <PIN pinname="Ground_BounceCoef" visible="1" slicecount="1" values="0.5">
    </PIN>
-   <PIN pinname="Ground_Friction" visible="1" slicecount="1" values="0">
+   <PIN pinname="Ground_Friction" visible="1" slicecount="1" values="0.899999976158142">
    </PIN>
    </NODE>
    <LINK srcnodeid="38" srcpinname="Layer" dstnodeid="41" dstpinname="Layer In">
@@ -174,47 +174,7 @@
    </LINK>
    <LINK srcnodeid="38" srcpinname="Query" dstnodeid="36" dstpinname="Input 2" hiddenwhenlocked="1">
    </LINK>
-   <NODE systemname="GetGroundSettings (Gea.NaiveGPU)" filename="..\..\..\vl\Gea.NaiveGPU.vl" nodename="GetGroundSettings (Gea.NaiveGPU)" componentmode="Hidden" id="51">
-   <BOUNDS type="Node" left="450" top="1710" width="4905" height="270">
-   </BOUNDS>
-   <PIN pinname="GroundLevel" visible="1">
-   </PIN>
-   <PIN pinname="BounceCoef" visible="1">
-   </PIN>
-   <PIN pinname="Friction" visible="1">
-   </PIN>
-   <PIN pinname="Enable" visible="1">
-   </PIN>
-   <PIN pinname="Euler/Verlet" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="44" srcpinname="Input Value" dstnodeid="51" dstpinname="NaiveGPU">
-   </LINK>
-   <LINK srcnodeid="51" srcpinname="Element Count" dstnodeid="47" dstpinname="Count X">
-   </LINK>
-   <LINK srcnodeid="51" srcpinname="QueryShadersEnable" dstnodeid="36" dstpinname="Switch" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="51" srcpinname="MassMult" dstnodeid="38" dstpinname="MassMult">
-   </LINK>
-   <LINK srcnodeid="51" srcpinname="DragMult" dstnodeid="38" dstpinname="DragMult">
-   </LINK>
-   <LINK srcnodeid="51" srcpinname="GravityXYZ" dstnodeid="38" dstpinname="GravityXYZ">
-   </LINK>
-   <LINK srcnodeid="51" srcpinname="tStepMult" dstnodeid="38" dstpinname="tStepMult">
-   </LINK>
-   <LINK srcnodeid="51" srcpinname="Last Index" dstnodeid="38" dstpinname="GroupLastIndex">
-   </LINK>
-   <LINK srcnodeid="51" srcpinname="Element Count" dstnodeid="38" dstpinname="GroupCount">
-   </LINK>
-   <LINK srcnodeid="51" srcpinname="Index Offset" dstnodeid="38" dstpinname="GroupIndexOffset">
-   </LINK>
    <LINK srcnodeid="43" srcpinname="Enum" dstnodeid="38" dstpinname="Technique">
-   </LINK>
-   <LINK srcnodeid="51" srcpinname="GroundLevel" dstnodeid="38" dstpinname="Ground_Level">
-   </LINK>
-   <LINK srcnodeid="51" srcpinname="BounceCoef" dstnodeid="38" dstpinname="Ground_BounceCoef">
-   </LINK>
-   <LINK srcnodeid="51" srcpinname="Friction" dstnodeid="38" dstpinname="Ground_Friction">
    </LINK>
    <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="52" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="6045" top="2655" width="100" height="100">
@@ -224,8 +184,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="51" srcpinname="Enable" dstnodeid="52" dstpinname="Input" hiddenwhenlocked="1">
-   </LINK>
    <LINK srcnodeid="52" srcpinname="Output" dstnodeid="42" dstpinname="Input 1" hiddenwhenlocked="1">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="53">
@@ -266,8 +224,6 @@
    <PIN pinname="Pin Visibility" slicecount="1" values="False">
    </PIN>
    </NODE>
-   <LINK srcnodeid="54" srcpinname="Y Output Value" dstnodeid="51" dstpinname="Euler/Verlet">
-   </LINK>
    <LINK srcnodeid="54" srcpinname="Y Output Value" dstnodeid="43" dstpinname="Ord Value">
    </LINK>
    <NODE systemname="DispatcherX (DX11.Drawer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DispatcherX (DX11.Drawer)" componentmode="Hidden" id="63">
@@ -277,7 +233,7 @@
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
-   <PIN pinname="Count X" visible="1" slicecount="1" values="262144">
+   <PIN pinname="Count X" visible="1" slicecount="3" values="2048,4096,1024">
    </PIN>
    <PIN pinname="Thread Group X" visible="1" slicecount="1" values="64">
    </PIN>
@@ -327,11 +283,11 @@
    </PIN>
    <PIN pinname="Technique" visible="1">
    </PIN>
-   <PIN pinname="Ground_Level" visible="1" slicecount="1" values="0">
+   <PIN pinname="Ground_Level" visible="1" slicecount="3" values="0,0,0">
    </PIN>
-   <PIN pinname="Ground_BounceCoef" visible="1" slicecount="1" values="1">
+   <PIN pinname="Ground_BounceCoef" visible="1" slicecount="3" values="0.5,0.5,0.5">
    </PIN>
-   <PIN pinname="Ground_Friction" visible="1" slicecount="1" values="0">
+   <PIN pinname="Ground_Friction" visible="1" slicecount="3" values="0.899999976158142,0.899999976158142,0.899999976158142">
    </PIN>
    </NODE>
    <LINK srcnodeid="59" srcpinname="Layer" dstnodeid="60" dstpinname="Layer In">
@@ -340,45 +296,7 @@
    </LINK>
    <LINK srcnodeid="63" srcpinname="Geometry Out" dstnodeid="59" dstpinname="Geometry">
    </LINK>
-   <NODE systemname="GetGroundSettings (Gea.NaiveGPU)" filename="..\..\..\vl\Gea.NaiveGPU.vl" nodename="GetGroundSettings (Gea.NaiveGPU)" componentmode="Hidden" id="58">
-   <BOUNDS type="Node" left="7650" top="1710" width="4905" height="270">
-   </BOUNDS>
-   <PIN pinname="GroundLevel" visible="1">
-   </PIN>
-   <PIN pinname="BounceCoef" visible="1">
-   </PIN>
-   <PIN pinname="Friction" visible="1">
-   </PIN>
-   <PIN pinname="Enable" visible="1">
-   </PIN>
-   <PIN pinname="Euler/Verlet" visible="1" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="44" srcpinname="Input Value" dstnodeid="58" dstpinname="NaiveGPU">
-   </LINK>
-   <LINK srcnodeid="58" srcpinname="Element Count" dstnodeid="63" dstpinname="Count X">
-   </LINK>
-   <LINK srcnodeid="58" srcpinname="MassMult" dstnodeid="59" dstpinname="MassMult">
-   </LINK>
-   <LINK srcnodeid="58" srcpinname="DragMult" dstnodeid="59" dstpinname="DragMult">
-   </LINK>
-   <LINK srcnodeid="58" srcpinname="GravityXYZ" dstnodeid="59" dstpinname="GravityXYZ">
-   </LINK>
-   <LINK srcnodeid="58" srcpinname="tStepMult" dstnodeid="59" dstpinname="tStepMult">
-   </LINK>
-   <LINK srcnodeid="58" srcpinname="Last Index" dstnodeid="59" dstpinname="GroupLastIndex">
-   </LINK>
-   <LINK srcnodeid="58" srcpinname="Element Count" dstnodeid="59" dstpinname="GroupCount">
-   </LINK>
-   <LINK srcnodeid="58" srcpinname="Index Offset" dstnodeid="59" dstpinname="GroupIndexOffset">
-   </LINK>
    <LINK srcnodeid="62" srcpinname="Enum" dstnodeid="59" dstpinname="Technique">
-   </LINK>
-   <LINK srcnodeid="58" srcpinname="GroundLevel" dstnodeid="59" dstpinname="Ground_Level">
-   </LINK>
-   <LINK srcnodeid="58" srcpinname="BounceCoef" dstnodeid="59" dstpinname="Ground_BounceCoef">
-   </LINK>
-   <LINK srcnodeid="58" srcpinname="Friction" dstnodeid="59" dstpinname="Ground_Friction">
    </LINK>
    <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="57" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="13245" top="2655" width="100" height="100">
@@ -388,8 +306,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="58" srcpinname="Enable" dstnodeid="57" dstpinname="Input" hiddenwhenlocked="1">
-   </LINK>
    <LINK srcnodeid="57" srcpinname="Output" dstnodeid="61" dstpinname="Input 1" hiddenwhenlocked="1">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="56">
@@ -432,8 +348,6 @@
    <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="55" srcpinname="Y Output Value" dstnodeid="58" dstpinname="Euler/Verlet">
-   </LINK>
    <LINK srcnodeid="55" srcpinname="Y Output Value" dstnodeid="62" dstpinname="Ord Value">
    </LINK>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="64">
@@ -453,5 +367,91 @@
    <LINK srcnodeid="64" srcpinname="Layer Out" dstnodeid="49" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="60" srcpinname="Layer Out" dstnodeid="64" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="GetGroundSettings (Gea.NaiveGPU)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\vl\Gea.NaiveGPU.vl" nodename="GetGroundSettings (Gea.NaiveGPU)" componentmode="Hidden" id="51">
+   <BOUNDS type="Node" left="450" top="1710" width="4905" height="270">
+   </BOUNDS>
+   <PIN pinname="GroundLevel" visible="1">
+   </PIN>
+   <PIN pinname="BounceCoef" visible="1">
+   </PIN>
+   <PIN pinname="Friction" visible="1">
+   </PIN>
+   <PIN pinname="Enable" visible="1">
+   </PIN>
+   <PIN pinname="Euler/Verlet" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="44" srcpinname="Input Value" dstnodeid="51" dstpinname="NaiveGPU">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Element Count" dstnodeid="47" dstpinname="Count X">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="QueryShadersEnable" dstnodeid="36" dstpinname="Switch" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="MassMult" dstnodeid="38" dstpinname="MassMult">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="DragMult" dstnodeid="38" dstpinname="DragMult">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="GravityXYZ" dstnodeid="38" dstpinname="GravityXYZ">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="tStepMult" dstnodeid="38" dstpinname="tStepMult">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Last Index" dstnodeid="38" dstpinname="GroupLastIndex">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Element Count" dstnodeid="38" dstpinname="GroupCount">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Index Offset" dstnodeid="38" dstpinname="GroupIndexOffset">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="GroundLevel" dstnodeid="38" dstpinname="Ground_Level">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="BounceCoef" dstnodeid="38" dstpinname="Ground_BounceCoef">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Friction" dstnodeid="38" dstpinname="Ground_Friction">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Enable" dstnodeid="52" dstpinname="Input" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="54" srcpinname="Y Output Value" dstnodeid="51" dstpinname="Euler/Verlet">
+   </LINK>
+   <NODE systemname="GetGroundSettings (Gea.NaiveGPU)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\vl\Gea.NaiveGPU.vl" nodename="GetGroundSettings (Gea.NaiveGPU)" componentmode="Hidden" id="58">
+   <BOUNDS type="Node" left="7650" top="1710" width="4905" height="270">
+   </BOUNDS>
+   <PIN pinname="GroundLevel" visible="1">
+   </PIN>
+   <PIN pinname="BounceCoef" visible="1">
+   </PIN>
+   <PIN pinname="Friction" visible="1">
+   </PIN>
+   <PIN pinname="Enable" visible="1">
+   </PIN>
+   <PIN pinname="Euler/Verlet" visible="1" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="44" srcpinname="Input Value" dstnodeid="58" dstpinname="NaiveGPU">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="Element Count" dstnodeid="63" dstpinname="Count X">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="MassMult" dstnodeid="59" dstpinname="MassMult">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="DragMult" dstnodeid="59" dstpinname="DragMult">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="GravityXYZ" dstnodeid="59" dstpinname="GravityXYZ">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="tStepMult" dstnodeid="59" dstpinname="tStepMult">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="Last Index" dstnodeid="59" dstpinname="GroupLastIndex">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="Element Count" dstnodeid="59" dstpinname="GroupCount">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="Index Offset" dstnodeid="59" dstpinname="GroupIndexOffset">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="GroundLevel" dstnodeid="59" dstpinname="Ground_Level">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="BounceCoef" dstnodeid="59" dstpinname="Ground_BounceCoef">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="Friction" dstnodeid="59" dstpinname="Ground_Friction">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="Enable" dstnodeid="57" dstpinname="Input" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="55" srcpinname="Y Output Value" dstnodeid="58" dstpinname="Euler/Verlet">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
-   <PATCH nodename="D:\REPOS\Aion_Scent\vvvv\vvvv_50beta37_x64\packs\Gea.NaiveGPU\nodes\modules\Draw\Surface_MultiPatched_Tessellated\ClothGeometry.v4p" filename="D:\REPOS\Mousiké\vvvv\Subpatches\Contents\VerletSimulation\Cloth\Surface_MultiPatched_Tessellated\ClothGeometry.v4p" systemname="ClothGeometry" scrollx="0" scrolly="3600">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\conature\Documents\REPOS\VVVV.Gea.NaiveGPU\nodes\modules\Draw\Surface_MultiPatched_Tessellated\ClothGeometry.v4p" filename="D:\REPOS\Mousiké\vvvv\Subpatches\Contents\VerletSimulation\Cloth\Surface_MultiPatched_Tessellated\ClothGeometry.v4p" systemname="ClothGeometry" scrollx="0" scrolly="-360">
    <BOUNDS height="14490" left="4260" top="0" type="Window" width="18480">
    </BOUNDS>
    <LINK dstnodeid="126" dstpinname="edgesXYZW" srcnodeid="129" srcpinname="Y Output Value">
@@ -308,7 +308,7 @@
    </LINK>
    <LINK srcnodeid="247" srcpinname="Output" dstnodeid="150" dstpinname="Input 2" hiddenwhenlocked="1">
    </LINK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="248" systemname="IOBox (Enumerations)">
    <BOUNDS type="Box" left="7380" top="8895" width="1755" height="270">
@@ -322,7 +322,7 @@
    </LINK>
    <PACK Name="dx11-vvvv-girlpower-master" Version="33.0">
    </PACK>
-   <PACK Name="dx11" Version="1.3.1.1">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
    <NODE systemname="Topology (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Topology (DX11.Geometry)" componentmode="Hidden" id="268">
    <BOUNDS type="Node" left="1140" top="13290" width="100" height="100">
@@ -839,7 +839,7 @@
    <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="394">
    <BOUNDS type="Node" left="8265" top="2850" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="67584">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -944,22 +944,6 @@
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
    </NODE>
-   <NODE systemname="Group (Gea.NaiveGPU Split)" filename="..\..\..\vl\Gea.NaiveGPU.vl" nodename="Group (Gea.NaiveGPU Split)" componentmode="Hidden" id="406">
-   <BOUNDS type="Node" left="8100" top="2265" width="1800" height="270">
-   </BOUNDS>
-   <PIN pinname="Group_R" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Index Offset" visible="1">
-   </PIN>
-   <PIN pinname="Count" visible="1">
-   </PIN>
-   <PIN pinname="ResolutionXY" visible="1">
-   </PIN>
-   <PIN pinname="Thickness" visible="1">
-   </PIN>
-   <PIN pinname="Enable" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="405">
    <BOUNDS type="Node" left="8100" top="1845" width="100" height="100">
    </BOUNDS>
@@ -970,10 +954,6 @@
    <PIN pinname="Index" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="405" srcpinname="Output Node" dstnodeid="406" dstpinname="Group_R">
-   </LINK>
-   <LINK srcnodeid="406" srcpinname="Index Offset" dstnodeid="394" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="419">
    <BOUNDS type="Box" left="10110" top="1680" width="795" height="240">
    </BOUNDS>
@@ -1013,13 +993,11 @@
    <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="422">
    <BOUNDS type="Node" left="11340" top="2860" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="406" srcpinname="Enable" dstnodeid="422" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="422" srcpinname="Output" dstnodeid="397" dstpinname="Input 3">
    </LINK>
    <LINK srcnodeid="378" srcpinname="Y Output Value" dstnodeid="397" dstpinname="Input 2">
@@ -1135,7 +1113,7 @@
    <NODE id="393" systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden">
    <BOUNDS type="Node" left="9885" top="2865" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="2" values="64,64">
+   <PIN pinname="Input" visible="1" slicecount="2" values="0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1144,8 +1122,30 @@
    <BOUNDS type="Box" left="9885" top="2865">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="406" srcpinname="ResolutionXY" dstnodeid="393" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="393" srcpinname="Output" dstnodeid="348" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Group (Gea.NaiveGPU Split)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\vl\Gea.NaiveGPU.vl" nodename="Group (Gea.NaiveGPU Split)" componentmode="Hidden" id="406">
+   <BOUNDS type="Node" left="8100" top="2265" width="1800" height="270">
+   </BOUNDS>
+   <PIN pinname="Group_R" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Index Offset" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   <PIN pinname="ResolutionXY" visible="1">
+   </PIN>
+   <PIN pinname="Thickness" visible="1">
+   </PIN>
+   <PIN pinname="Enable" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="405" srcpinname="Output Node" dstnodeid="406" dstpinname="Group_R">
+   </LINK>
+   <LINK srcnodeid="406" srcpinname="Index Offset" dstnodeid="394" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="406" srcpinname="Enable" dstnodeid="422" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="406" srcpinname="ResolutionXY" dstnodeid="393" dstpinname="Input">
    </LINK>
    </PATCH>

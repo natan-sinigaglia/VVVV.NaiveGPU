@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha37.1.dtd" >
-   <PATCH nodename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\Utils\DispatchAllGroups (Gea.NaiveGPU).v4p" systemname="DispatchAllGroups (Gea.NaiveGPU)" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\Utils\DispatchAllGroups (Gea.NaiveGPU).v4p" scrollx="555" scrolly="-360">
-   <BOUNDS type="Window" left="12780" top="8325" width="3885" height="4545">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\conature\Documents\REPOS\VVVV.Gea.NaiveGPU\nodes\modules\Utils\DispatchAllGroups (Gea.NaiveGPU).v4p" systemname="DispatchAllGroups (Gea.NaiveGPU)" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\Utils\DispatchAllGroups (Gea.NaiveGPU).v4p" scrollx="555" scrolly="-360">
+   <BOUNDS type="Window" left="12750" top="7575" width="3885" height="4545">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.2">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE systemname="DispatcherX (DX11.Drawer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DispatcherX (DX11.Drawer)" componentmode="Hidden" id="3">
    <BOUNDS type="Node" left="795" top="2265" width="100" height="100">
@@ -13,7 +13,7 @@
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
-   <PIN pinname="Count X" visible="1" slicecount="1" values="768">
+   <PIN pinname="Count X" visible="1" slicecount="1" values="72704">
    </PIN>
    <PIN pinname="Thread Group X" visible="1" slicecount="1" values="64">
    </PIN>
@@ -68,7 +68,7 @@
    </NODE>
    <LINK srcnodeid="9" srcpinname="Enum" dstnodeid="8" dstpinname="Receive String">
    </LINK>
-   <NODE systemname="GetElementCount (Gea.NaiveGPU)" filename="..\..\vl\Gea.NaiveGPU.vl" nodename="GetElementCount (Gea.NaiveGPU)" componentmode="Hidden" id="7">
+   <NODE systemname="GetElementCount (Gea.NaiveGPU)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\vl\Gea.NaiveGPU.vl" nodename="GetElementCount (Gea.NaiveGPU)" componentmode="Hidden" id="7">
    <BOUNDS type="Node" left="795" top="1425" width="1470" height="270">
    </BOUNDS>
    <PIN pinname="GroupsBinSize" visible="1">

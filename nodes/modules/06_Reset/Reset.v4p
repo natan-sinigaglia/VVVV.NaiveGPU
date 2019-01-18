@@ -1,12 +1,12 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha37.1.dtd" >
-   <PATCH nodename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\06_Reset\Reset.v4p" systemname="Reset" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\06_Reset\Reset.v4p" scrollx="0" scrolly="-360">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\conature\Documents\REPOS\VVVV.Gea.NaiveGPU\nodes\modules\06_Reset\Reset.v4p" systemname="Reset" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\06_Reset\Reset.v4p" scrollx="0" scrolly="-360">
    <BOUNDS type="Window" left="0" top="2520" width="13830" height="8895">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.2">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
    <PACK Name="dx11.particles" Version="1.0.3">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="12" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="285" top="6675" width="795" height="240">
@@ -49,7 +49,7 @@
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
-   <PIN pinname="Count X" visible="1" slicecount="3" values="2097152,2048,4096">
+   <PIN pinname="Count X" visible="1" slicecount="1" values="65536">
    </PIN>
    <PIN pinname="Thread Group X" visible="1" slicecount="1" values="64">
    </PIN>
@@ -147,15 +147,15 @@
    </BOUNDS>
    <PIN pinname="Query" visible="1">
    </PIN>
-   <PIN pinname="ResetPosXYZ" visible="1">
+   <PIN pinname="ResetPosXYZ" visible="1" slicecount="3" values="0,0,0">
    </PIN>
    <PIN pinname="Technique" visible="1" slicecount="1" values="Euler">
    </PIN>
-   <PIN pinname="GroupCount" visible="1">
+   <PIN pinname="GroupCount" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="GroupIndexOffset" visible="1">
+   <PIN pinname="GroupIndexOffset" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="GroupLastIndex" visible="1">
+   <PIN pinname="GroupLastIndex" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="16" srcpinname="Layer" dstnodeid="1" dstpinname="Layer In">
@@ -198,38 +198,6 @@
    <BOUNDS type="Box" left="5190" top="2250">
    </BOUNDS>
    </NODE>
-   <NODE systemname="GetResetSettings (Gea.NaiveGPU)" filename="..\..\vl\Gea.NaiveGPU.vl" nodename="GetResetSettings (Gea.NaiveGPU)" componentmode="Hidden" id="20">
-   <BOUNDS type="Node" left="345" top="1680" width="4905" height="270">
-   </BOUNDS>
-   <PIN pinname="ResetPosXYZ" visible="1">
-   </PIN>
-   <PIN pinname="Enable" visible="1">
-   </PIN>
-   <PIN pinname="Element Count" visible="1">
-   </PIN>
-   <PIN pinname="Index Offset" visible="1">
-   </PIN>
-   <PIN pinname="Euler/Verlet" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Last Index" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="5" srcpinname="Input Value" dstnodeid="20" dstpinname="NaiveGPU">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="MassMult" dstnodeid="16" dstpinname="MassMult">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="DragMult" dstnodeid="16" dstpinname="DragMult">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="GravityXYZ" dstnodeid="16" dstpinname="GravityXYZ">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="tStepMult" dstnodeid="16" dstpinname="tStepMult">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="QueryShadersEnable" dstnodeid="18" dstpinname="Switch" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="Enable" dstnodeid="19" dstpinname="Input" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Force Reset">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="22">
    <BOUNDS type="Box" left="6075" top="4290" width="480" height="480">
    </BOUNDS>
@@ -266,16 +234,6 @@
    </LINK>
    <LINK srcnodeid="26" srcpinname="Layer Out" dstnodeid="12" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="20" srcpinname="Element Count" dstnodeid="9" dstpinname="Count X">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="Element Count" dstnodeid="16" dstpinname="GroupCount">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="Index Offset" dstnodeid="16" dstpinname="GroupIndexOffset">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="Last Index" dstnodeid="16" dstpinname="GroupLastIndex">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="ResetPosXYZ" dstnodeid="16" dstpinname="ResetPosXYZ">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="48">
    <BOUNDS type="Box" left="5205" top="975" width="480" height="480">
    </BOUNDS>
@@ -298,8 +256,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="48" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Euler/Verlet">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="57" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="12840" top="2970" width="480" height="480">
    </BOUNDS>
@@ -331,7 +287,7 @@
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
-   <PIN pinname="Count X" visible="1" slicecount="1" values="64000">
+   <PIN pinname="Count X" visible="1" slicecount="3" values="2048,4096,1024">
    </PIN>
    <PIN pinname="Thread Group X" visible="1" slicecount="1" values="64">
    </PIN>
@@ -371,15 +327,15 @@
    </BOUNDS>
    <PIN pinname="Query" visible="1">
    </PIN>
-   <PIN pinname="ResetPosXYZ" visible="1" slicecount="3" values="0,0,0">
+   <PIN pinname="ResetPosXYZ" visible="1" slicecount="9" values="0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Technique" visible="1" slicecount="1" values="Verlet">
    </PIN>
-   <PIN pinname="GroupCount" visible="1" slicecount="1" values="0">
+   <PIN pinname="GroupCount" visible="1" slicecount="3" values="0,0,0">
    </PIN>
-   <PIN pinname="GroupIndexOffset" visible="1" slicecount="1" values="0">
+   <PIN pinname="GroupIndexOffset" visible="1" slicecount="3" values="0,0,0">
    </PIN>
-   <PIN pinname="GroupLastIndex" visible="1" slicecount="1" values="0">
+   <PIN pinname="GroupLastIndex" visible="1" slicecount="3" values="0,0,0">
    </PIN>
    </NODE>
    <LINK srcnodeid="53" srcpinname="Layer" dstnodeid="54" dstpinname="Layer In">
@@ -398,7 +354,121 @@
    <BOUNDS type="Box" left="11940" top="2250">
    </BOUNDS>
    </NODE>
-   <NODE systemname="GetResetSettings (Gea.NaiveGPU)" filename="..\..\vl\Gea.NaiveGPU.vl" nodename="GetResetSettings (Gea.NaiveGPU)" componentmode="Hidden" id="51">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="50">
+   <BOUNDS type="Box" left="12825" top="4290" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12825" top="4290" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="55" srcpinname="Output" dstnodeid="50" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="52" srcpinname="Output" dstnodeid="55" dstpinname="Input 1" hiddenwhenlocked="1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="49">
+   <BOUNDS type="Box" left="11955" top="975" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11955" top="975" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Euler/Verlet">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="False">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="54" srcpinname="Layer Out" dstnodeid="26" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="60">
+   <BOUNDS type="Node" left="4335" top="3720" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Ord Value" visible="1">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="48" srcpinname="Y Output Value" dstnodeid="60" dstpinname="Ord Value">
+   </LINK>
+   <LINK srcnodeid="60" srcpinname="Enum" dstnodeid="16" dstpinname="Technique">
+   </LINK>
+   <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="61">
+   <BOUNDS type="Node" left="11265" top="3735" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Ord Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="49" srcpinname="Y Output Value" dstnodeid="61" dstpinname="Ord Value">
+   </LINK>
+   <LINK srcnodeid="61" srcpinname="Enum" dstnodeid="53" dstpinname="Technique">
+   </LINK>
+   <NODE systemname="GetResetSettings (Gea.NaiveGPU)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\vl\Gea.NaiveGPU.vl" nodename="GetResetSettings (Gea.NaiveGPU)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="345" top="1680" width="4905" height="270">
+   </BOUNDS>
+   <PIN pinname="ResetPosXYZ" visible="1">
+   </PIN>
+   <PIN pinname="Enable" visible="1">
+   </PIN>
+   <PIN pinname="Element Count" visible="1">
+   </PIN>
+   <PIN pinname="Index Offset" visible="1">
+   </PIN>
+   <PIN pinname="Euler/Verlet" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Last Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Input Value" dstnodeid="20" dstpinname="NaiveGPU">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="MassMult" dstnodeid="16" dstpinname="MassMult">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="DragMult" dstnodeid="16" dstpinname="DragMult">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="GravityXYZ" dstnodeid="16" dstpinname="GravityXYZ">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="tStepMult" dstnodeid="16" dstpinname="tStepMult">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="QueryShadersEnable" dstnodeid="18" dstpinname="Switch" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Enable" dstnodeid="19" dstpinname="Input" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Force Reset">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Element Count" dstnodeid="9" dstpinname="Count X">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Element Count" dstnodeid="16" dstpinname="GroupCount">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Index Offset" dstnodeid="16" dstpinname="GroupIndexOffset">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Last Index" dstnodeid="16" dstpinname="GroupLastIndex">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="ResetPosXYZ" dstnodeid="16" dstpinname="ResetPosXYZ">
+   </LINK>
+   <LINK srcnodeid="48" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Euler/Verlet">
+   </LINK>
+   <NODE systemname="GetResetSettings (Gea.NaiveGPU)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\vl\Gea.NaiveGPU.vl" nodename="GetResetSettings (Gea.NaiveGPU)" componentmode="Hidden" id="51">
    <BOUNDS type="Node" left="7095" top="1680" width="4905" height="270">
    </BOUNDS>
    <PIN pinname="ResetPosXYZ" visible="1">
@@ -428,26 +498,6 @@
    </LINK>
    <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="51" dstpinname="Force Reset">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="50">
-   <BOUNDS type="Box" left="12825" top="4290" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="12825" top="4290" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Y Input Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="55" srcpinname="Output" dstnodeid="50" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="52" srcpinname="Output" dstnodeid="55" dstpinname="Input 1" hiddenwhenlocked="1">
-   </LINK>
    <LINK srcnodeid="51" srcpinname="Element Count" dstnodeid="56" dstpinname="Count X">
    </LINK>
    <LINK srcnodeid="51" srcpinname="Element Count" dstnodeid="53" dstpinname="GroupCount">
@@ -458,56 +508,6 @@
    </LINK>
    <LINK srcnodeid="51" srcpinname="ResetPosXYZ" dstnodeid="53" dstpinname="ResetPosXYZ">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="49">
-   <BOUNDS type="Box" left="11955" top="975" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="11955" top="975" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Euler/Verlet">
-   </PIN>
-   <PIN pinname="Pin Visibility" slicecount="1" values="False">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="49" srcpinname="Y Output Value" dstnodeid="51" dstpinname="Euler/Verlet">
-   </LINK>
-   <LINK srcnodeid="54" srcpinname="Layer Out" dstnodeid="26" dstpinname="Layer 2">
-   </LINK>
-   <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="60">
-   <BOUNDS type="Node" left="4335" top="3720" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Ord Value" visible="1">
-   </PIN>
-   <PIN pinname="Enum" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="48" srcpinname="Y Output Value" dstnodeid="60" dstpinname="Ord Value">
-   </LINK>
-   <LINK srcnodeid="60" srcpinname="Enum" dstnodeid="16" dstpinname="Technique">
-   </LINK>
-   <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="61">
-   <BOUNDS type="Node" left="11265" top="3735" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Ord Value" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Enum" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="49" srcpinname="Y Output Value" dstnodeid="61" dstpinname="Ord Value">
-   </LINK>
-   <LINK srcnodeid="61" srcpinname="Enum" dstnodeid="53" dstpinname="Technique">
    </LINK>
    </PATCH>

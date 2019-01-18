@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha37.1.dtd" >
-   <PATCH nodename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\05_Constraints\ShapeObstacles\ShapeObstacles (Gea.NaiveGPU).v4p" systemname="ShapeObstacles (Gea.NaiveGPU)" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\05_Constraints\Shapes\ShapeObstacles (Gea.NaiveGPU).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\conature\Documents\REPOS\vvvv_50beta38.1_x64\packs\VVVV.Gea.NaiveGPU\nodes\modules\05_Constraints\ShapeObstacles\ShapeObstacles (Gea.NaiveGPU).v4p" systemname="ShapeObstacles (Gea.NaiveGPU)" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\05_Constraints\Shapes\ShapeObstacles (Gea.NaiveGPU).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="750" top="6105" width="15510" height="7215">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.2">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
@@ -139,7 +139,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Switch" visible="1" slicecount="1" values="1">
+   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="36" srcpinname="Output" dstnodeid="37" dstpinname="Input Node" hiddenwhenlocked="1">
@@ -151,43 +151,19 @@
    <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="56" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="5385" top="3825" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="56" srcpinname="Output" dstnodeid="39" dstpinname="Input 1" hiddenwhenlocked="1">
    </LINK>
-   <NODE systemname="GetShapeObstaclesSettings (Gea.NaiveGPU)" filename="..\..\..\vl\Gea.NaiveGPU.vl" nodename="GetShapeObstaclesSettings (Gea.NaiveGPU)" componentmode="Hidden" id="57">
-   <BOUNDS type="Node" left="1230" top="1485" width="4215" height="270">
-   </BOUNDS>
-   <PIN pinname="SpheresDataCount" visible="1">
-   </PIN>
-   <PIN pinname="SpheresData Index Offset" visible="1">
-   </PIN>
-   <PIN pinname="Euler/Verlet" visible="1">
-   </PIN>
-   <PIN pinname="Spheres_Data1XYZW" visible="1">
-   </PIN>
-   <PIN pinname="Spheres_Data2XYZW" visible="1">
-   </PIN>
-   <PIN pinname="Enable" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="40" srcpinname="Input Value" dstnodeid="57" dstpinname="NaiveGPU">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="Element Count" dstnodeid="43" dstpinname="Count X">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="QueryShadersEnable" dstnodeid="36" dstpinname="Switch" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="Enable" dstnodeid="56" dstpinname="Input" hiddenwhenlocked="1">
-   </LINK>
    <NODE systemname="ShapeObstaclesCS (DX11.Effect)" filename="dx11\ShapeObstaclesCS.fx" nodename="ShapeObstaclesCS (DX11.Effect)" componentmode="Hidden" id="58">
    <BOUNDS type="Node" left="540" top="4860" width="4905" height="270">
    </BOUNDS>
-   <PIN pinname="SpheresDataBufferCount" visible="1">
+   <PIN pinname="SpheresDataBufferCount" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="SpheresDataBufferOffset" visible="1">
+   <PIN pinname="SpheresDataBufferOffset" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Technique">
    </PIN>
@@ -203,46 +179,6 @@
    <LINK srcnodeid="58" srcpinname="Layer" dstnodeid="38" dstpinname="Layer In">
    </LINK>
    <LINK srcnodeid="58" srcpinname="Query" dstnodeid="36" dstpinname="Input 2" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="Index Offset" dstnodeid="58" dstpinname="GroupIndexOffset">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="Element Count" dstnodeid="58" dstpinname="GroupCount">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="Last Index" dstnodeid="58" dstpinname="GroupLastIndex">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="tStepMult" dstnodeid="58" dstpinname="tStepMult">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="GravityXYZ" dstnodeid="58" dstpinname="GravityXYZ">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="DragMult" dstnodeid="58" dstpinname="DragMult">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="MassMult" dstnodeid="58" dstpinname="MassMult">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="Element Count" dstnodeid="58" dstpinname="Count">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="Scalar" dstnodeid="58" dstpinname="Perlin_Time">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="StrengthXYZ" dstnodeid="58" dstpinname="Perlin_StrenghtXYZ">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="Frequency" dstnodeid="58" dstpinname="Perlin_Freq">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="Lacunarity" dstnodeid="58" dstpinname="Perlin_Lacun">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="Octaves" dstnodeid="58" dstpinname="Perlin_Oct">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="Persistance" dstnodeid="58" dstpinname="Perlin_Pers">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="StrengthXYZ" dstnodeid="58" dstpinname="Brownian_StrenghtXYZ">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="Strength" dstnodeid="58" dstpinname="Strength">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="ConstactThreshold" dstnodeid="58" dstpinname="ContactThreshold">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="SpheresData Index Offset" dstnodeid="58" dstpinname="DataBufferIndexOffset">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="SpheresDataCount" dstnodeid="58" dstpinname="SpheresDataBufferCount">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="SpheresData Index Offset" dstnodeid="58" dstpinname="SpheresDataBufferOffset">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="60">
    <BOUNDS type="Box" left="5430" top="810" width="480" height="480">
@@ -266,8 +202,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="60" srcpinname="Y Output Value" dstnodeid="57" dstpinname="Euler/Verlet">
-   </LINK>
    <NODE id="27" systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden">
    <BOUNDS type="Node" left="4755" top="3285" width="100" height="100">
    </BOUNDS>
@@ -336,7 +270,211 @@
    </NODE>
    <LINK srcnodeid="65" srcpinname="Output" dstnodeid="69" dstpinname="Input 1" hiddenwhenlocked="1">
    </LINK>
-   <NODE systemname="GetShapeObstaclesSettings (Gea.NaiveGPU)" filename="..\..\..\vl\Gea.NaiveGPU.vl" nodename="GetShapeObstaclesSettings (Gea.NaiveGPU)" componentmode="Hidden" id="64">
+   <NODE systemname="ShapeObstaclesCS (DX11.Effect)" filename="dx11\ShapeObstaclesCS.fx" nodename="ShapeObstaclesCS (DX11.Effect)" componentmode="Hidden" id="63">
+   <BOUNDS type="Node" left="7440" top="4860" width="4905" height="270">
+   </BOUNDS>
+   <PIN pinname="SpheresDataBufferCount" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="SpheresDataBufferOffset" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Technique">
+   </PIN>
+   <PIN pinname="SpheresData1Buffer" visible="1">
+   </PIN>
+   <PIN pinname="SpheresData2Buffer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="70" srcpinname="Geometry Out" dstnodeid="63" dstpinname="Geometry">
+   </LINK>
+   <LINK srcnodeid="69" srcpinname="Output" dstnodeid="63" dstpinname="Enabled" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="63" srcpinname="Layer" dstnodeid="68" dstpinname="Layer In">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="62">
+   <BOUNDS type="Box" left="12330" top="810" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12330" top="810" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Euler/Verlet">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="False">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE id="61" systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden">
+   <BOUNDS type="Node" left="11655" top="3285" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Ord Value" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="61" srcpinname="Enum" dstnodeid="63" dstpinname="Technique">
+   </LINK>
+   <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="61" dstpinname="Ord Value">
+   </LINK>
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="71">
+   <BOUNDS type="Node" left="555" top="6015" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="555" top="6015" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Layer Out" dstnodeid="71" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="71" srcpinname="Layer Out" dstnodeid="45" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="Layer Out" dstnodeid="71" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="DynamicBuffer (DX11.Buffer 4d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer 4d)" componentmode="Hidden" id="72">
+   <BOUNDS type="Node" left="3945" top="2400" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3945" top="2400" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="DataXYZW" visible="1" slicecount="4" values="0,0,0,0">
+   </PIN>
+   <PIN pinname="Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Apply" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="72" srcpinname="Buffer" dstnodeid="58" dstpinname="SpheresData1Buffer">
+   </LINK>
+   <NODE systemname="DynamicBuffer (DX11.Buffer 4d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer 4d)" componentmode="Hidden" id="73">
+   <BOUNDS type="Node" left="4245" top="2850" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4245" top="2850" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="DataXYZW" visible="1" slicecount="4" values="0,0,0,0">
+   </PIN>
+   <PIN pinname="Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Apply" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="73" srcpinname="Buffer" dstnodeid="58" dstpinname="SpheresData2Buffer">
+   </LINK>
+   <NODE systemname="DynamicBuffer (DX11.Buffer 4d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer 4d)" componentmode="Hidden" id="75">
+   <BOUNDS type="Node" left="11025" top="2220" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="11025" top="2220" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="DataXYZW" visible="1" slicecount="4" values="0,0,0,0">
+   </PIN>
+   <PIN pinname="Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Apply" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="DynamicBuffer (DX11.Buffer 4d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer 4d)" componentmode="Hidden" id="74">
+   <BOUNDS type="Node" left="11325" top="2670" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="11325" top="2670" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="DataXYZW" visible="1" slicecount="4" values="0,0,0,0">
+   </PIN>
+   <PIN pinname="Buffer" visible="1">
+   </PIN>
+   <PIN pinname="Apply" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="75" srcpinname="Buffer" dstnodeid="63" dstpinname="SpheresData1Buffer">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Buffer" dstnodeid="63" dstpinname="SpheresData2Buffer">
+   </LINK>
+   <NODE systemname="GetShapeObstaclesSettings (Gea.NaiveGPU)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\vl\Gea.NaiveGPU.vl" nodename="GetShapeObstaclesSettings (Gea.NaiveGPU)" componentmode="Hidden" id="57">
+   <BOUNDS type="Node" left="1230" top="1485" width="4215" height="270">
+   </BOUNDS>
+   <PIN pinname="SpheresDataCount" visible="1">
+   </PIN>
+   <PIN pinname="SpheresData Index Offset" visible="1">
+   </PIN>
+   <PIN pinname="Euler/Verlet" visible="1">
+   </PIN>
+   <PIN pinname="Spheres_Data1XYZW" visible="1">
+   </PIN>
+   <PIN pinname="Spheres_Data2XYZW" visible="1">
+   </PIN>
+   <PIN pinname="Enable" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="40" srcpinname="Input Value" dstnodeid="57" dstpinname="NaiveGPU">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Element Count" dstnodeid="43" dstpinname="Count X">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="QueryShadersEnable" dstnodeid="36" dstpinname="Switch" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Enable" dstnodeid="56" dstpinname="Input" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Index Offset" dstnodeid="58" dstpinname="GroupIndexOffset">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Element Count" dstnodeid="58" dstpinname="GroupCount">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Last Index" dstnodeid="58" dstpinname="GroupLastIndex">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="tStepMult" dstnodeid="58" dstpinname="tStepMult">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="GravityXYZ" dstnodeid="58" dstpinname="GravityXYZ">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="DragMult" dstnodeid="58" dstpinname="DragMult">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="MassMult" dstnodeid="58" dstpinname="MassMult">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Element Count" dstnodeid="58" dstpinname="Count">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Scalar" dstnodeid="58" dstpinname="Perlin_Time">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="StrengthXYZ" dstnodeid="58" dstpinname="Perlin_StrenghtXYZ">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Frequency" dstnodeid="58" dstpinname="Perlin_Freq">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Lacunarity" dstnodeid="58" dstpinname="Perlin_Lacun">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Octaves" dstnodeid="58" dstpinname="Perlin_Oct">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Persistance" dstnodeid="58" dstpinname="Perlin_Pers">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="StrengthXYZ" dstnodeid="58" dstpinname="Brownian_StrenghtXYZ">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Strength" dstnodeid="58" dstpinname="Strength">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="ConstactThreshold" dstnodeid="58" dstpinname="ContactThreshold">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="SpheresData Index Offset" dstnodeid="58" dstpinname="DataBufferIndexOffset">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="SpheresDataCount" dstnodeid="58" dstpinname="SpheresDataBufferCount">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="SpheresData Index Offset" dstnodeid="58" dstpinname="SpheresDataBufferOffset">
+   </LINK>
+   <LINK srcnodeid="60" srcpinname="Y Output Value" dstnodeid="57" dstpinname="Euler/Verlet">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Spheres_Data1XYZW" dstnodeid="72" dstpinname="DataXYZW">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Spheres_Data2XYZW" dstnodeid="73" dstpinname="DataXYZW">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Enable" dstnodeid="72" dstpinname="Apply" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Enable" dstnodeid="73" dstpinname="Apply" hiddenwhenlocked="1">
+   </LINK>
+   <NODE systemname="GetShapeObstaclesSettings (Gea.NaiveGPU)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\vl\Gea.NaiveGPU.vl" nodename="GetShapeObstaclesSettings (Gea.NaiveGPU)" componentmode="Hidden" id="64">
    <BOUNDS type="Node" left="8130" top="1485" width="4215" height="270">
    </BOUNDS>
    <PIN pinname="SpheresDataCount" visible="1">
@@ -357,26 +495,6 @@
    <LINK srcnodeid="64" srcpinname="Element Count" dstnodeid="70" dstpinname="Count X">
    </LINK>
    <LINK srcnodeid="64" srcpinname="Enable" dstnodeid="65" dstpinname="Input" hiddenwhenlocked="1">
-   </LINK>
-   <NODE systemname="ShapeObstaclesCS (DX11.Effect)" filename="dx11\ShapeObstaclesCS.fx" nodename="ShapeObstaclesCS (DX11.Effect)" componentmode="Hidden" id="63">
-   <BOUNDS type="Node" left="7440" top="4860" width="4905" height="270">
-   </BOUNDS>
-   <PIN pinname="SpheresDataBufferCount" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="SpheresDataBufferOffset" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Technique">
-   </PIN>
-   <PIN pinname="SpheresData1Buffer" visible="1">
-   </PIN>
-   <PIN pinname="SpheresData2Buffer" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="70" srcpinname="Geometry Out" dstnodeid="63" dstpinname="Geometry">
-   </LINK>
-   <LINK srcnodeid="69" srcpinname="Output" dstnodeid="63" dstpinname="Enabled" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="63" srcpinname="Layer" dstnodeid="68" dstpinname="Layer In">
    </LINK>
    <LINK srcnodeid="64" srcpinname="Index Offset" dstnodeid="63" dstpinname="GroupIndexOffset">
    </LINK>
@@ -418,129 +536,11 @@
    </LINK>
    <LINK srcnodeid="64" srcpinname="SpheresData Index Offset" dstnodeid="63" dstpinname="SpheresDataBufferOffset">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="62">
-   <BOUNDS type="Box" left="12330" top="810" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="12330" top="810" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Euler/Verlet">
-   </PIN>
-   <PIN pinname="Pin Visibility" slicecount="1" values="False">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="64" dstpinname="Euler/Verlet">
    </LINK>
-   <NODE id="61" systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden">
-   <BOUNDS type="Node" left="11655" top="3285" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Ord Value" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Enum" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="61" srcpinname="Enum" dstnodeid="63" dstpinname="Technique">
-   </LINK>
-   <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="61" dstpinname="Ord Value">
-   </LINK>
-   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="71">
-   <BOUNDS type="Node" left="555" top="6015" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="555" top="6015" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Layer 1" visible="1">
-   </PIN>
-   <PIN pinname="Layer Out" visible="1">
-   </PIN>
-   <PIN pinname="Layer 2" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="38" srcpinname="Layer Out" dstnodeid="71" dstpinname="Layer 1">
-   </LINK>
-   <LINK srcnodeid="71" srcpinname="Layer Out" dstnodeid="45" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="68" srcpinname="Layer Out" dstnodeid="71" dstpinname="Layer 2">
-   </LINK>
-   <NODE systemname="DynamicBuffer (DX11.Buffer 4d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer 4d)" componentmode="Hidden" id="72">
-   <BOUNDS type="Node" left="3945" top="2400" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="3945" top="2400" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="DataXYZW" visible="1">
-   </PIN>
-   <PIN pinname="Buffer" visible="1">
-   </PIN>
-   <PIN pinname="Apply" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="57" srcpinname="Spheres_Data1XYZW" dstnodeid="72" dstpinname="DataXYZW">
-   </LINK>
-   <LINK srcnodeid="72" srcpinname="Buffer" dstnodeid="58" dstpinname="SpheresData1Buffer">
-   </LINK>
-   <NODE systemname="DynamicBuffer (DX11.Buffer 4d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer 4d)" componentmode="Hidden" id="73">
-   <BOUNDS type="Node" left="4245" top="2850" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="4245" top="2850" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="DataXYZW" visible="1" slicecount="4" values="0,0,0,0">
-   </PIN>
-   <PIN pinname="Buffer" visible="1">
-   </PIN>
-   <PIN pinname="Apply" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="57" srcpinname="Spheres_Data2XYZW" dstnodeid="73" dstpinname="DataXYZW">
-   </LINK>
-   <LINK srcnodeid="73" srcpinname="Buffer" dstnodeid="58" dstpinname="SpheresData2Buffer">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="Enable" dstnodeid="72" dstpinname="Apply" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="Enable" dstnodeid="73" dstpinname="Apply" hiddenwhenlocked="1">
-   </LINK>
-   <NODE systemname="DynamicBuffer (DX11.Buffer 4d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer 4d)" componentmode="Hidden" id="75">
-   <BOUNDS type="Node" left="11025" top="2220" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="11025" top="2220" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="DataXYZW" visible="1" slicecount="4" values="0,0,0,0">
-   </PIN>
-   <PIN pinname="Buffer" visible="1">
-   </PIN>
-   <PIN pinname="Apply" visible="1" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="DynamicBuffer (DX11.Buffer 4d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer 4d)" componentmode="Hidden" id="74">
-   <BOUNDS type="Node" left="11325" top="2670" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="11325" top="2670" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="DataXYZW" visible="1" slicecount="4" values="0,0,0,0">
-   </PIN>
-   <PIN pinname="Buffer" visible="1">
-   </PIN>
-   <PIN pinname="Apply" visible="1" slicecount="1" values="1">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="64" srcpinname="Spheres_Data1XYZW" dstnodeid="75" dstpinname="DataXYZW">
    </LINK>
    <LINK srcnodeid="64" srcpinname="Spheres_Data2XYZW" dstnodeid="74" dstpinname="DataXYZW">
-   </LINK>
-   <LINK srcnodeid="75" srcpinname="Buffer" dstnodeid="63" dstpinname="SpheresData1Buffer">
-   </LINK>
-   <LINK srcnodeid="74" srcpinname="Buffer" dstnodeid="63" dstpinname="SpheresData2Buffer">
    </LINK>
    <LINK srcnodeid="64" srcpinname="Enable" dstnodeid="75" dstpinname="Apply" hiddenwhenlocked="1">
    </LINK>

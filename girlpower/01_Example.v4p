@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
-   <PATCH nodename="C:\Users\conature\Documents\REPOS\vvvv_50beta38.1_x64\packs\Gea.NaiveGPU\girlpower\01_Example.v4p" systemname="01_Ropes" filename="D:\REPOS\Gea.Springs\examples\01_Ropes.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\conature\Documents\REPOS\VVVV.Gea.NaiveGPU\girlpower\01_Example.v4p" systemname="01_Ropes" filename="D:\REPOS\Gea.Springs\examples\01_Ropes.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="-480" top="204" width="18456" height="10284">
    </BOUNDS>
    <PACK Name="dx11" Version="1.3.1">
@@ -316,28 +316,6 @@
    <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <NODE systemname="PointEmitter (Gea.ParticlesGPU)" filename="..\nodes\modules\02_Emitters\PointEmitter\PointEmitter (Gea.ParticlesGPU).v4p" nodename="PointEmitter (Gea.ParticlesGPU)" componentmode="Hidden" id="262">
-   <BOUNDS type="Node" left="1080" top="6735" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Emitter Pos" slicecount="3" visible="1" values="0,0,0">
-   </PIN>
-   <PIN pinname="Query" visible="1">
-   </PIN>
-   <PIN pinname="Particles Per Frame" visible="1" slicecount="1" values="1">
-   </PIN>
-   <BOUNDS type="Window" left="10500" top="6630" width="18045" height="7785">
-   </BOUNDS>
-   <PIN pinname="Emitter Col" visible="1">
-   </PIN>
-   <PIN pinname="Size" visible="1">
-   </PIN>
-   <PIN pinname="SizeRndAmount" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="PosRndAmount" slicecount="1" values="0.07">
-   </PIN>
-   </NODE>
    <NODE systemname="TimeStamp (DX11.Query)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="TimeStamp (DX11.Query)" componentmode="Hidden" id="264">
    <BOUNDS type="Node" left="3135" top="7455" width="100" height="100">
    </BOUNDS>
@@ -363,9 +341,9 @@
    <NODE systemname="EmittedAccumulator (Gea.ParticlesGPU)" filename="..\nodes\modules\02_Emitters\EmittedAccumulator\EmittedAccumulator (Gea.ParticlesGPU).v4p" nodename="EmittedAccumulator (Gea.ParticlesGPU)" componentmode="Hidden" id="268">
    <BOUNDS type="Node" left="1080" top="7290" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="2310" top="465" width="11940" height="13935">
+   <BOUNDS type="Window" left="2310" top="465" width="14925" height="13935">
    </BOUNDS>
-   <PIN pinname="Layer In" visible="1">
+   <PIN pinname="Layer In" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -378,8 +356,6 @@
    <PIN pinname="Enabled" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="262" srcpinname="Layer" dstnodeid="268" dstpinname="Layer In">
-   </LINK>
    <NODE systemname="Perlin (2d)" nodename="Perlin (2d)" componentmode="Hidden" id="273">
    <BOUNDS type="Node" left="1080" top="5295" width="100" height="100">
    </BOUNDS>
@@ -472,18 +448,16 @@
    </NODE>
    <LINK srcnodeid="279" srcpinname="Y Output Value" dstnodeid="278" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="278" srcpinname="Output" dstnodeid="262" dstpinname="Emitter Pos">
-   </LINK>
    <NODE systemname="LifeTimeFader (DX11.Effect)" filename="..\nodes\modules\Deformers\dx11\LifeTimeFader.fx" nodename="LifeTimeFader (DX11.Effect)" componentmode="Hidden" id="281">
    <BOUNDS type="Node" left="6978" top="7347" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Geometry" visible="1">
+   <PIN pinname="Geometry" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="groupCount" visible="1">
+   <PIN pinname="groupCount" visible="1" slicecount="1" values="65536">
    </PIN>
-   <PIN pinname="groupIndexOffset" visible="1">
+   <PIN pinname="groupIndexOffset" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="SizeMult" visible="1">
    </PIN>
@@ -497,24 +471,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="281" srcpinname="Layer" dstnodeid="247" dstpinname="Layer 1">
-   </LINK>
-   <NODE systemname="GroupDispatch (Gea.NaiveGPU)" filename="..\nodes\modules\Utils\GroupDispatch (Gea.NaiveGPU).v4p" nodename="GroupDispatch (Gea.NaiveGPU)" componentmode="Hidden" id="284">
-   <BOUNDS type="Node" left="6873" top="6732" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Geometry Out" visible="1">
-   </PIN>
-   <PIN pinname="Count" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Start Offset" visible="1">
-   </PIN>
-   <PIN pinname="Group Index" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="284" srcpinname="Geometry Out" dstnodeid="281" dstpinname="Geometry">
-   </LINK>
-   <LINK srcnodeid="284" srcpinname="Element Count" dstnodeid="281" dstpinname="groupCount">
-   </LINK>
-   <LINK srcnodeid="284" srcpinname="Index Offset" dstnodeid="281" dstpinname="groupIndexOffset">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="285">
    <BOUNDS type="Box" left="8838" top="6762" width="795" height="240">
@@ -586,8 +542,6 @@
    </LINK>
    <LINK srcnodeid="296" srcpinname="Output" dstnodeid="295" dstpinname="Hue">
    </LINK>
-   <LINK srcnodeid="295" srcpinname="Output" dstnodeid="262" dstpinname="Emitter Col">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="323">
    <BOUNDS type="Box" left="3435" top="6060" width="795" height="240">
    </BOUNDS>
@@ -602,8 +556,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Size">
    </PIN>
    </NODE>
-   <LINK srcnodeid="323" srcpinname="Y Output Value" dstnodeid="262" dstpinname="Size">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="327">
    <BOUNDS type="Box" left="9483" top="7197" width="480" height="480">
    </BOUNDS>
@@ -641,52 +593,6 @@
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="261" srcpinname="Y Output Value" dstnodeid="260" dstpinname="Enabled">
-   </LINK>
-   <NODE systemname="NaiveGPU (Gea.NaiveGPU)" filename="..\nodes\modules\NaiveGPU (Gea.NaiveGPU).v4p" componentmode="Hidden" id="358" nodename="..\nodes\modules\NaiveGPU (Gea.NaiveGPU).v4p">
-   <BOUNDS type="Node" left="900" top="12105" width="6675" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="900" top="12105" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="5172" top="276" width="11772" height="11244">
-   </BOUNDS>
-   <PIN pinname="Emitters Layer" visible="1">
-   </PIN>
-   <PIN pinname="Modifiers Layer" visible="1">
-   </PIN>
-   <PIN pinname="Constraints Layer" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Deformers Layer" visible="1">
-   </PIN>
-   <PIN pinname="View" visible="1">
-   </PIN>
-   <PIN pinname="Projection" visible="1">
-   </PIN>
-   <PIN pinname="Custom Render Semantics" visible="-1" pintype="Input" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Custom Resource Semantics" visible="-1" pintype="Input" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Force Reset" visible="1" pintype="Input" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Buffers" visible="1">
-   </PIN>
-   <PIN pinname="Custom Modifiers - Output Node" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Custom Modifiers" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="VolumeField tW" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Custom Constraints Layer - Output Node" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="241" srcpinname="Output Node" dstnodeid="358" dstpinname="Custom Emitters">
-   </LINK>
-   <LINK srcnodeid="244" srcpinname="Output Node" dstnodeid="358" dstpinname="Deformers Layer">
-   </LINK>
-   <LINK srcnodeid="256" srcpinname="Input Value" dstnodeid="358" dstpinname="View">
-   </LINK>
-   <LINK srcnodeid="257" srcpinname="Input Value" dstnodeid="358" dstpinname="Projection">
-   </LINK>
-   <LINK srcnodeid="358" srcpinname="Buffers" dstnodeid="260" dstpinname="Buffers">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="359">
    <BOUNDS type="Box" left="22374" top="9750" width="975" height="255">
@@ -786,16 +692,6 @@
    <BOUNDS type="Box" left="22134" top="8760" width="2250" height="480">
    </BOUNDS>
    </NODE>
-   <NODE systemname="Controller (Gea.NaiveGPU Wrapper)" filename="..\nodes\vl\Gea.NaiveGPU.vl" nodename="Controller (Gea.NaiveGPU Wrapper)" componentmode="Hidden" id="366">
-   <BOUNDS type="Node" left="7968" top="2580" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="qwer" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="NaiveGPU" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="7968" top="2580">
-   </BOUNDS>
-   </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="371" systemname="IOBox (String)">
    <BOUNDS type="Box" left="7968" top="1452" width="795" height="240">
    </BOUNDS>
@@ -833,8 +729,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="370" srcpinname="Enum" dstnodeid="369" dstpinname="Receive String">
-   </LINK>
-   <LINK srcnodeid="369" srcpinname="Input Value" dstnodeid="366" dstpinname="NaiveGPU">
    </LINK>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="375">
    <BOUNDS type="Node" left="900" top="15630" width="17910" height="270">
@@ -910,8 +804,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Force Reset|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="381" srcpinname="Y Output Value" dstnodeid="358" dstpinname="Force Reset">
-   </LINK>
    <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="382">
    <BOUNDS type="Node" left="20721" top="14559" width="100" height="100">
    </BOUNDS>
@@ -1063,14 +955,12 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Switch" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="397" srcpinname="Output" dstnodeid="382" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="358" srcpinname="Buffers" dstnodeid="397" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="397" srcpinname="Output" dstnodeid="386" dstpinname="Input Node">
    </LINK>
@@ -1107,7 +997,7 @@
    </PIN>
    <BOUNDS type="Window" left="375" top="4830" width="22995" height="11460">
    </BOUNDS>
-   <PIN pinname="Buffers" visible="1">
+   <PIN pinname="Buffers" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
@@ -1130,8 +1020,6 @@
    <PIN pinname="Index" visible="1" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="358" srcpinname="Buffers" dstnodeid="401" dstpinname="Buffers">
-   </LINK>
    <NODE systemname="PhongDirectional (DX11.Effect)" filename="%VVVV%\packs\dx11\nodes\dx11\PhongDirectional.fx" nodename="PhongDirectional (DX11.Effect)" componentmode="Hidden" id="402">
    <BOUNDS type="Node" left="3525" top="15015" width="100" height="100">
    </BOUNDS>
@@ -1187,7 +1075,7 @@
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
-   <PIN pinname="Buffers" visible="1">
+   <PIN pinname="Buffers" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Contruct Geometry" slicecount="1" values="0">
    </PIN>
@@ -1221,8 +1109,6 @@
    <LINK srcnodeid="406" srcpinname="XYZ" dstnodeid="410" dstpinname="Light DirectionXYZ">
    </LINK>
    <LINK srcnodeid="409" srcpinname="Geometry Out" dstnodeid="410" dstpinname="Geometry">
-   </LINK>
-   <LINK srcnodeid="358" srcpinname="Buffers" dstnodeid="409" dstpinname="Buffers">
    </LINK>
    <LINK srcnodeid="410" srcpinname="Layer" dstnodeid="375" dstpinname="Layer 3">
    </LINK>
@@ -3013,7 +2899,7 @@
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
-   <PIN pinname="Buffers" visible="1">
+   <PIN pinname="Buffers" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Contruct Geometry" slicecount="1" values="0">
    </PIN>
@@ -3047,8 +2933,6 @@
    <LINK srcnodeid="406" srcpinname="XYZ" dstnodeid="563" dstpinname="Light DirectionXYZ">
    </LINK>
    <LINK srcnodeid="564" srcpinname="Geometry Out" dstnodeid="563" dstpinname="Geometry">
-   </LINK>
-   <LINK srcnodeid="358" srcpinname="Buffers" dstnodeid="564" dstpinname="Buffers">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="562">
    <BOUNDS type="Box" left="13800" top="13965" width="480" height="480">
@@ -3105,5 +2989,121 @@
    <LINK srcnodeid="560" srcpinname="Y Output Value" dstnodeid="564" dstpinname="Index">
    </LINK>
    <LINK srcnodeid="563" srcpinname="Layer" dstnodeid="375" dstpinname="Layer 4">
+   </LINK>
+   <NODE systemname="GroupDispatch (Gea.NaiveGPU)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\modules\Utils\GroupDispatch (Gea.NaiveGPU).v4p" nodename="GroupDispatch (Gea.NaiveGPU)" componentmode="Hidden" id="284">
+   <BOUNDS type="Node" left="6870" top="6735" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Start Offset" visible="1">
+   </PIN>
+   <PIN pinname="Group Index" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="284" srcpinname="Geometry Out" dstnodeid="281" dstpinname="Geometry">
+   </LINK>
+   <LINK srcnodeid="284" srcpinname="Element Count" dstnodeid="281" dstpinname="groupCount">
+   </LINK>
+   <LINK srcnodeid="284" srcpinname="Index Offset" dstnodeid="281" dstpinname="groupIndexOffset">
+   </LINK>
+   <NODE systemname="PointEmitter (Gea.ParticlesGPU)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\modules\02_Emitters\PointEmitter\PointEmitter (Gea.ParticlesGPU).v4p" nodename="PointEmitter (Gea.ParticlesGPU)" componentmode="Hidden" id="262">
+   <BOUNDS type="Node" left="1080" top="6735" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Emitter Pos" slicecount="3" visible="1" values="0,0,0">
+   </PIN>
+   <PIN pinname="Query" visible="1">
+   </PIN>
+   <PIN pinname="Particles Per Frame" visible="1" slicecount="1" values="1">
+   </PIN>
+   <BOUNDS type="Window" left="10500" top="6630" width="18045" height="7785">
+   </BOUNDS>
+   <PIN pinname="Emitter Col" visible="1">
+   </PIN>
+   <PIN pinname="Size" visible="1">
+   </PIN>
+   <PIN pinname="SizeRndAmount" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="PosRndAmount" slicecount="1" values="0.07">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="262" srcpinname="Layer" dstnodeid="268" dstpinname="Layer In">
+   </LINK>
+   <LINK srcnodeid="278" srcpinname="Output" dstnodeid="262" dstpinname="Emitter Pos">
+   </LINK>
+   <LINK srcnodeid="295" srcpinname="Output" dstnodeid="262" dstpinname="Emitter Col">
+   </LINK>
+   <LINK srcnodeid="323" srcpinname="Y Output Value" dstnodeid="262" dstpinname="Size">
+   </LINK>
+   <NODE systemname="NaiveGPU (Gea.NaiveGPU)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\modules\NaiveGPU (Gea.NaiveGPU).v4p" componentmode="Hidden" id="358" nodename="NaiveGPU (Gea.NaiveGPU)">
+   <BOUNDS type="Node" left="900" top="12105" width="9135" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="900" top="12105" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5172" top="276" width="11772" height="11244">
+   </BOUNDS>
+   <PIN pinname="Emitters Layer" visible="1">
+   </PIN>
+   <PIN pinname="Modifiers Layer" visible="1">
+   </PIN>
+   <PIN pinname="Constraints Layer" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Deformers Layer" visible="1">
+   </PIN>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Custom Render Semantics" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Custom Resource Semantics" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Force Reset" visible="1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Buffers" visible="1">
+   </PIN>
+   <PIN pinname="Custom Modifiers - Output Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Custom Modifiers" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="VolumeField tW" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Custom Constraints Layer - Output Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="241" srcpinname="Output Node" dstnodeid="358" dstpinname="Custom Emitters">
+   </LINK>
+   <LINK srcnodeid="244" srcpinname="Output Node" dstnodeid="358" dstpinname="Deformers Layer">
+   </LINK>
+   <LINK srcnodeid="256" srcpinname="Input Value" dstnodeid="358" dstpinname="View">
+   </LINK>
+   <LINK srcnodeid="257" srcpinname="Input Value" dstnodeid="358" dstpinname="Projection">
+   </LINK>
+   <LINK srcnodeid="358" srcpinname="Buffers" dstnodeid="260" dstpinname="Buffers">
+   </LINK>
+   <LINK srcnodeid="381" srcpinname="Y Output Value" dstnodeid="358" dstpinname="Force Reset">
+   </LINK>
+   <LINK srcnodeid="358" srcpinname="Buffers" dstnodeid="397" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="358" srcpinname="Buffers" dstnodeid="401" dstpinname="Buffers">
+   </LINK>
+   <LINK srcnodeid="358" srcpinname="Buffers" dstnodeid="409" dstpinname="Buffers">
+   </LINK>
+   <LINK srcnodeid="358" srcpinname="Buffers" dstnodeid="564" dstpinname="Buffers">
+   </LINK>
+   <NODE systemname="Controller (Gea.NaiveGPU Wrapper)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\vl\Gea.NaiveGPU.vl" nodename="Controller (Gea.NaiveGPU Wrapper)" componentmode="Hidden" id="366">
+   <BOUNDS type="Node" left="7968" top="2580" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="qwer" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="NaiveGPU" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="7968" top="2580">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="369" srcpinname="Input Value" dstnodeid="366" dstpinname="NaiveGPU">
    </LINK>
    </PATCH>

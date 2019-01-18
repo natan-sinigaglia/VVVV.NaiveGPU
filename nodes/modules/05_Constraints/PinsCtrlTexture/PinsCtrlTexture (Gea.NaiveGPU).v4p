@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha37.1.dtd" >
-   <PATCH nodename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\05_Constraints\PinsCtrlTexture\PinsCtrlTexture (Gea.NaiveGPU).v4p" systemname="Targets (Verlet)" filename="C:\Users\natan\Documents\Repos\Mousiké\Research\VerletSimulation\modules\Targets\Targets (Verlet).v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\conature\Documents\REPOS\VVVV.Gea.NaiveGPU\nodes\modules\05_Constraints\PinsCtrlTexture\PinsCtrlTexture (Gea.NaiveGPU).v4p" systemname="Targets (Verlet)" filename="C:\Users\natan\Documents\Repos\Mousiké\Research\VerletSimulation\modules\Targets\Targets (Verlet).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="1125" top="1605" width="15705" height="7500">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.2">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="129">
    <BOUNDS type="Node" left="3690" top="3165" width="100" height="100">
@@ -71,7 +71,7 @@
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
-   <PIN pinname="Count X" visible="1" slicecount="2" values="2048,4096">
+   <PIN pinname="Count X" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Thread Group X" visible="1" slicecount="1" values="64">
    </PIN>
@@ -173,7 +173,7 @@
    </PIN>
    <PIN pinname="Brownian_StrenghtXYZ" visible="1">
    </PIN>
-   <PIN pinname="Strength" visible="1">
+   <PIN pinname="Strength" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Pins Texture" visible="1">
    </PIN>
@@ -187,60 +187,6 @@
    <LINK srcnodeid="151" srcpinname="Layer" dstnodeid="154" dstpinname="Layer In">
    </LINK>
    <LINK srcnodeid="151" srcpinname="Query" dstnodeid="152" dstpinname="Input 2" hiddenwhenlocked="1">
-   </LINK>
-   <NODE systemname="GetPinsCtrlTextureSettings (Gea.NaiveGPU)" filename="..\..\..\vl\Gea.NaiveGPU.vl" nodename="GetPinsCtrlTextureSettings (Gea.NaiveGPU)" componentmode="Hidden" id="164">
-   <BOUNDS type="Node" left="990" top="1605" width="4215" height="270">
-   </BOUNDS>
-   <PIN pinname="Strength" visible="1">
-   </PIN>
-   <PIN pinname="PinsTextureName" visible="1">
-   </PIN>
-   <PIN pinname="Euler/Verlet" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Enable" visible="1">
-   </PIN>
-   <PIN pinname="Index Offset" visible="1">
-   </PIN>
-   <PIN pinname="Last Index" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="156" srcpinname="Input Value" dstnodeid="164" dstpinname="NaiveGPU">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="Element Count" dstnodeid="159" dstpinname="Count X">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="QueryShadersEnable" dstnodeid="152" dstpinname="Switch" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="Index Offset" dstnodeid="151" dstpinname="GroupIndexOffset">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="Element Count" dstnodeid="151" dstpinname="GroupCount">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="Last Index" dstnodeid="151" dstpinname="GroupLastIndex">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="tStepMult" dstnodeid="151" dstpinname="tStepMult">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="GravityXYZ" dstnodeid="151" dstpinname="GravityXYZ">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="DragMult" dstnodeid="151" dstpinname="DragMult">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="MassMult" dstnodeid="151" dstpinname="MassMult">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="Element Count" dstnodeid="151" dstpinname="Count">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="Scalar" dstnodeid="151" dstpinname="Perlin_Time">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="StrengthXYZ" dstnodeid="151" dstpinname="Perlin_StrenghtXYZ">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="Frequency" dstnodeid="151" dstpinname="Perlin_Freq">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="Lacunarity" dstnodeid="151" dstpinname="Perlin_Lacun">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="Octaves" dstnodeid="151" dstpinname="Perlin_Oct">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="Persistance" dstnodeid="151" dstpinname="Perlin_Pers">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="StrengthXYZ" dstnodeid="151" dstpinname="Brownian_StrenghtXYZ">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="Strength" dstnodeid="151" dstpinname="Strength">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="165">
    <BOUNDS type="Box" left="3690" top="2355" width="975" height="255">
@@ -324,8 +270,6 @@
    <PIN pinname="Filter Index" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="164" srcpinname="PinsTextureName" dstnodeid="170" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="169" srcpinname="Input Value" dstnodeid="170" dstpinname="Filter">
    </LINK>
    <LINK srcnodeid="170" srcpinname="Filter Index" dstnodeid="166" dstpinname="Index">
@@ -354,8 +298,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="164" srcpinname="Enable" dstnodeid="172" dstpinname="Input" hiddenwhenlocked="1">
-   </LINK>
    <LINK srcnodeid="172" srcpinname="Output" dstnodeid="155" dstpinname="Input 1" hiddenwhenlocked="1">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="173">
@@ -400,8 +342,6 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="176" srcpinname="Y Output Value" dstnodeid="164" dstpinname="Euler/Verlet">
-   </LINK>
    <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="193">
    <BOUNDS type="Node" left="11040" top="3165" width="100" height="100">
    </BOUNDS>
@@ -431,7 +371,7 @@
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
-   <PIN pinname="Count X" visible="1" slicecount="2" values="2048,4096">
+   <PIN pinname="Count X" visible="1" slicecount="3" values="2048,4096,1024">
    </PIN>
    <PIN pinname="Thread Group X" visible="1" slicecount="1" values="64">
    </PIN>
@@ -473,7 +413,7 @@
    </PIN>
    <PIN pinname="Brownian_StrenghtXYZ" visible="1">
    </PIN>
-   <PIN pinname="Strength" visible="1" slicecount="2" values="1,1">
+   <PIN pinname="Strength" visible="1" slicecount="3" values="1,1,1">
    </PIN>
    <PIN pinname="Pins Texture" visible="1" slicecount="2" values=",">
    </PIN>
@@ -485,60 +425,6 @@
    <LINK srcnodeid="190" srcpinname="Output" dstnodeid="188" dstpinname="Enabled" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="188" srcpinname="Layer" dstnodeid="189" dstpinname="Layer In">
-   </LINK>
-   <NODE systemname="GetPinsCtrlTextureSettings (Gea.NaiveGPU)" filename="..\..\..\vl\Gea.NaiveGPU.vl" nodename="GetPinsCtrlTextureSettings (Gea.NaiveGPU)" componentmode="Hidden" id="187">
-   <BOUNDS type="Node" left="8340" top="1605" width="4215" height="270">
-   </BOUNDS>
-   <PIN pinname="Strength" visible="1">
-   </PIN>
-   <PIN pinname="PinsTextureName" visible="1">
-   </PIN>
-   <PIN pinname="Euler/Verlet" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Enable" visible="1">
-   </PIN>
-   <PIN pinname="Index Offset" visible="1">
-   </PIN>
-   <PIN pinname="Last Index" visible="1">
-   </PIN>
-   <PIN pinname="Element Count" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="156" srcpinname="Input Value" dstnodeid="187" dstpinname="NaiveGPU">
-   </LINK>
-   <LINK srcnodeid="187" srcpinname="Element Count" dstnodeid="191" dstpinname="Count X">
-   </LINK>
-   <LINK srcnodeid="187" srcpinname="Index Offset" dstnodeid="188" dstpinname="GroupIndexOffset">
-   </LINK>
-   <LINK srcnodeid="187" srcpinname="Element Count" dstnodeid="188" dstpinname="GroupCount">
-   </LINK>
-   <LINK srcnodeid="187" srcpinname="Last Index" dstnodeid="188" dstpinname="GroupLastIndex">
-   </LINK>
-   <LINK srcnodeid="187" srcpinname="tStepMult" dstnodeid="188" dstpinname="tStepMult">
-   </LINK>
-   <LINK srcnodeid="187" srcpinname="GravityXYZ" dstnodeid="188" dstpinname="GravityXYZ">
-   </LINK>
-   <LINK srcnodeid="187" srcpinname="DragMult" dstnodeid="188" dstpinname="DragMult">
-   </LINK>
-   <LINK srcnodeid="187" srcpinname="MassMult" dstnodeid="188" dstpinname="MassMult">
-   </LINK>
-   <LINK srcnodeid="187" srcpinname="Element Count" dstnodeid="188" dstpinname="Count">
-   </LINK>
-   <LINK srcnodeid="187" srcpinname="Scalar" dstnodeid="188" dstpinname="Perlin_Time">
-   </LINK>
-   <LINK srcnodeid="187" srcpinname="StrengthXYZ" dstnodeid="188" dstpinname="Perlin_StrenghtXYZ">
-   </LINK>
-   <LINK srcnodeid="187" srcpinname="Frequency" dstnodeid="188" dstpinname="Perlin_Freq">
-   </LINK>
-   <LINK srcnodeid="187" srcpinname="Lacunarity" dstnodeid="188" dstpinname="Perlin_Lacun">
-   </LINK>
-   <LINK srcnodeid="187" srcpinname="Octaves" dstnodeid="188" dstpinname="Perlin_Oct">
-   </LINK>
-   <LINK srcnodeid="187" srcpinname="Persistance" dstnodeid="188" dstpinname="Perlin_Pers">
-   </LINK>
-   <LINK srcnodeid="187" srcpinname="StrengthXYZ" dstnodeid="188" dstpinname="Brownian_StrenghtXYZ">
-   </LINK>
-   <LINK srcnodeid="187" srcpinname="Strength" dstnodeid="188" dstpinname="Strength">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="186">
    <BOUNDS type="Box" left="11040" top="2355" width="975" height="255">
@@ -613,7 +499,7 @@
    <NODE systemname="Sift (String)" nodename="Sift (String)" componentmode="Hidden" id="181">
    <BOUNDS type="Node" left="11295" top="3705" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="2" values="Ropes,Cloth">
+   <PIN pinname="Input" visible="1" slicecount="3" values="Ropes,Cloth,Cloth2">
    </PIN>
    <PIN pinname="Filter" visible="1">
    </PIN>
@@ -622,8 +508,6 @@
    <PIN pinname="Filter Index" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="187" srcpinname="PinsTextureName" dstnodeid="181" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="182" srcpinname="Input Value" dstnodeid="181" dstpinname="Filter">
    </LINK>
    <LINK srcnodeid="181" srcpinname="Filter Index" dstnodeid="185" dstpinname="Index">
@@ -652,8 +536,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="187" srcpinname="Enable" dstnodeid="179" dstpinname="Input" hiddenwhenlocked="1">
-   </LINK>
    <LINK srcnodeid="179" srcpinname="Output" dstnodeid="190" dstpinname="Input 1" hiddenwhenlocked="1">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="178">
@@ -698,8 +580,6 @@
    <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="177" srcpinname="Y Output Value" dstnodeid="187" dstpinname="Euler/Verlet">
-   </LINK>
    <LINK srcnodeid="176" srcpinname="Y Output Value" dstnodeid="171" dstpinname="Ord Value">
    </LINK>
    <LINK srcnodeid="177" srcpinname="Y Output Value" dstnodeid="180" dstpinname="Ord Value">
@@ -721,5 +601,125 @@
    <LINK srcnodeid="194" srcpinname="Layer Out" dstnodeid="161" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="189" srcpinname="Layer Out" dstnodeid="194" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="GetPinsCtrlTextureSettings (Gea.NaiveGPU)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\vl\Gea.NaiveGPU.vl" nodename="GetPinsCtrlTextureSettings (Gea.NaiveGPU)" componentmode="Hidden" id="164">
+   <BOUNDS type="Node" left="990" top="1605" width="4215" height="270">
+   </BOUNDS>
+   <PIN pinname="Strength" visible="1">
+   </PIN>
+   <PIN pinname="PinsTextureName" visible="1">
+   </PIN>
+   <PIN pinname="Euler/Verlet" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Enable" visible="1">
+   </PIN>
+   <PIN pinname="Index Offset" visible="1">
+   </PIN>
+   <PIN pinname="Last Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="156" srcpinname="Input Value" dstnodeid="164" dstpinname="NaiveGPU">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="Element Count" dstnodeid="159" dstpinname="Count X">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="QueryShadersEnable" dstnodeid="152" dstpinname="Switch" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="Index Offset" dstnodeid="151" dstpinname="GroupIndexOffset">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="Element Count" dstnodeid="151" dstpinname="GroupCount">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="Last Index" dstnodeid="151" dstpinname="GroupLastIndex">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="tStepMult" dstnodeid="151" dstpinname="tStepMult">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="GravityXYZ" dstnodeid="151" dstpinname="GravityXYZ">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="DragMult" dstnodeid="151" dstpinname="DragMult">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="MassMult" dstnodeid="151" dstpinname="MassMult">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="Element Count" dstnodeid="151" dstpinname="Count">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="Scalar" dstnodeid="151" dstpinname="Perlin_Time">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="StrengthXYZ" dstnodeid="151" dstpinname="Perlin_StrenghtXYZ">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="Frequency" dstnodeid="151" dstpinname="Perlin_Freq">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="Lacunarity" dstnodeid="151" dstpinname="Perlin_Lacun">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="Octaves" dstnodeid="151" dstpinname="Perlin_Oct">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="Persistance" dstnodeid="151" dstpinname="Perlin_Pers">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="StrengthXYZ" dstnodeid="151" dstpinname="Brownian_StrenghtXYZ">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="Strength" dstnodeid="151" dstpinname="Strength">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="PinsTextureName" dstnodeid="170" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="Enable" dstnodeid="172" dstpinname="Input" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="176" srcpinname="Y Output Value" dstnodeid="164" dstpinname="Euler/Verlet">
+   </LINK>
+   <NODE systemname="GetPinsCtrlTextureSettings (Gea.NaiveGPU)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\vl\Gea.NaiveGPU.vl" nodename="GetPinsCtrlTextureSettings (Gea.NaiveGPU)" componentmode="Hidden" id="187">
+   <BOUNDS type="Node" left="8340" top="1605" width="4215" height="270">
+   </BOUNDS>
+   <PIN pinname="Strength" visible="1">
+   </PIN>
+   <PIN pinname="PinsTextureName" visible="1">
+   </PIN>
+   <PIN pinname="Euler/Verlet" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Enable" visible="1">
+   </PIN>
+   <PIN pinname="Index Offset" visible="1">
+   </PIN>
+   <PIN pinname="Last Index" visible="1">
+   </PIN>
+   <PIN pinname="Element Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="156" srcpinname="Input Value" dstnodeid="187" dstpinname="NaiveGPU">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Element Count" dstnodeid="191" dstpinname="Count X">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Index Offset" dstnodeid="188" dstpinname="GroupIndexOffset">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Element Count" dstnodeid="188" dstpinname="GroupCount">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Last Index" dstnodeid="188" dstpinname="GroupLastIndex">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="tStepMult" dstnodeid="188" dstpinname="tStepMult">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="GravityXYZ" dstnodeid="188" dstpinname="GravityXYZ">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="DragMult" dstnodeid="188" dstpinname="DragMult">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="MassMult" dstnodeid="188" dstpinname="MassMult">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Element Count" dstnodeid="188" dstpinname="Count">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Scalar" dstnodeid="188" dstpinname="Perlin_Time">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="StrengthXYZ" dstnodeid="188" dstpinname="Perlin_StrenghtXYZ">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Frequency" dstnodeid="188" dstpinname="Perlin_Freq">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Lacunarity" dstnodeid="188" dstpinname="Perlin_Lacun">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Octaves" dstnodeid="188" dstpinname="Perlin_Oct">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Persistance" dstnodeid="188" dstpinname="Perlin_Pers">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="StrengthXYZ" dstnodeid="188" dstpinname="Brownian_StrenghtXYZ">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Strength" dstnodeid="188" dstpinname="Strength">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="PinsTextureName" dstnodeid="181" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="187" srcpinname="Enable" dstnodeid="179" dstpinname="Input" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="177" srcpinname="Y Output Value" dstnodeid="187" dstpinname="Euler/Verlet">
    </LINK>
    </PATCH>

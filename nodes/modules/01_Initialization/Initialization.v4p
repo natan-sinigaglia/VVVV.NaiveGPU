@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha37.1.dtd" >
-   <PATCH nodename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\01_Initialization\Initialization.v4p" systemname="initialization" filename="C:\Users\MLF\Dropbox (MLF)\0158_Distortions_in_Spacetime_01_Build_Natan\vvvv\Gea.ParticlesGPU\modules\initialization\initialization.v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\conature\Documents\REPOS\VVVV.Gea.NaiveGPU\nodes\modules\01_Initialization\Initialization.v4p" systemname="initialization" filename="C:\Users\MLF\Dropbox (MLF)\0158_Distortions_in_Spacetime_01_Build_Natan\vvvv\Gea.ParticlesGPU\modules\initialization\initialization.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="1695" top="7665" width="9315" height="7395">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.2">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="1">
    <BOUNDS type="Box" left="480" top="4380" width="795" height="240">
@@ -29,11 +29,11 @@
    </PIN>
    <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="GroupIndexOffset" visible="1">
+   <PIN pinname="GroupIndexOffset" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="GroupCount" visible="1">
+   <PIN pinname="GroupCount" visible="1" slicecount="1" values="65536">
    </PIN>
-   <PIN pinname="GroupLastIndex" visible="1">
+   <PIN pinname="GroupLastIndex" visible="1" slicecount="1" values="65535">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="13">
@@ -93,36 +93,12 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1215" top="2445" width="3000" height="3000">
    </BOUNDS>
-   <PIN pinname="Count X" visible="1">
+   <PIN pinname="Count X" visible="1" slicecount="1" values="65536">
    </PIN>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="GetInitializationSettings (Gea.NaiveGPU)" filename="..\..\vl\Gea.NaiveGPU.vl" nodename="GetInitializationSettings (Gea.NaiveGPU)" componentmode="Hidden" id="20">
-   <BOUNDS type="Node" left="1215" top="1620" width="2775" height="270">
-   </BOUNDS>
-   <PIN pinname="ElementCount" visible="1">
-   </PIN>
-   <PIN pinname="IndexOffset" visible="1">
-   </PIN>
-   <PIN pinname="LastIndex" visible="1">
-   </PIN>
-   <PIN pinname="Type" visible="1">
-   </PIN>
-   <PIN pinname="Euler/Verlet" visible="1" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="16" srcpinname="Input Value" dstnodeid="20" dstpinname="NaiveGPU">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="ElementCount" dstnodeid="19" dstpinname="Count X">
-   </LINK>
    <LINK srcnodeid="19" srcpinname="Geometry Out" dstnodeid="2" dstpinname="Geometry">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="IndexOffset" dstnodeid="2" dstpinname="GroupIndexOffset">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="ElementCount" dstnodeid="2" dstpinname="GroupCount">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="LastIndex" dstnodeid="2" dstpinname="GroupLastIndex">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="22">
    <BOUNDS type="Box" left="3840" top="660" width="480" height="480">
@@ -148,8 +124,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Euler/Verlet">
-   </LINK>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="23">
    <BOUNDS type="Node" left="510" top="3735" width="100" height="100">
    </BOUNDS>
@@ -179,11 +153,11 @@
    </PIN>
    <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="GroupIndexOffset" visible="1">
+   <PIN pinname="GroupIndexOffset" visible="1" slicecount="3" values="65536,67584,71680">
    </PIN>
-   <PIN pinname="GroupCount" visible="1">
+   <PIN pinname="GroupCount" visible="1" slicecount="3" values="2048,4096,1024">
    </PIN>
-   <PIN pinname="GroupLastIndex" visible="1">
+   <PIN pinname="GroupLastIndex" visible="1" slicecount="3" values="67583,71679,72703">
    </PIN>
    </NODE>
    <NODE systemname="DispatcherX (DX11.Drawer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DispatcherX (DX11.Drawer)" componentmode="Hidden" id="26">
@@ -191,36 +165,12 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4815" top="2445" width="3000" height="3000">
    </BOUNDS>
-   <PIN pinname="Count X" visible="1">
+   <PIN pinname="Count X" visible="1" slicecount="3" values="2048,4096,1024">
    </PIN>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="GetInitializationSettings (Gea.NaiveGPU)" filename="..\..\vl\Gea.NaiveGPU.vl" nodename="GetInitializationSettings (Gea.NaiveGPU)" componentmode="Hidden" id="25">
-   <BOUNDS type="Node" left="4815" top="1620" width="2775" height="270">
-   </BOUNDS>
-   <PIN pinname="ElementCount" visible="1">
-   </PIN>
-   <PIN pinname="IndexOffset" visible="1">
-   </PIN>
-   <PIN pinname="LastIndex" visible="1">
-   </PIN>
-   <PIN pinname="Type" visible="1">
-   </PIN>
-   <PIN pinname="Euler/Verlet" visible="1" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="16" srcpinname="Input Value" dstnodeid="25" dstpinname="NaiveGPU">
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="ElementCount" dstnodeid="26" dstpinname="Count X">
-   </LINK>
    <LINK srcnodeid="26" srcpinname="Geometry Out" dstnodeid="27" dstpinname="Geometry">
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="IndexOffset" dstnodeid="27" dstpinname="GroupIndexOffset">
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="ElementCount" dstnodeid="27" dstpinname="GroupCount">
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="LastIndex" dstnodeid="27" dstpinname="GroupLastIndex">
    </LINK>
    <LINK srcnodeid="27" srcpinname="Layer" dstnodeid="23" dstpinname="Layer 2">
    </LINK>
@@ -248,8 +198,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="28" srcpinname="Y Output Value" dstnodeid="25" dstpinname="Euler/Verlet">
-   </LINK>
    <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="30">
    <BOUNDS type="Node" left="6705" top="2580" width="100" height="100">
    </BOUNDS>
@@ -273,5 +221,57 @@
    <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="31" dstpinname="Ord Value">
    </LINK>
    <LINK srcnodeid="31" srcpinname="Enum" dstnodeid="2" dstpinname="Technique">
+   </LINK>
+   <NODE systemname="GetInitializationSettings (Gea.NaiveGPU)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\vl\Gea.NaiveGPU.vl" nodename="GetInitializationSettings (Gea.NaiveGPU)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="1215" top="1620" width="2775" height="270">
+   </BOUNDS>
+   <PIN pinname="ElementCount" visible="1">
+   </PIN>
+   <PIN pinname="IndexOffset" visible="1">
+   </PIN>
+   <PIN pinname="LastIndex" visible="1">
+   </PIN>
+   <PIN pinname="Type" visible="1">
+   </PIN>
+   <PIN pinname="Euler/Verlet" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Input Value" dstnodeid="20" dstpinname="NaiveGPU">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="ElementCount" dstnodeid="19" dstpinname="Count X">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="IndexOffset" dstnodeid="2" dstpinname="GroupIndexOffset">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="ElementCount" dstnodeid="2" dstpinname="GroupCount">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="LastIndex" dstnodeid="2" dstpinname="GroupLastIndex">
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Euler/Verlet">
+   </LINK>
+   <NODE systemname="GetInitializationSettings (Gea.NaiveGPU)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\vl\Gea.NaiveGPU.vl" nodename="GetInitializationSettings (Gea.NaiveGPU)" componentmode="Hidden" id="25">
+   <BOUNDS type="Node" left="4815" top="1620" width="2775" height="270">
+   </BOUNDS>
+   <PIN pinname="ElementCount" visible="1">
+   </PIN>
+   <PIN pinname="IndexOffset" visible="1">
+   </PIN>
+   <PIN pinname="LastIndex" visible="1">
+   </PIN>
+   <PIN pinname="Type" visible="1">
+   </PIN>
+   <PIN pinname="Euler/Verlet" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Input Value" dstnodeid="25" dstpinname="NaiveGPU">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="ElementCount" dstnodeid="26" dstpinname="Count X">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="IndexOffset" dstnodeid="27" dstpinname="GroupIndexOffset">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="ElementCount" dstnodeid="27" dstpinname="GroupCount">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="LastIndex" dstnodeid="27" dstpinname="GroupLastIndex">
+   </LINK>
+   <LINK srcnodeid="28" srcpinname="Y Output Value" dstnodeid="25" dstpinname="Euler/Verlet">
    </LINK>
    </PATCH>
