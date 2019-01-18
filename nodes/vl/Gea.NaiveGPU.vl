@@ -12255,7 +12255,7 @@
               <Pin Id="KWRMQOhnffqMvpxKvLGGSy" Name="Simulation_M" Kind="InputPin" />
               <Pin Id="SQSPrAhVeROOvQAP8Q8t4v" Name="Output" Kind="StateOutputPin" />
             </Node>
-            <Node Bounds="-157,534,1124,20" Id="I1OhTN256dmLd5Zfmoonqz">
+            <Node Bounds="-204,633,1124,13" Id="I1OhTN256dmLd5Zfmoonqz">
               <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="Cons" />
@@ -12672,7 +12672,7 @@
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
             </Pad>
-            <Pad Id="QTyO9kWnOdfMnQa5vSrk5H" Comment="Strength" Bounds="2124,303,33,57" ShowValueBox="true" isIOBox="true" Value="1, 1, 1">
+            <Pad Id="QTyO9kWnOdfMnQa5vSrk5H" Comment="Strength" Bounds="2124,303,33,57" ShowValueBox="true" isIOBox="true" Value="10, 10, 10">
               <p:TypeAnnotation LastCategoryFullName="3D" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Vector3" />
               </p:TypeAnnotation>
@@ -12698,7 +12698,7 @@
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
             </Pad>
-            <Node Bounds="3534,177,75,22" Id="RWeTXKkHc9DM9MNOlX7Qfl">
+            <Node Bounds="3506,102,75,22" Id="RWeTXKkHc9DM9MNOlX7Qfl">
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.PinsCtrlTexture_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="PinsCtrlTexture_M" />
@@ -12714,12 +12714,12 @@
               <Pin Id="KhbI1qCWHLNOR3qC2kXs4f" Name="Strength" Kind="InputPin" />
               <Pin Id="QNAtIa5a3vGNFpUWBsNaD9" Name="Output" Kind="StateOutputPin" />
             </Node>
-            <Pad Id="QsuSBcKlExgMuqQFEEwvXm" Comment="PinsTextureName" Bounds="3582,147,69,20" ShowValueBox="true" isIOBox="true" Value="Ropes">
+            <Pad Id="QsuSBcKlExgMuqQFEEwvXm" Comment="PinsTextureName" Bounds="3552,48,69,20" ShowValueBox="true" isIOBox="true" Value="Ropes">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pad>
-            <Pad Id="Fr2DvF0pLzvOfS8CuMkR3K" Comment="Enable" Bounds="3523,127,40,19" ShowValueBox="true" isIOBox="true" Value="True">
+            <Pad Id="Fr2DvF0pLzvOfS8CuMkR3K" Comment="Enable" Bounds="3501,0,40,19" ShowValueBox="true" isIOBox="true" Value="True">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
@@ -13242,7 +13242,7 @@
               <Pin Id="PfqiAiYaZKOPIjeO2PM4K3" Name="Input" Kind="StateInputPin" />
               <Pin Id="GvwNvO36zinPXlW7KDlEEx" Name="Result" Kind="OutputPin" />
             </Node>
-            <Pad Id="O316NiYK9ZdNMnGoTecSGU" Comment="Enable" Bounds="3069,269,40,19" ShowValueBox="true" isIOBox="true" Value="True">
+            <Pad Id="O316NiYK9ZdNMnGoTecSGU" Comment="Enable" Bounds="3069,269,40,19" ShowValueBox="true" isIOBox="true" Value="False">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
@@ -13252,8 +13252,8 @@
                 <Choice Kind="TypeFlag" Name="Vector3" />
               </p:TypeAnnotation>
             </Pad>
-            <ControlPoint Id="GW5BiRddRJGOPcK7PHn3NU" Bounds="-160,661" />
-            <Overlay Id="BXq0KZ0cepePeigeuffZ4E" Name="Groups_M" Bounds="-245,33,1659,667" />
+            <ControlPoint Id="GW5BiRddRJGOPcK7PHn3NU" Bounds="-207,760" />
+            <Overlay Id="BXq0KZ0cepePeigeuffZ4E" Name="Groups_M" Bounds="-278,25,1659,667" />
             <Overlay Id="Ss5CdJzO3GUQGMyu9qF7Vr" Name="Modifiers" Bounds="1499,-319,1832,991" />
             <Overlay Id="VRUK6jIEhqYPuXUdDtydan" Name="Constraints" Bounds="3462,-403,1097,1070" />
             <ControlPoint Id="EknpCI2rcPzLsAcYNh1QtV" Bounds="1551,839" />
@@ -13439,6 +13439,199 @@
                 <Choice Kind="TypeFlag" Name="Float32" />
               </p:TypeAnnotation>
             </Pad>
+            <Pad Id="VL84pydSIgvMSnU5BaL7Im" Bounds="-227,-869,493,140" ShowValueBox="true" isIOBox="true" Value="Here is where you contruct the elements of your system:&#xD;&#xA;you can create:&#xD;&#xA;- particles (type 0)&#xD;&#xA;- ropes (type 1)&#xD;&#xA;- clothes (type 2)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">12</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Node Bounds="-206,-569,85,22" Id="K9hVhaRLToYPLfyR3wfkbn">
+              <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Construct_M" LastSymbolSource="Gea.NaiveGPU.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="RecordType" Name="Construct_M" />
+                <Choice Kind="OperationCallFlag" Name="Create" />
+              </p:NodeReference>
+              <Pin Id="CafqnRTTreePOQnDRaXKOA" Name="Type" Kind="InputPin" />
+              <Pin Id="L4kSYtJADugMH8VyDXZR8A" Name="Count" Kind="InputPin" />
+              <Pin Id="Cy0Orv2FQ9lLl51jEdQp3L" Name="Resolution" Kind="InputPin" />
+              <Pin Id="KHp6DmUECAkLngzaqIOvc2" Name="Size" Kind="InputPin" />
+              <Pin Id="U98T4sM0FQ4OtPE1k8BC2V" Name="Body_M" Kind="InputPin" />
+              <Pin Id="JLpZR4r4ygQMpfYGfqIP88" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Pad Id="GCvAtg54MpULjphXRFYdOG" Comment="Type" Bounds="-203,-766,18,19" ShowValueBox="true" isIOBox="true" Value="0">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="BSzEH8WlmiAM69mbZJOIsh" Comment="Count" Bounds="-183,-734,18,19" ShowValueBox="true" isIOBox="true" Value="1">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="PYK53iskLznNrKCUbElROP" Comment="Resolution" Bounds="-163,-696,33,38" ShowValueBox="true" isIOBox="true" Value="1, 1">
+              <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="RrbjnWwXfpWOKr2Oglivva" Comment="Size" Bounds="-144,-606,33,38" ShowValueBox="true" isIOBox="true" Value="1, 1">
+              <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Vector2" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="NLdCrLHX03MLsjDbdXlYe3" Bounds="-116,-732,683,22" ShowValueBox="true" isIOBox="true" Value="meaningful for type 0 and 1 (how many particles or ropes). (always 1 for cloth, which is not spreadable in itself)">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Pad Id="OGDD0KEfbuxP3jZZJLKJFq" Bounds="-58,-672,747,81" ShowValueBox="true" isIOBox="true" Value="it means different things for each type:&#xD;&#xA;- particles: used to distribute particles on a 2d grid and assign them a UV coord, to eventually be driven by a ctrl texture)&#xD;&#xA;- ropes: resolution x defines the resolution of the ropes&#xD;&#xA;- cloth: xy resolution of the cloth">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Pad Id="Lc5Hob878BWNE2gJWtT9u4" Bounds="-59,-605,189,41" ShowValueBox="true" isIOBox="true" Value="- type 1: length of the rope&#xD;&#xA;- type 2: xy size of the cloth">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Node Bounds="-207,-363,85,22" Id="Kdyv4RSkoqfMpR2SHynBzD">
+              <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Body_M" LastSymbolSource="Gea.NaiveGPU.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="RecordType" Name="Body_M" />
+                <Choice Kind="OperationCallFlag" Name="Create" />
+              </p:NodeReference>
+              <Pin Id="Gaz5SaZuTliMbP6tblB4sN" Name="Mass" Kind="InputPin" />
+              <Pin Id="R0DbVZY2AP9LUTjckIvGuu" Name="Drag" Kind="InputPin" />
+              <Pin Id="HqCSQa7Xw5DN3t1Ycm0T6a" Name="Thickness" Kind="InputPin" />
+              <Pin Id="U7cpGnYwmroPwdYEyA7Dyh" Name="Enable Unfold Springs" Kind="InputPin" DefaultValue="False">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Boolean" />
+                </p:TypeAnnotation>
+              </Pin>
+              <Pin Id="JEyZdiBdDCfLU0mFsOBbUE" Name="Unfold Mate Distance" Kind="InputPin" />
+              <Pin Id="EndfTQoktxYQWcbrtQIf5Z" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Pad Id="Mw8xo1UehzyQWPlYuzgBg2" Comment="Mass" Bounds="-204,-502,33,19" ShowValueBox="true" isIOBox="true" Value="1">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="SXDZmYLsnmlN2u3tiONF5A" Comment="Drag" Bounds="-185,-477,39,19" ShowValueBox="true" isIOBox="true" Value="50">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="NbwaLld3LtAOfw5KoTed4m" Comment="Thickness" Bounds="-165,-451,33,19" ShowValueBox="true" isIOBox="true" Value="0">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Float32" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="GzUrI4zxr3nQGHtR8Jz5KO" Comment="Enable Unfold Springs" Bounds="-145,-414,40,19" ShowValueBox="true" isIOBox="true" Value="False">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="IX75Xp7WVoeNhFg3cPmOx3" Comment="Unfold Mate Distance" Bounds="-125,-383,18,19" ShowValueBox="true" isIOBox="true" Value="2">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Integer32" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="EXtdO9PYndTPTrHln4aGU4" Bounds="26,-399,329,40" ShowValueBox="true" isIOBox="true" Value="These two parameters define the unfold behaviour of the rope and cloth springs simulation">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Pad Id="Jawv7qn93gePkDJ1eO625V" Bounds="-64,-446,271,22" ShowValueBox="true" isIOBox="true" Value="used for constraint-collision evaluation">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Node Bounds="-208,-289,205,22" Id="RZOvPUiB4bKN3Kc0aJLKUa">
+              <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Simulation_M" LastSymbolSource="Gea.NaiveGPU.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="RecordType" Name="Simulation_M" />
+                <Choice Kind="OperationCallFlag" Name="Create" />
+              </p:NodeReference>
+              <Pin Id="P6sCmWnat6mONfSP37wUtf" Name="Enable" Kind="InputPin" />
+              <Pin Id="I946ttPdhppOAvYKUvb71z" Name="Reset" Kind="InputPin" />
+              <Pin Id="VHLbMnAxIEQNrPmHGLLdZT" Name="ResetPos" Kind="InputPin" />
+              <Pin Id="NhRXPDm0pENPRamNzs0OW9" Name="tStepMult" Kind="InputPin" />
+              <Pin Id="No2Y5ue425CLpbXR5oPiCr" Name="DragMult" Kind="InputPin" />
+              <Pin Id="DJlt5yocV08L3My2oY4giH" Name="MassMult" Kind="InputPin" />
+              <Pin Id="LjYNTNwgk17Px2PeRgwnVb" Name="RestLengthMult" Kind="InputPin" />
+              <Pin Id="D8UdXynaauWN9FNkOEIAYF" Name="RndLength" Kind="InputPin" />
+              <Pin Id="EpN40frkUd7Ns9Vr9hOg3v" Name="StiffnessMult" Kind="InputPin" />
+              <Pin Id="P8qKk4u9Z5gLssvwrj7NQh" Name="UnfoldStiffnessMult" Kind="InputPin" />
+              <Pin Id="A9Ri8k48yNyN7wxTifd2kQ" Name="SpringsIterationsCount" Kind="InputPin" />
+              <Pin Id="AMZm642iN22NuBsAkVlLYO" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Pad Id="UksfadCOPMVPfUJq2AxvqZ" Bounds="10,-277,294,22" ShowValueBox="true" isIOBox="true" Value="here you can modify in runtime the properties of the objects">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Pad Id="Cwwz6rJSGfHMJYsmRCmtd6" Bounds="-219,-189,737,62" ShowValueBox="true" isIOBox="true" Value="Every object is stored as a &quot;Group&quot;, which in the end is a portion of the huge GPU buffers containing all the data for the simulation">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">12</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Pad Id="T2DmACVnGiYLrYBrLiHBmX" Bounds="1504,-438,730,114" ShowValueBox="true" isIOBox="true" Value="Modifiers allow you to apply forces in runtime.&#xD;&#xA;You assign them to groups:&#xD;&#xA;- group 2 selected: the object with index 2 will be influenced by the deformer&#xD;&#xA;- group -1: get applied to all the groups">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">12</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Pad Id="PXS1GzspGAZOqcyCbVt37Y" Bounds="3461,-465,335,60" ShowValueBox="true" isIOBox="true" Value="Same as Modifiers, but for constraints.&#xD;&#xA;(applied at the end of the simulation)">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">12</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Pad Id="ODgr8KWttuzOOmcIhIboOy" Bounds="3587,116,260,105" ShowValueBox="true" isIOBox="true" Value="this is the string for the ctrl texture receiver.  you can dynamically switch between multiple ctrl textures.&#xD;&#xA;ctrl textures are defines and sent via S node anywhere in vvvv patches">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
           </Canvas>
           <Patch Id="GhE0js3HUznMMSWQ8CxAp4" Name="Create" />
           <ProcessDefinition Id="Bv35SJSFegwOxSa0YrWFEd">
@@ -13462,7 +13655,6 @@
           <Link Id="Gfdt2DbduAoN2l7eYDxga0" Ids="PrUIXBkawrVLfTqkWxb8Cy,Vsvs2e5Wg2VMlZDrlEB0ad" />
           <Link Id="OiGLvjeayncMUr3dAksSr2" Ids="HCrKfLbTfWDPDqBpKGrOSE,PPC9jqNCGSbQOVGfQh3bwU" />
           <Link Id="LxnbPoeRnZJPcAf6B820t9" Ids="BJY4iPRDshFOyL5Zn46t3o,USCoNuCrtytMmWgmIaC0FH" />
-          <Link Id="OLd9Xw4McjFMJo2wDaXIM7" Ids="PsV2jaxRo8eQJ39S6lXCg4,IMCzH9QDOa8QFG2SifJSof" />
           <Link Id="CLgTJZm6BtxPUEIzMFuffx" Ids="Cm6otDL1aIBO9no6fgii0X,JBJIzsEs9FBMiME5o6Dlu4" />
           <Link Id="E14qlFrg9QcLTsKwE66F4F" Ids="PYa1aGbAfHjOSBmDFdKcXV,VdBtgeSokleQOsXx25NqSP" />
           <Link Id="Ip63QJf2p50NZEQp56lUI2" Ids="PAJmowulxsrOOOWP1rxxdd,SawWtUuavbrQZVCzwpJgd8" />
@@ -13583,6 +13775,16 @@
           <Link Id="MhrXh7uz6TlNGBu6ArSA1T" Ids="CgVYVdgepMQOqJeHRQKg6V,Rn2QjiF8IFCPXR3s4tr3mQ" />
           <Link Id="BI8AELmyfmjLfl9Cv2K2Lv" Ids="NxzXff2R2yYP5YFz65lO85,EdAYk2MBf5COSlTjgp9CKr" />
           <Link Id="IhZFkucOkXTPvXq7Iw4liB" Ids="TLvMEAaCQWfLNYxyhCq6zn,MPbbaVntvuCMOyyuNYilJq" />
+          <Link Id="DUTbjP7MzkaOxXpETOGRtt" Ids="GCvAtg54MpULjphXRFYdOG,CafqnRTTreePOQnDRaXKOA" />
+          <Link Id="TARyphN0ZbRLOwoBSFjw1p" Ids="BSzEH8WlmiAM69mbZJOIsh,L4kSYtJADugMH8VyDXZR8A" />
+          <Link Id="Mnh8ZmZKixlPU6sgs6NQ8B" Ids="PYK53iskLznNrKCUbElROP,Cy0Orv2FQ9lLl51jEdQp3L" />
+          <Link Id="BM4cCOtHU8VPSzermA3Pnm" Ids="RrbjnWwXfpWOKr2Oglivva,KHp6DmUECAkLngzaqIOvc2" />
+          <Link Id="HtpvH1YUHj3MreLMxHBJw7" Ids="Mw8xo1UehzyQWPlYuzgBg2,Gaz5SaZuTliMbP6tblB4sN" />
+          <Link Id="CaEGFTENvw7QcSUtOpFVW1" Ids="SXDZmYLsnmlN2u3tiONF5A,R0DbVZY2AP9LUTjckIvGuu" />
+          <Link Id="CMr6UO3Z2jQNpRFhaKBnsN" Ids="NbwaLld3LtAOfw5KoTed4m,HqCSQa7Xw5DN3t1Ycm0T6a" />
+          <Link Id="Ou58DoCOruKLfUdicJ6brd" Ids="GzUrI4zxr3nQGHtR8Jz5KO,U7cpGnYwmroPwdYEyA7Dyh" />
+          <Link Id="VhARzlthaGHNYegwd4ncdW" Ids="IX75Xp7WVoeNhFg3cPmOx3,JEyZdiBdDCfLU0mFsOBbUE" />
+          <Link Id="SHcuQcqoERzPENE0h46vND" Ids="PsV2jaxRo8eQJ39S6lXCg4,IMCzH9QDOa8QFG2SifJSof" />
         </Patch>
       </Node>
       <Canvas Id="IOYStK2woLdP6OKwWQbxYK" Name="VVVV" Position="156,544" DefaultCategory="VVVV.Gea.NaiveGPU" CanvasType="FullCategory">
@@ -20432,7 +20634,7 @@
         </p:NodeReference>
         <Patch Id="LbwyNewpLHwN49LRxeZgEs">
           <Canvas Id="ACSn20LYnuZQGqAeCSs0To" CanvasType="Group">
-            <Node Bounds="447,329,139,20" Id="UONmmbB9GDzOwYRxWjiS6b">
+            <Node Bounds="443,267,139,13" Id="UONmmbB9GDzOwYRxWjiS6b">
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessNode" Name="Scene_01" />
@@ -20491,7 +20693,7 @@
               <Pin Id="D88wQ0KfdCqLXZZTnh72tC" Name="Apply" Kind="InputPin" />
               <Pin Id="V7XjdpTUuegOHK4iez4NuH" Name="Output" Kind="StateOutputPin" />
             </Node>
-            <Pad Id="OJoxuZZNLAVLqER2NPFh9v" Comment="Set Groups_M" Bounds="613,439,73,69" ShowValueBox="true" isIOBox="true" Value="False">
+            <Pad Id="OJoxuZZNLAVLqER2NPFh9v" Comment="Set Groups_M" Bounds="593,424,73,69" ShowValueBox="true" isIOBox="true" Value="False">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
@@ -20518,7 +20720,7 @@
               <Pin Id="S8w3Jq2BXhXPKyqMaGUKxV" Name="Constrains_M" Kind="InputPin" />
               <Pin Id="Vym38frdUjRMj7cFYgirvg" Name="Output" Kind="StateOutputPin" />
             </Node>
-            <Node Bounds="604,493,64,13" Id="NbC6VtIGLh0MkJwSrsPWkD">
+            <Node Bounds="584,478,64,13" Id="NbC6VtIGLh0MkJwSrsPWkD">
               <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="OnOpen" />
@@ -20526,20 +20728,59 @@
               <Pin Id="H7fAk3N7zFqLiX6z1UoFeR" Name="Simulate" Kind="InputPin" />
               <Pin Id="LCOsTaUdOh5NLeb5mLYaBv" Name="Output" Kind="OutputPin" />
             </Node>
-            <Node Bounds="312,614,135,22" Id="VaLL9QMu4qnPpEoPvKnMuo">
+            <Node Bounds="311,604,135,22" Id="VaLL9QMu4qnPpEoPvKnMuo">
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.NaiveGPU_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="OperationCallFlag" Name="SetGroupsSimulation_M" />
               </p:NodeReference>
               <Pin Id="UFV4M62Ls5ALW1mejx62lS" Name="Input" Kind="StateInputPin" />
               <Pin Id="TwrL9kX6P6nPKN4ksBlgEC" Name="Groups_M" Kind="InputPin" />
-              <Pin Id="VnXEDO72BJUPgiY2koLM31" Name="Apply" Kind="InputPin" />
               <Pin Id="GDOHyw16JfmMas1KOu7lOD" Name="Output" Kind="StateOutputPin" />
             </Node>
-            <Pad Id="JNAB2gryWsgLLQ7KtNpcLS" Comment="Apply" Bounds="536,587,40,19" ShowValueBox="true" isIOBox="true" Value="True">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Boolean" />
+            <Pad Id="JfDbssilqbkPcxuDapW1Bs" Bounds="444,620,437,44" ShowValueBox="true" isIOBox="true" Value="Set dynamically certain properties of the objects that you might want to update in runtime">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Pad Id="DHvS8c050ayOcN4sTRSe9f" Bounds="408,735,218,22" ShowValueBox="true" isIOBox="true" Value="update the modifiers in runtime">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Pad Id="NjauHtUVOmpLQNgHGyXKYv" Bounds="429,801,221,20" ShowValueBox="true" isIOBox="true" Value="update the constraints in runtime">
+              <p:TypeAnnotation>
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Pad Id="IwoGINZQ05yPx2sWwLdfDM" Bounds="402,536,435,40" ShowValueBox="true" isIOBox="true" Value="elements contructor. You want to build your objects once, then run the simulation">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Pad Id="Nk6jxs4RMP7PcMK1mZXLwB" Bounds="588,273,310,40" ShowValueBox="true" isIOBox="true" Value="a scene patch is where you define a system. You can eventually switch between multiple of them ">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
             </Pad>
           </Canvas>
           <Patch Id="TlPQuC2f680PM0q0ogK3qv" Name="Create" />
@@ -20563,7 +20804,6 @@
           <Link Id="IxrwbJL05fqNld1VyicWNL" Ids="CWv0TgcATnGOIRPYiLau49,PJcuKsfyxExOTpMlyb2hS3" />
           <Link Id="Tchvhyioz6PN1R3Pa0bplb" Ids="IOX8aPI3tROQaETNeiwuAE,F7cf6DHiQxvLkehb4l6hHO" />
           <Link Id="P4STLAODmnzLm8JPmEpeW8" Ids="Plkg0M3lz4qLubmRpOAHe7,S8w3Jq2BXhXPKyqMaGUKxV" />
-          <Link Id="U0j9ASPUrdALNebkvezZqt" Ids="JNAB2gryWsgLLQ7KtNpcLS,VnXEDO72BJUPgiY2koLM31" />
           <Link Id="H5fqNgFPD2KPA8UJfRggXq" Ids="V7XjdpTUuegOHK4iez4NuH,UFV4M62Ls5ALW1mejx62lS" />
           <Link Id="BW0C4bXQzYiMurd56ux0yz" Ids="CWv0TgcATnGOIRPYiLau49,TwrL9kX6P6nPKN4ksBlgEC" />
           <Link Id="OJz9AUFGYgEOM1EktsP0It" Ids="GDOHyw16JfmMas1KOu7lOD,V3sTRhAmWGGNt0CMtbGWuZ" />

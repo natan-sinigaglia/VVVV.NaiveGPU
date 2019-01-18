@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
-   <PATCH nodename="C:\Users\conature\Documents\REPOS\VVVV.Gea.NaiveGPU\nodes\modules\03_Modifiers\Modifiers.v4p" systemname="Modifiers" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\03_Modifiers\Modifiers.v4p" scrollx="0" scrolly="-360">
+   <PATCH nodename="C:\Users\conature\Documents\REPOS\vvvv_50beta38.1_x64\packs\VVVV.Gea.NaiveGPU\nodes\modules\03_Modifiers\Modifiers.v4p" systemname="Modifiers" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\03_Modifiers\Modifiers.v4p" scrollx="0" scrolly="-360">
    <BOUNDS type="Window" left="1170" top="7860" width="18420" height="7125">
    </BOUNDS>
    <PACK Name="dx11" Version="1.3.1">

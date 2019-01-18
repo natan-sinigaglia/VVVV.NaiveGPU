@@ -1,12 +1,12 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta37.dtd" >
-   <PATCH nodename="D:\REPOS\Aion_Scent\vvvv\vvvv_50beta37_x64\packs\Gea.NaiveGPU\nodes\modules\NaiveGPU (Gea.NaiveGPU).v4p" systemname="NaiveGPU (Gea.NaiveGPU)" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\NaiveGPU (Gea.NaiveGPU).v4p" scrollx="0" scrolly="720">
-   <BOUNDS type="Window" left="5172" top="276" width="11772" height="11244">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\conature\Documents\REPOS\vvvv_50beta38.1_x64\packs\VVVV.Gea.NaiveGPU\nodes\modules\NaiveGPU (Gea.NaiveGPU).v4p" systemname="NaiveGPU (Gea.NaiveGPU)" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\NaiveGPU (Gea.NaiveGPU).v4p" scrollx="0" scrolly="690">
+   <BOUNDS type="Window" left="5160" top="270" width="11760" height="12555">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.3.1.1">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
    <PACK Name="dx11.particles" Version="1.0.3">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE systemname="NaiveGPU (Gea.NaiveGPU Wrapper)" filename="..\vl\Gea.NaiveGPU.vl" nodename="NaiveGPU (Gea.NaiveGPU Wrapper)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="3675" top="255" width="100" height="100">
@@ -483,7 +483,7 @@
    </PIN>
    <PIN pinname="Custom Modifiers" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="VolumeField tW" visible="1">
+   <PIN pinname="VolumeField tW" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="VolumeTexture3D" visible="1" slicecount="1" values="||">
    </PIN>
@@ -495,7 +495,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2415" top="3885" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Node" visible="1">
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|VolumeField tW|">
    </PIN>
@@ -527,72 +527,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="18" srcpinname="Output Node" dstnodeid="38" dstpinname="Custom Constraints Layer">
-   </LINK>
-   <NODE systemname="TimeStamp (DX11.Query)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="TimeStamp (DX11.Query)" componentmode="Hidden" id="39">
-   <BOUNDS type="Node" left="6525" top="8520" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="6525" top="8520" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Query Source" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Time" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="40">
-   <BOUNDS type="Box" left="6525" top="8970" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="6525" top="8970" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="39" srcpinname="Time" dstnodeid="40" dstpinname="Y Input Value">
-   </LINK>
-   <NODE systemname="TimeStamp (DX11.Query)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="TimeStamp (DX11.Query)" componentmode="Hidden" id="42">
-   <BOUNDS type="Node" left="8085" top="10755" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="8085" top="10755" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Query Source" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Time" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="41">
-   <BOUNDS type="Box" left="8085" top="11205" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="8085" top="11205" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="42" srcpinname="Time" dstnodeid="41" dstpinname="Y Input Value">
-   </LINK>
-   <NODE systemname="TimeStamp (DX11.Query)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="TimeStamp (DX11.Query)" componentmode="Hidden" id="44">
-   <BOUNDS type="Node" left="10560" top="5280" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="10560" top="5280" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Query Source" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Time" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="43">
-   <BOUNDS type="Box" left="10560" top="5730" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="10560" top="5730" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="44" srcpinname="Time" dstnodeid="43" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="31" srcpinname="Layer Out" dstnodeid="26" dstpinname="Layer 6">
    </LINK>
@@ -654,4 +588,18 @@
    </NODE>
    <LINK srcnodeid="23" srcpinname="tStep" dstnodeid="29" dstpinname="TimeStep">
    </LINK>
+   <NODE nodename="IOBox (String)" systemname="IOBox (String)" componentmode="InABox" id="47">
+   <BOUNDS type="Node" left="2310" top="11160" width="7980" height="3210">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2310" top="11160" width="9225" height="3465">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|This is the struct of the elements in the buffer. they are different depending on which integration they use (euler/verlet)&cr;&lf;// EULER INTEGRATION ===========================================================&cr;&lf;/*&cr;&lf;&tab;Buffer1 = Pos, LifeTime&cr;&lf;&tab;Buffer2 = Vel, Mass&cr;&lf;&tab;Buffer3 = Force&cr;&lf;&tab;Buffer4 = Col, Size&cr;&lf;*/&cr;&lf;&cr;&lf;// VERLET INTEGRATION ==========================================================&cr;&lf;/*&cr;&lf;&tab;Buffer1 = Pos, Mass;&cr;&lf;&tab;Buffer2 = PrevPos, Thickness;&cr;&lf;&tab;Buffer3 = Force, Drag;&cr;&lf;&tab;Buffer4 = Info (UVZ coords, ObjectID);&cr;&lf;*/|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>

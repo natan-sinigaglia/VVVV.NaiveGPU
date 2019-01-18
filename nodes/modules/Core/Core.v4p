@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
    <PATCH nodename="C:\Users\conature\Documents\REPOS\vvvv_50beta38.1_x64\packs\VVVV.Gea.NaiveGPU\nodes\modules\Core\Core.v4p" systemname="Core" filename="C:\Users\MLF\Dropbox (MLF)\0158_Distortions_in_Spacetime_01_Build_Natan\vvvv\Gea.ParticlesGPU\modules\core\Core.v4p" scrollx="0" scrolly="-360">
-   <BOUNDS type="Window" left="1395" top="735" width="18165" height="14400">
+   <BOUNDS type="Window" left="6840" top="825" width="18165" height="14400">
    </BOUNDS>
    <PACK Name="dx11" Version="1.3.1">
    </PACK>
