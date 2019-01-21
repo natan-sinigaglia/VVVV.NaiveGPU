@@ -17,7 +17,6 @@ Ah, I didn't have really time to prepare nice help patches or multiple example s
 ### Required Packs
 - dx11
 - dx11.Particles
-- InstanceNoodles
 - Happy.fxh
 
 
