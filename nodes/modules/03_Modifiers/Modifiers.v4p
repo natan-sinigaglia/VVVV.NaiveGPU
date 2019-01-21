@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
    <PATCH nodename="C:\Users\conature\Documents\REPOS\vvvv_50beta38.1_x64\packs\VVVV.Gea.NaiveGPU\nodes\modules\03_Modifiers\Modifiers.v4p" systemname="Modifiers" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\03_Modifiers\Modifiers.v4p" scrollx="0" scrolly="-360">
-   <BOUNDS type="Window" left="1170" top="7860" width="18420" height="7125">
+   <BOUNDS type="Window" left="1170" top="7860" width="14895" height="5775">
    </BOUNDS>
    <PACK Name="dx11" Version="1.3.1">
    </PACK>
@@ -25,9 +25,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="67">
-   <BOUNDS type="Box" left="810" top="4950" width="795" height="240">
+   <BOUNDS type="Box" left="810" top="3750" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="810" top="4950" width="0" height="0">
+   <BOUNDS type="Node" left="810" top="3750" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -37,9 +37,9 @@
    </PIN>
    </NODE>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="66">
-   <BOUNDS type="Node" left="810" top="4425" width="15615" height="270">
+   <BOUNDS type="Node" left="810" top="3225" width="13020" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="810" top="4425" width="3000" height="3000">
+   <BOUNDS type="Box" left="810" top="3225" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Layer Out" visible="1">
    </PIN>
@@ -49,7 +49,7 @@
    </PIN>
    <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="6">
+   <PIN pinname="Input Count" slicecount="1" values="5">
    </PIN>
    <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
    </PIN>
@@ -63,9 +63,9 @@
    </PIN>
    </NODE>
    <NODE systemname="Turbulence (Gea.NaiveGPU)" filename="Turbulence\Turbulence (Gea.NaiveGPU).v4p" componentmode="Hidden" id="51" nodename="Turbulence (Gea.NaiveGPU)">
-   <BOUNDS type="Node" left="810" top="3375" width="100" height="100">
+   <BOUNDS type="Node" left="810" top="2175" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="810" top="3375" width="4800" height="3600">
+   <BOUNDS type="Box" left="810" top="2175" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="2580" top="5670" width="8010" height="5880">
    </BOUNDS>
@@ -89,7 +89,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Cymatics (Gea.NaiveGPU)" filename="Cymatics\Cymatics (Gea.NaiveGPU).v4p" nodename="Cymatics (Gea.NaiveGPU)" componentmode="Hidden" id="50">
-   <BOUNDS type="Node" left="6000" top="3375" width="100" height="100">
+   <BOUNDS type="Node" left="6000" top="2175" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="1035" top="5745" width="7830" height="6585">
    </BOUNDS>
@@ -115,7 +115,7 @@
    </PIN>
    <PIN pinname="Phase" slicecount="1" values="0">
    </PIN>
-   <BOUNDS type="Box" left="6000" top="3375">
+   <BOUNDS type="Box" left="6000" top="2175">
    </BOUNDS>
    <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
    </PIN>
@@ -123,7 +123,7 @@
    <LINK srcnodeid="50" srcpinname="Layer" dstnodeid="66" dstpinname="Layer 3">
    </LINK>
    <NODE systemname="Brownian (Gea.NaiveGPU)" filename="Brownian\Brownian (Gea.NaiveGPU).v4p" nodename="Brownian (Gea.NaiveGPU)" componentmode="Hidden" id="49">
-   <BOUNDS type="Node" left="3405" top="3375" width="930" height="270">
+   <BOUNDS type="Node" left="3405" top="2175" width="930" height="270">
    </BOUNDS>
    <BOUNDS type="Window" left="480" top="3105" width="7860" height="6015">
    </BOUNDS>
@@ -137,19 +137,19 @@
    </PIN>
    <PIN pinname="Strenght" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="3405" top="3375">
+   <BOUNDS type="Box" left="3405" top="2175">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="49" srcpinname="Layer" dstnodeid="66" dstpinname="Layer 2">
    </LINK>
    <NODE systemname="Attractor (Gea.NaiveGPU)" filename="Attractor\Attractor (Gea.NaiveGPU).v4p" nodename="Attractor (Gea.NaiveGPU)" componentmode="Hidden" id="45">
-   <BOUNDS type="Node" left="8595" top="3375" width="100" height="100">
+   <BOUNDS type="Node" left="8595" top="2175" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="9960" top="4470" width="8400" height="7560">
    </BOUNDS>
    <PIN pinname="Radius" slicecount="1" visible="1" values="1">
    </PIN>
-   <BOUNDS type="Box" left="8595" top="3375">
+   <BOUNDS type="Box" left="8595" top="2175">
    </BOUNDS>
    <PIN pinname="Vector Rotation" visible="1">
    </PIN>
@@ -164,68 +164,20 @@
    </LINK>
    <LINK srcnodeid="66" srcpinname="Layer Out" dstnodeid="67" dstpinname="Input Node">
    </LINK>
-   <NODE systemname="VolumeField (Gea.NaiveGPU)" filename="VolumeField\VolumeField (Gea.NaiveGPU).v4p" componentmode="Hidden" id="41" nodename="VolumeField (Gea.NaiveGPU)">
-   <BOUNDS type="Node" left="11175" top="3375" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="11175" top="3375" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="4380" top="5295" width="8160" height="6465">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Geometry" visible="1">
-   </PIN>
-   <PIN pinname="groupCount" visible="1">
-   </PIN>
-   <PIN pinname="groupIndexOffset" visible="1">
-   </PIN>
-   <PIN pinname="Volume T" visible="1">
-   </PIN>
-   <PIN pinname="VolumeTexture3D" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="VolumeField tW" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="35">
-   <BOUNDS type="Box" left="11700" top="2430" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="11700" top="2430" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="VolumeTexture3D">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="35" srcpinname="Output Node" dstnodeid="41" dstpinname="VolumeTexture3D">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="68">
-   <BOUNDS type="Box" left="13770" top="3390" width="795" height="240">
+   <BOUNDS type="Box" left="11175" top="2190" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="13770" top="3390" width="0" height="0">
+   <BOUNDS type="Node" left="11175" top="2190" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Custom Modifiers|">
    </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="68" srcpinname="Output Node" dstnodeid="66" dstpinname="Layer 6">
-   </LINK>
    <LINK srcnodeid="51" srcpinname="Layer" dstnodeid="66" dstpinname="Layer 1">
    </LINK>
-   <LINK srcnodeid="41" srcpinname="Layer" dstnodeid="66" dstpinname="Layer 5">
-   </LINK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="69">
-   <BOUNDS type="Box" left="11175" top="1650" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="11175" top="1650" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|VolumeField tW|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="69" srcpinname="Output Node" dstnodeid="41" dstpinname="VolumeField tW">
+   <LINK srcnodeid="68" srcpinname="Output Node" dstnodeid="66" dstpinname="Layer 5">
    </LINK>
    </PATCH>

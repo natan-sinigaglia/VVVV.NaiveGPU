@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
-   <PATCH nodename="C:\Users\conature\Documents\REPOS\VVVV.Gea.NaiveGPU\girlpower\01_Example.v4p" systemname="01_Ropes" filename="D:\REPOS\Gea.Springs\examples\01_Ropes.v4p" scrollx="-1800" scrolly="0">
+   <PATCH nodename="C:\Users\conature\Documents\REPOS\VVVV.Gea.NaiveGPU\girlpower\01_Example.v4p" systemname="01_Ropes" filename="D:\REPOS\Gea.Springs\examples\01_Ropes.v4p" scrollx="0" scrolly="-1800">
    <BOUNDS type="Window" left="-480" top="195" width="18450" height="13560">
    </BOUNDS>
    <PACK Name="dx11" Version="1.3.1">
@@ -61,6 +61,8 @@
    </PIN>
    <PIN pinname="Initial InterestXYZ" visible="1">
    </PIN>
+   <PIN pinname="Initial Latitude" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="9" srcpinname="View" dstnodeid="0" dstpinname="View">
    </LINK>
@@ -71,7 +73,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3045" top="18015" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,1,0">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,1.5,0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -582,24 +584,6 @@
    </NODE>
    <LINK srcnodeid="327" srcpinname="Y Output Value" dstnodeid="281" dstpinname="Enabled">
    </LINK>
-   <NODE systemname="SpritesConstant (Gea.NaiveGPU.Draw)" filename="..\nodes\modules\Draw\SpritesConstant (Gea.NaiveGPU.Draw).v4p" nodename="SpritesConstant (Gea.NaiveGPU.Draw)" componentmode="Hidden" id="260">
-   <BOUNDS type="Node" left="900" top="16530" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Buffers" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Group Index" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Enabled" visible="1">
-   </PIN>
-   <PIN pinname="Query" visible="1">
-   </PIN>
-   <BOUNDS type="Window" left="2745" top="2370" width="10110" height="9180">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="261" srcpinname="Y Output Value" dstnodeid="260" dstpinname="Enabled">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="359">
    <BOUNDS type="Box" left="22374" top="9750" width="975" height="255">
    </BOUNDS>
@@ -741,7 +725,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="900" top="17130" width="3000" height="3000">
    </BOUNDS>
-   <PIN pinname="Layer 1" visible="1">
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
@@ -760,8 +744,6 @@
    <PIN pinname="Layer 6" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="260" srcpinname="Layer" dstnodeid="375" dstpinname="Layer 1">
-   </LINK>
    <NODE systemname="ReadBack (DX11.Buffer 4d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="ReadBack (DX11.Buffer 4d)" componentmode="Hidden" id="379">
    <BOUNDS type="Node" left="21216" top="17244" width="100" height="100">
    </BOUNDS>
@@ -793,9 +775,9 @@
    <LINK srcnodeid="379" srcpinname="OutputXYZW" dstnodeid="380" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="381">
-   <BOUNDS type="Box" left="9300" top="10680" width="1500" height="900">
+   <BOUNDS type="Box" left="9300" top="10755" width="645" height="675">
    </BOUNDS>
-   <BOUNDS type="Node" left="9300" top="10680" width="0" height="0">
+   <BOUNDS type="Node" left="9300" top="10755" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -805,7 +787,7 @@
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Boolean">
    </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
@@ -2911,6 +2893,8 @@
    </PIN>
    <PIN pinname="Custom Constraints Layer - Output Node" visible="1" slicecount="1" values="||">
    </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="241" srcpinname="Output Node" dstnodeid="358" dstpinname="Custom Emitters">
    </LINK>
@@ -2919,8 +2903,6 @@
    <LINK srcnodeid="256" srcpinname="Input Value" dstnodeid="358" dstpinname="View">
    </LINK>
    <LINK srcnodeid="257" srcpinname="Input Value" dstnodeid="358" dstpinname="Projection">
-   </LINK>
-   <LINK srcnodeid="358" srcpinname="Buffers" dstnodeid="260" dstpinname="Buffers">
    </LINK>
    <LINK srcnodeid="381" srcpinname="Y Output Value" dstnodeid="358" dstpinname="Force Reset">
    </LINK>
@@ -3235,5 +3217,49 @@
    <LINK srcnodeid="585" srcpinname="Geometry Out" dstnodeid="588" dstpinname="Geometry">
    </LINK>
    <LINK srcnodeid="587" srcpinname="Transform Out" dstnodeid="588" dstpinname="Transform In">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="589">
+   <BOUNDS type="Box" left="10335" top="10755" width="645" height="675">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10335" top="10755" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="589" srcpinname="Y Output Value" dstnodeid="358" dstpinname="Enabled">
+   </LINK>
+   <NODE systemname="SpritesConstant (Gea.NaiveGPU.Draw)" filename="%VVVV%\packs\VVVV.Gea.NaiveGPU\nodes\modules\Draw\Sprites\SpritesConstant (Gea.NaiveGPU.Draw).v4p" nodename="SpritesConstant (Gea.NaiveGPU.Draw)" componentmode="Hidden" id="260">
+   <BOUNDS type="Node" left="900" top="16530" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Buffers" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Group Index" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Query" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="1215" top="4440" width="11610" height="11445">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="261" srcpinname="Y Output Value" dstnodeid="260" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="260" srcpinname="Layer" dstnodeid="375" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="358" srcpinname="Buffers" dstnodeid="260" dstpinname="Buffers">
    </LINK>
    </PATCH>
