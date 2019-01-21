@@ -1,12 +1,12 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha37.1.dtd" >
-   <PATCH nodename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\Debug\Debug.v4p" systemname="Debug" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\Debug\Debug.v4p" scrollx="0" scrolly="210">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
+   <PATCH nodename="C:\Users\conature\Documents\REPOS\VVVV.Gea.NaiveGPU\nodes\modules\Debug\Debug.v4p" systemname="Debug" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\Debug\Debug.v4p" scrollx="5400" scrolly="210">
    <BOUNDS type="Window" left="5475" top="5685" width="16665" height="8520">
    </BOUNDS>
-   <PACK Name="dx11" Version="1.2">
+   <PACK Name="dx11" Version="1.3.1">
    </PACK>
    <PACK Name="dx11.particles" Version="1.0.3">
    </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE systemname="Sphere (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Sphere (DX11.Geometry)" componentmode="Hidden" id="29" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="2286" top="3405" width="100" height="100">

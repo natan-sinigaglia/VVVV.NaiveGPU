@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
-   <PATCH nodename="C:\Users\conature\Documents\REPOS\VVVV.Gea.NaiveGPU\girlpower\01_Example.v4p" systemname="01_Ropes" filename="D:\REPOS\Gea.Springs\examples\01_Ropes.v4p" scrollx="0" scrolly="-360">
+   <PATCH nodename="C:\Users\conature\Documents\REPOS\VVVV.Gea.NaiveGPU\girlpower\01_Example.v4p" systemname="01_Ropes" filename="D:\REPOS\Gea.Springs\examples\01_Ropes.v4p" scrollx="-1800" scrolly="0">
    <BOUNDS type="Window" left="-480" top="195" width="18450" height="13560">
    </BOUNDS>
    <PACK Name="dx11" Version="1.3.1">
@@ -11,7 +11,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="807" top="19512" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="17820" top="195" width="10200" height="6450">
+   <BOUNDS type="Window" left="17805" top="195" width="10740" height="6495">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -26,6 +26,8 @@
    <PIN pinname="Depth Buffer Format" slicecount="1" values="D32_Float">
    </PIN>
    <PIN pinname="VSync" visible="1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.44537,0.44537,0.44537,1.00000|">
    </PIN>
    </NODE>
    <PACK Name="VVVV.Packs" Version="0.2.0">
@@ -523,7 +525,7 @@
    <LINK srcnodeid="294" srcpinname="Output" dstnodeid="275" dstpinname="Spread Count">
    </LINK>
    <NODE systemname="HSV (Color Join)" nodename="HSV (Color Join)" componentmode="Hidden" id="295">
-   <BOUNDS type="Node" left="3660" top="3270" width="100" height="100">
+   <BOUNDS type="Node" left="3645" top="3930" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Hue" visible="1">
    </PIN>
@@ -533,11 +535,13 @@
    </PIN>
    </NODE>
    <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="296">
-   <BOUNDS type="Node" left="3675" top="2835" width="100" height="100">
+   <BOUNDS type="Node" left="3645" top="3495" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Spread Count" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="0.5">
    </PIN>
    </NODE>
    <LINK srcnodeid="276" srcpinname="Y Output Value" dstnodeid="296" dstpinname="Spread Count">
@@ -733,7 +737,7 @@
    <LINK srcnodeid="370" srcpinname="Enum" dstnodeid="369" dstpinname="Receive String">
    </LINK>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="375">
-   <BOUNDS type="Node" left="900" top="17130" width="17910" height="270">
+   <BOUNDS type="Node" left="900" top="17130" width="19380" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="900" top="17130" width="3000" height="3000">
    </BOUNDS>
@@ -743,7 +747,7 @@
    </PIN>
    <PIN pinname="Layer Out" visible="1">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="5">
+   <PIN pinname="Input Count" slicecount="1" values="6">
    </PIN>
    <PIN pinname="Layer 3" visible="1">
    </PIN>
@@ -751,7 +755,9 @@
    </PIN>
    <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Layer 5" visible="1">
+   <PIN pinname="Layer 5" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 6" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="260" srcpinname="Layer" dstnodeid="375" dstpinname="Layer 1">
@@ -2101,9 +2107,9 @@
    <LINK srcnodeid="493" srcpinname="Y Output Value" dstnodeid="401" dstpinname="Up Vector">
    </LINK>
    <NODE systemname="Debug" filename="..\nodes\modules\Debug\Debug.v4p" componentmode="Hidden" id="517" nodename="..\nodes\modules\Debug\Debug.v4p">
-   <BOUNDS type="Node" left="17187" top="16500" width="100" height="100">
+   <BOUNDS type="Node" left="18372" top="16485" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="17187" top="16500" width="4800" height="3600">
+   <BOUNDS type="Box" left="18372" top="16485" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="5475" top="5685" width="16665" height="8520">
    </BOUNDS>
@@ -2112,14 +2118,12 @@
    <PIN pinname="Enabled" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="517" srcpinname="Layer Out" dstnodeid="375" dstpinname="Layer 5">
-   </LINK>
    <LINK srcnodeid="375" srcpinname="Layer Out" dstnodeid="6" dstpinname="Layer In">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="518">
-   <BOUNDS type="Box" left="17157" top="15780" width="480" height="480">
+   <BOUNDS type="Box" left="18342" top="15765" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="17157" top="15780" width="0" height="0">
+   <BOUNDS type="Node" left="18342" top="15765" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -2833,7 +2837,7 @@
    </PIN>
    <PIN pinname="Start Offset" visible="1">
    </PIN>
-   <PIN pinname="Group Index" slicecount="1" values="0" visible="1">
+   <PIN pinname="Group Index" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="284" srcpinname="Geometry Out" dstnodeid="281" dstpinname="Geometry">
@@ -3194,4 +3198,42 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <LINK srcnodeid="517" srcpinname="Layer Out" dstnodeid="375" dstpinname="Layer 6">
+   </LINK>
+   <NODE systemname="Grid (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Grid (DX11.Geometry)" componentmode="Hidden" id="585">
+   <BOUNDS type="Node" left="15075" top="15900" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="15075" top="15900" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   <PIN pinname="SizeXY" slicecount="2" values="20,20">
+   </PIN>
+   </NODE>
+   <NODE systemname="Rotate (Transform)" nodename="Rotate (Transform)" componentmode="Hidden" id="587">
+   <BOUNDS type="Node" left="15855" top="15975" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="X" slicecount="1" values="0.25">
+   </PIN>
+   </NODE>
+   <NODE systemname="PhongDirectional (DX11.Effect)" filename="%VVVV%\packs\dx11\nodes\dx11\PhongDirectional.fx" nodename="PhongDirectional (DX11.Effect)" componentmode="Hidden" id="588">
+   <BOUNDS type="Node" left="14805" top="16515" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Ambient Color" slicecount="1" values="|0.06505,0.06505,0.06505,1.00000|">
+   </PIN>
+   <PIN pinname="Diffuse Color" slicecount="1" values="|0.63816,0.63816,0.63816,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="406" srcpinname="XYZ" dstnodeid="588" dstpinname="Light DirectionXYZ" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="562" srcpinname="Y Output Value" dstnodeid="588" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="588" srcpinname="Layer" dstnodeid="375" dstpinname="Layer 5">
+   </LINK>
+   <LINK srcnodeid="585" srcpinname="Geometry Out" dstnodeid="588" dstpinname="Geometry">
+   </LINK>
+   <LINK srcnodeid="587" srcpinname="Transform Out" dstnodeid="588" dstpinname="Transform In">
+   </LINK>
    </PATCH>
