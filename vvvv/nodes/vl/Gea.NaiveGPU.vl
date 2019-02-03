@@ -1538,8 +1538,8 @@
                 </p:NodeReference>
                 <Pin Id="SvZCOWQEjlsMN5pNqVUZuL" Name="Output" Kind="StateOutputPin" />
                 <Pin Id="CwIJSTDEgQ6LIJAQRDfN9y" Name="Count" Kind="InputPin" />
-                <Pin Id="ReptmPdIWZsPVDOvt8hujw" Name="Resolution" Kind="InputPin" />
                 <Pin Id="MQLwOYUJHn9N1KeRzYRvCr" Name="Body_M" Kind="InputPin" />
+                <Pin Id="ReptmPdIWZsPVDOvt8hujw" Name="Resolution" Kind="InputPin" />
               </Node>
               <Pad Id="S5twroKkHktNEhaIneGDQo" Comment="Count" Bounds="1310,-178,70,20" ShowValueBox="true" isIOBox="true" Value="262144">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -1587,9 +1587,9 @@
                   </p:TypeAnnotation>
                 </Pin>
                 <Pin Id="NFPTvI2E8s3MIfnpZRfIgB" Name="Count" Kind="InputPin" />
-                <Pin Id="GNhAzHwfp0lL6FQP5ioHbJ" Name="Resolution" Kind="InputPin" />
                 <Pin Id="EOaQ55jiav9OamFCPRTosJ" Name="Size" Kind="InputPin" />
                 <Pin Id="RHqkv3FJ0fKP6nu7EvD4tt" Name="Body_M" Kind="InputPin" />
+                <Pin Id="GNhAzHwfp0lL6FQP5ioHbJ" Name="Resolution" Kind="InputPin" />
               </Node>
               <Node Bounds="1773,-78,85,22" Id="CkAejUsxnFCNuzxrKsrUNC">
                 <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Body_M" LastSymbolSource="Gea.NaiveGPU.vl">
@@ -1859,9 +1859,9 @@
                     <Choice Kind="TypeFlag" Name="Integer32" />
                   </p:TypeAnnotation>
                 </Pin>
-                <Pin Id="JEsLkKhH8RhMybfO6TQrjl" Name="Resolution" Kind="InputPin" />
                 <Pin Id="L4hf15e05SiPRjswL0PMJ8" Name="Size" Kind="InputPin" />
                 <Pin Id="Vop8PZdHGcqP0mQJMuJjDv" Name="Body_M" Kind="InputPin" />
+                <Pin Id="JEsLkKhH8RhMybfO6TQrjl" Name="Resolution" Kind="InputPin" />
               </Node>
               <Node Bounds="2114,-99,85,22" Id="GFa6GtmL7ahNoBr2nYqU9O">
                 <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Body_M" LastSymbolSource="Gea.NaiveGPU.vl">
@@ -5045,6 +5045,7 @@
                       <Choice Kind="OperationCallFlag" Name="Split" />
                     </p:NodeReference>
                     <Pin Id="URx9aiJ2ZyjNJZzA5QOB7s" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="TNfxRufRnBLPrwWjYnZdPf" Name="Output" Kind="OutputPin" />
                     <Pin Id="CLcYVwjx0rfQWajORKQcZ2" Name="Type" Kind="OutputPin" />
                     <Pin Id="FxjIreNdHJXOmyhjwNY6Bf" Name="Count" Kind="OutputPin" />
                     <Pin Id="QBDggGjrO5mNHuxG6sG27T" Name="Resolution" Kind="OutputPin" />
@@ -12184,9 +12185,9 @@
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Group_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Group_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="SQSPrAhVeROOvQAP8Q8t4v" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="TrX7yXMcYUONu85ZwG3PNN" Name="Input" Kind="InputPin" />
               <Pin Id="R6S3Qk4P0WcMOs74vPxHW1" Name="Name" Kind="InputPin" DefaultValue="Particles">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="String" />
@@ -12194,6 +12195,7 @@
               </Pin>
               <Pin Id="BYCwaXbcxllOPlkXGUjB7N" Name="Construct_M" Kind="InputPin" />
               <Pin Id="KWRMQOhnffqMvpxKvLGGSy" Name="Simulation_M" Kind="InputPin" />
+              <Pin Id="SQSPrAhVeROOvQAP8Q8t4v" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="-204,633,1124,13" Id="I1OhTN256dmLd5Zfmoonqz">
               <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
@@ -12210,9 +12212,9 @@
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Group_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Group_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="PnXpDsYb7IENG2pIYniPFQ" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="GZgJdsQ87YrO9votDw89Rw" Name="Input" Kind="InputPin" />
               <Pin Id="TTOcEInkdWzMsyxGKm13iS" Name="Name" Kind="InputPin" DefaultValue="Ropes">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="String" />
@@ -12220,18 +12222,21 @@
               </Pin>
               <Pin Id="HzTq4ov5UHdL0lzow0So8v" Name="Construct_M" Kind="InputPin" />
               <Pin Id="IxpMpjhi3fLLyzyKr5DDbR" Name="Simulation_M" Kind="InputPin" />
+              <Pin Id="PnXpDsYb7IENG2pIYniPFQ" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="-163,312,85,22" Id="OE4vCfR6kmpLiiSorGe4y0">
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Construct_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Construct_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="KvRWKJnHdh5NKL2wjsFCfq" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="VA9xqiPqy2PQZsLwQAJ9CY" Name="Input" Kind="InputPin" />
               <Pin Id="DecfMx2pBLmO3G7xfJk8Zh" Name="Type" Kind="InputPin" />
               <Pin Id="Jf1lBNrE1DRNsnF5t93MSw" Name="Count" Kind="InputPin" />
               <Pin Id="AZKe98FPYBMPIrNxdJbFLS" Name="Resolution" Kind="InputPin" />
+              <Pin Id="CcZuSeLbuMQNCs8mHxHth8" Name="Size" Kind="InputPin" />
               <Pin Id="QPYwLbn7BRnL6XC93tUL1B" Name="Body_M" Kind="InputPin" />
+              <Pin Id="KvRWKJnHdh5NKL2wjsFCfq" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Pad Id="OOWus4Ja7GqOTBl3ZE5rAh" Comment="Count" Bounds="-181,174,70,20" ShowValueBox="true" isIOBox="true" Value="65536">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -12247,9 +12252,10 @@
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Body_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Body_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="HnG7s3T86vQLP7IPyAI7Fp" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="RuXwELXUJLMO1rAtbpQ0FS" Name="Input" Kind="InputPin" />
+              <Pin Id="QlOW0ezpUwsLeGQFg6pAat" Name="Mass" Kind="InputPin" />
               <Pin Id="KZ0ssfURlDdLtD5CjFMbwg" Name="Drag" Kind="InputPin" />
               <Pin Id="USCoNuCrtytMmWgmIaC0FH" Name="Thickness" Kind="InputPin" />
               <Pin Id="OmSFEkwtOGGOp5RubAA5Bi" Name="Enable Unfold Springs" Kind="InputPin" DefaultValue="False">
@@ -12257,23 +12263,36 @@
                   <Choice Kind="TypeFlag" Name="Boolean" />
                 </p:TypeAnnotation>
               </Pin>
+              <Pin Id="Ocri7N7Q9QoOIT8IIQLSSm" Name="Unfold Mate Distance" Kind="InputPin" />
+              <Pin Id="HnG7s3T86vQLP7IPyAI7Fp" Name="Output" Kind="StateOutputPin" />
             </Node>
-            <Node Bounds="-33,314,205,22" Id="CoYzk0OusRRLB88fOu6syf">
+            <Node Bounds="-33,314,20,22" Id="CoYzk0OusRRLB88fOu6syf">
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Simulation_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Simulation_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="EkiNFaBifuqOR9CDa3RBsm" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="LOEJB8ByT2kOFTi2PgCw4L" Name="Input" Kind="InputPin" />
+              <Pin Id="KX6YIi2fFUuNBx9XZybMv3" Name="Enable" Kind="InputPin" />
+              <Pin Id="HwmjHXcLzXpOOCY38UpgoM" Name="Reset" Kind="InputPin" />
               <Pin Id="Ejpgy62AhRBLdRUgJU1Tm9" Name="ResetPos" Kind="InputPin" />
+              <Pin Id="IUhaTNR7hF3LT43wi5rX0S" Name="tStepMult" Kind="InputPin" />
+              <Pin Id="Vuc4d4rdWtFM3C9Fv3Nn52" Name="DragMult" Kind="InputPin" />
+              <Pin Id="Ma3fB6K5414OshhYrTUycc" Name="MassMult" Kind="InputPin" />
+              <Pin Id="EBBtXVswB7eM1SK0DFA0uK" Name="RestLengthMult" Kind="InputPin" />
+              <Pin Id="M1RrJJRRaTaPdI6p7CytH5" Name="RndLength" Kind="InputPin" />
+              <Pin Id="M1B00d2hrDiMNEkuiZ6vSu" Name="StiffnessMult" Kind="InputPin" />
+              <Pin Id="Ib0geTbmix6LiW0IsI5nX2" Name="UnfoldStiffnessMult" Kind="InputPin" />
+              <Pin Id="SBkbytnm1T8NPygEuWwUdf" Name="SpringsIterationsCount" Kind="InputPin" />
+              <Pin Id="EkiNFaBifuqOR9CDa3RBsm" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="201,317,85,22" Id="KngEoKNyFqEOWputUwRra4">
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Construct_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Construct_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="CzyuR46CQ6uPWpLwtanNn1" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="Eo3nayVcT9MPjtjWhmFTmH" Name="Input" Kind="InputPin" />
               <Pin Id="VRT14ncWgEeOKf6fd98iWH" Name="Type" Kind="InputPin" DefaultValue="1">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Integer32" />
@@ -12283,24 +12302,41 @@
               <Pin Id="PPC9jqNCGSbQOVGfQh3bwU" Name="Resolution" Kind="InputPin" />
               <Pin Id="JXIeqBSvHl0Psjx60WhD0p" Name="Size" Kind="InputPin" />
               <Pin Id="Q5wyboTHGe6P9bXVLzjb93" Name="Body_M" Kind="InputPin" />
+              <Pin Id="CzyuR46CQ6uPWpLwtanNn1" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="282,274,85,22" Id="UE7XEnnV3c6P2GXWT4cTUV">
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Body_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Body_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="FNLwywFpJGvPukBFTvuVGt" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="FGiin5pjJZCQFlE10E8g32" Name="Input" Kind="InputPin" />
+              <Pin Id="VKDC3ABKoySNllNwMMYxzz" Name="Mass" Kind="InputPin" />
+              <Pin Id="OvWw6YGloQRP8fWOcoMDE2" Name="Drag" Kind="InputPin" />
               <Pin Id="BljWeAmnQ3RMAGUDeoBfQb" Name="Thickness" Kind="InputPin" />
+              <Pin Id="TDZY6CLKBr1OavFodqA6q3" Name="Enable Unfold Springs" Kind="InputPin" />
+              <Pin Id="O2A8HAv5f1UNAtizm10BRx" Name="Unfold Mate Distance" Kind="InputPin" />
+              <Pin Id="FNLwywFpJGvPukBFTvuVGt" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="331,319,205,22" Id="Q1zrvdQmu6XQPHxvLw4loL">
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Simulation_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Simulation_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="HWwKQc61dWMMqCyXOm9FPj" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="FkE6dK5AN3xQDhssqyzjxd" Name="Input" Kind="InputPin" />
+              <Pin Id="Ub3AJbndql6MZ5kJCVEmh6" Name="Enable" Kind="InputPin" />
+              <Pin Id="RxR1wTGGbfNMi4dWqfLhXk" Name="Reset" Kind="InputPin" />
+              <Pin Id="UNfs70PO8XJLILnQyXxJjM" Name="ResetPos" Kind="InputPin" />
+              <Pin Id="TG9KZryQmyZNfJNBupRCzu" Name="tStepMult" Kind="InputPin" />
+              <Pin Id="IELxKeksqSpOnpqF5xTw74" Name="DragMult" Kind="InputPin" />
+              <Pin Id="Fqx5g3mZfnkL3ARPmz8Hdy" Name="MassMult" Kind="InputPin" />
+              <Pin Id="EIB0u38immyLvKbbVWQi9U" Name="RestLengthMult" Kind="InputPin" />
+              <Pin Id="QmQwvZQBa66LdlL8pEM2fO" Name="RndLength" Kind="InputPin" />
+              <Pin Id="AQXD7gwBuJtMRzzDYgnEB0" Name="StiffnessMult" Kind="InputPin" />
+              <Pin Id="HBmVmiP9sLmQJKojaFVMIf" Name="UnfoldStiffnessMult" Kind="InputPin" />
               <Pin Id="FSk95GChfbnPhASgrNe7ec" Name="SpringsIterationsCount" Kind="InputPin" />
+              <Pin Id="HWwKQc61dWMMqCyXOm9FPj" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Pad Id="PrUIXBkawrVLfTqkWxb8Cy" Comment="Count" Bounds="220,186,24,19" ShowValueBox="true" isIOBox="true" Value="64">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -12316,15 +12352,18 @@
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Modifiers_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Modifiers_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="LtBpJsdCrGrN7W9FL97n3U" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="VB5AKPuRiwjMIJXur340Ap" Name="Input" Kind="InputPin" />
               <Pin Id="JBJIzsEs9FBMiME5o6Dlu4" Name="Gravity_M" Kind="InputPin" />
+              <Pin Id="E6v7ZsDlToLPBVZmopesRb" Name="Spiral_M" Kind="InputPin" />
+              <Pin Id="Dsj2Bo7pmhPQZPtZcZFuEn" Name="Torus_M" Kind="InputPin" />
               <Pin Id="HJmfbGsr1vlO5yQLu25L7d" Name="Turbulence_M" Kind="InputPin" />
               <Pin Id="UVcVklbcpQMQHuw0eqeMiw" Name="Brownian_M" Kind="InputPin" />
               <Pin Id="VeekEsieKm0MbJKIt8VLXV" Name="Cymatics_M" Kind="InputPin" />
               <Pin Id="RT4gsdRmrFpOuO5B9KyUd1" Name="Attractors_M" Kind="InputPin" />
               <Pin Id="UPftw3fsCIlLGmuFhJq8hi" Name="VolumeField_M" Kind="InputPin" />
+              <Pin Id="LtBpJsdCrGrN7W9FL97n3U" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="3673,526,681,22" Id="Vb7VSFceCQ0NUoWebdjjSi">
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Constrains_M" LastSymbolSource="Gea.NaiveGPU.vl">
@@ -12341,20 +12380,23 @@
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Ground_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Ground_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="AiPdKt1OCxaNHLVv89equU" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="NB0El3TwvOVPdCUSZEntTV" Name="Input" Kind="InputPin" />
               <Pin Id="FUEtKzHsUeKMBdN7kyEUx0" Name="Enable" Kind="InputPin" />
               <Pin Id="DS6oeyXzr73OzS5BMHFxUl" Name="TargetGroup" Kind="InputPin" DefaultValue="-1">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Integer32" />
                 </p:TypeAnnotation>
               </Pin>
+              <Pin Id="GAQn8MOwIkRPEKIdaJGeCm" Name="GroundLevel" Kind="InputPin" />
+              <Pin Id="IWrvi04WIDdORGPiV8ihlP" Name="BounceCoef" Kind="InputPin" />
               <Pin Id="N09dcsJJZbSMpJbmpE2rGF" Name="Friction" Kind="InputPin" DefaultValue="0.9">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
               </Pin>
+              <Pin Id="AiPdKt1OCxaNHLVv89equU" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="4009,419,58,22" Id="VBoRFTvM7aeMVNuPBW7GoL">
               <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
@@ -12369,9 +12411,9 @@
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.ShapeObstacles_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="ShapeObstacles_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="VWrYSwNn6BFNHj8woTLNWe" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="F9IuQoJwDZZNPmYVFGx7XA" Name="Input" Kind="InputPin" />
               <Pin Id="SawWtUuavbrQZVCzwpJgd8" Name="Enable" Kind="InputPin" />
               <Pin Id="MaquXQyCuPhMPIc9w8l1Se" Name="TargetGroup" Kind="InputPin" DefaultValue="-1">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -12379,6 +12421,8 @@
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="KTjJPrsmpVYOtpWIHUSkuD" Name="SphereObstacles_M" Kind="InputPin" />
+              <Pin Id="OBK73nzrhjOPo0lpi6hFLX" Name="ConstactThreshold" Kind="InputPin" />
+              <Pin Id="VWrYSwNn6BFNHj8woTLNWe" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Pad Id="BJY4iPRDshFOyL5Zn46t3o" Comment="Thickness" Bounds="-7,224,60,21" ShowValueBox="true" isIOBox="true" Value="0.00500000035">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -12392,11 +12436,13 @@
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Gravity_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Gravity_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="PsV2jaxRo8eQJ39S6lXCg4" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="EiDwG78FIWcNLJ3NF3K9OE" Name="Input" Kind="InputPin" />
               <Pin Id="EzHLGmbLyxFLWDA9XEamAg" Name="Enable" Kind="InputPin" />
               <Pin Id="VdBtgeSokleQOsXx25NqSP" Name="Gravity" Kind="InputPin" />
+              <Pin Id="UHa5Wt4Mot9LY022dO4Sge" Name="TargetGroup" Kind="InputPin" />
+              <Pin Id="PsV2jaxRo8eQJ39S6lXCg4" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="1557,379,58,22" Id="Ss4wQv29byoPzcW6YfUCUJ">
               <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
@@ -12426,11 +12472,13 @@
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Turbulence_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Turbulence_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="AillFSOkEEEQUrjYftwWpq" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="NdyH2wzDPYgPzkey2TmzUd" Name="Input" Kind="InputPin" />
               <Pin Id="SLycooSymloN4kK1fbhS9D" Name="Enable" Kind="InputPin" />
+              <Pin Id="FRd7u2Gy3N9Om1gaefPvbQ" Name="TargetGroup" Kind="InputPin" />
               <Pin Id="Ex89Hh2mQTiLMH4eIFj49u" Name="SimplexAdvanced_M" Kind="InputPin" />
+              <Pin Id="AillFSOkEEEQUrjYftwWpq" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="1806,425,58,22" Id="Slq8Z41i8xAOngFbhdmBos">
               <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
@@ -12464,19 +12512,24 @@
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.SimplexAdvanced_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="SimplexAdvanced_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="ILdXZUbie1fPC4sGrxUQmL" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="FaVEg0FTF5wNEp9u7kcBd4" Name="Input" Kind="InputPin" />
               <Pin Id="SeVKhy0kaDEPWY76zAfrIM" Name="Scalar" Kind="InputPin" />
+              <Pin Id="AlXDW7RvExgLQrvdSJiyiJ" Name="Frequency" Kind="InputPin" />
+              <Pin Id="Tz0Q3ahTw34PFHZzkORPkX" Name="Octaves" Kind="InputPin" />
+              <Pin Id="KGCvNiZ2XjVPM3n5t3yAC2" Name="Lacunarity" Kind="InputPin" />
+              <Pin Id="Po1mB5o2wjbPGl4v8vnoG9" Name="Persistance" Kind="InputPin" />
               <Pin Id="NyNrb1AJ81oPjAAtzVgvqy" Name="Strength" Kind="InputPin" />
+              <Pin Id="ILdXZUbie1fPC4sGrxUQmL" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="596,407,55,22" Id="RrJmlELixRBNnfORn5DIrM">
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Group_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Group_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="T1XG9bBe0OVP0huGqKrF7O" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="NSbVhSVaj0pLxhvl82JrYR" Name="Input" Kind="InputPin" />
               <Pin Id="Rm6oYatNF11QQUwBL95dWd" Name="Name" Kind="InputPin" DefaultValue="Cloth">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="String" />
@@ -12484,40 +12537,59 @@
               </Pin>
               <Pin Id="OrvTJHAHWNjLNzDhCOocZ5" Name="Construct_M" Kind="InputPin" />
               <Pin Id="TJOBYHTit5LLdXFWMKBruf" Name="Simulation_M" Kind="InputPin" />
+              <Pin Id="T1XG9bBe0OVP0huGqKrF7O" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="597,321,85,22" Id="MyMMtEYrigUOdC3Pf46dHr">
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Construct_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Construct_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="Ai21elRf5kvOs9lhY1nBeL" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="Sdi4ZUr8hyQPGvfMJwMpcP" Name="Input" Kind="InputPin" />
               <Pin Id="UtOff9oD9aDLUOivxn2agS" Name="Type" Kind="InputPin" DefaultValue="2">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Integer32" />
                 </p:TypeAnnotation>
               </Pin>
+              <Pin Id="QuQExiNo5cSMk46I1w6tYp" Name="Count" Kind="InputPin" />
               <Pin Id="FOqx7WWtRCSL1x5OGdQKmO" Name="Resolution" Kind="InputPin" />
               <Pin Id="LQUPZshQwkDOJlIlybuEky" Name="Size" Kind="InputPin" />
               <Pin Id="HujrLF6uCadLcusOwmHQ63" Name="Body_M" Kind="InputPin" />
+              <Pin Id="Ai21elRf5kvOs9lhY1nBeL" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="678,278,85,22" Id="AoA3MboHsl8K9wYztfJJoN">
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Body_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Body_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="AHCTi2DP0KXP9x10WP5W9x" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="PTkTyyEmMNnNP3nbxkNjKe" Name="Input" Kind="InputPin" />
+              <Pin Id="VnL5FFysqXtLkkqFGhh5Yb" Name="Mass" Kind="InputPin" />
+              <Pin Id="DMGVHAJ3PlDMlPNf9VzhBz" Name="Drag" Kind="InputPin" />
               <Pin Id="BNzrM9kbtmSO9glLUk8Yb0" Name="Thickness" Kind="InputPin" />
+              <Pin Id="Mwxb3kxnaBFQdpcBXxD5Gl" Name="Enable Unfold Springs" Kind="InputPin" />
+              <Pin Id="HgQFfS9mNvRNklSksjIIrX" Name="Unfold Mate Distance" Kind="InputPin" />
+              <Pin Id="AHCTi2DP0KXP9x10WP5W9x" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="713,322,205,22" Id="TYhrl8bTDL1PFFmYON4g2o">
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Simulation_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Simulation_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="AFGXRG891fWLpxdK31iTvw" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="C3NASUGPx8UN6FHbln4n53" Name="Input" Kind="InputPin" />
+              <Pin Id="El2J5ewHnQFMYeBZ46Eo7F" Name="Enable" Kind="InputPin" />
+              <Pin Id="SxFFb3YpmVHO7Fe8J8JMhD" Name="Reset" Kind="InputPin" />
+              <Pin Id="LydCW9eCeuBODwTgsUeYWz" Name="ResetPos" Kind="InputPin" />
+              <Pin Id="MPm9Rpmy1pbLO4WHTep57U" Name="tStepMult" Kind="InputPin" />
+              <Pin Id="Vsj6oaXl2u8QP0K6AQ6MvY" Name="DragMult" Kind="InputPin" />
+              <Pin Id="RQipvdNRswTQQKJXfqUCvP" Name="MassMult" Kind="InputPin" />
+              <Pin Id="MESCVw3r1hZPTEiVAHuJgz" Name="RestLengthMult" Kind="InputPin" />
+              <Pin Id="COrBYtpO9qhLEQakx1hjV1" Name="RndLength" Kind="InputPin" />
+              <Pin Id="QffVEYtAQXrQGxb84Fa5KJ" Name="StiffnessMult" Kind="InputPin" />
+              <Pin Id="QyJluljaIejMIxKqMsCZ4p" Name="UnfoldStiffnessMult" Kind="InputPin" />
               <Pin Id="CVJ1qbKRWNLOrkV1lPH1vM" Name="SpringsIterationsCount" Kind="InputPin" />
+              <Pin Id="AFGXRG891fWLpxdK31iTvw" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Pad Id="NpZb2hR3DQcPaZHuBRmppD" Comment="Resolution" Bounds="638,234,39,38" ShowValueBox="true" isIOBox="true" Value="64, 64">
               <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
@@ -12538,11 +12610,13 @@
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Brownian_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Brownian_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="OwIaMuwsbITPwyFZi2p4q0" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="INUiOUGJYcCPCrI7GzxFIg" Name="Input" Kind="InputPin" />
               <Pin Id="LLn9RKWENaALMJu4nnSkhb" Name="Enable" Kind="InputPin" />
+              <Pin Id="J1uFGggHbx3PjNS0ZtSXHy" Name="TargetGroup" Kind="InputPin" />
               <Pin Id="PSOSaX8tMdWNi2YZZoGoGO" Name="Strength" Kind="InputPin" />
+              <Pin Id="OwIaMuwsbITPwyFZi2p4q0" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="2101,421,58,22" Id="MpWoCyrndyAO85h8vlayZV">
               <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
@@ -12588,9 +12662,9 @@
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.PinsCtrlTexture_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="PinsCtrlTexture_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="QNAtIa5a3vGNFpUWBsNaD9" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="RgVzVFLwbrgO4LkGoaZRjc" Name="Input" Kind="InputPin" />
               <Pin Id="IBE4Aai6j4fLg3B77EYWDI" Name="Enable" Kind="InputPin" />
               <Pin Id="GgG9sw6kdwwNzX32aPrlOw" Name="TargetGroup" Kind="InputPin" DefaultValue="1">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -12598,6 +12672,8 @@
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="S5JUk5RNbJlNPBlUp26xQz" Name="PinsTextureName" Kind="InputPin" />
+              <Pin Id="CQrRL1MMSpPMVT4s4DkTHT" Name="Strength" Kind="InputPin" />
+              <Pin Id="QNAtIa5a3vGNFpUWBsNaD9" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Pad Id="QsuSBcKlExgMuqQFEEwvXm" Comment="PinsTextureName" Bounds="3552,48,69,20" ShowValueBox="true" isIOBox="true" Value="Ropes">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -12807,9 +12883,9 @@
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.PinsCtrlTexture_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="PinsCtrlTexture_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="PlgyTArO3iqO4xiPFbIOle" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="LLLswFnhY2NPn1b2azGpqt" Name="Input" Kind="InputPin" />
               <Pin Id="PQvPryCTb3CNAw269gn0JA" Name="Enable" Kind="InputPin" />
               <Pin Id="HaWMcpfVjCZOHphcFXcMaQ" Name="TargetGroup" Kind="InputPin" DefaultValue="2">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -12817,6 +12893,8 @@
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="Aq30x6rL413OBAMk3D0h3P" Name="PinsTextureName" Kind="InputPin" />
+              <Pin Id="B8rFFCzifApMPXXJXAlC5q" Name="Strength" Kind="InputPin" />
+              <Pin Id="PlgyTArO3iqO4xiPFbIOle" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Pad Id="IJj0gKDEOJTM0kogu2ITdn" Comment="PinsTextureName" Bounds="3694,248,69,20" ShowValueBox="true" isIOBox="true" Value="Cloth">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -12862,11 +12940,13 @@
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Attractors_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Attractors_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="CnxeTFvCs8NLTZ6jvsOEEr" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="K2mf0RhFLHoPBU7v96p3HC" Name="Input" Kind="InputPin" />
               <Pin Id="Qy3PC9d2CToPEbj9AcstHZ" Name="Enable" Kind="InputPin" />
+              <Pin Id="UzagbtwHpwZOQNxQyhRb2i" Name="TargetGroup" Kind="InputPin" />
               <Pin Id="RUfcgOzN9qfMomyYNeeCsl" Name="AttractorPoints_M" Kind="InputPin" />
+              <Pin Id="CnxeTFvCs8NLTZ6jvsOEEr" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="2748,428,58,22" Id="V0AL99INdniMREiATBlhg1">
               <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
@@ -12958,10 +13038,12 @@
                   <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.AttractorPoint_M" LastSymbolSource="Gea.NaiveGPU.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="RecordType" Name="AttractorPoint_M" />
-                    <Choice Kind="OperationCallFlag" Name="Create" />
+                    <Choice Kind="OperationCallFlag" Name="Update" />
                   </p:NodeReference>
-                  <Pin Id="QRmQrcuQa60PRzVdAWYNOv" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="NHLZcBFfwLkNRl8D9E7uCZ" Name="Input" Kind="InputPin" />
                   <Pin Id="F4fh1ZhxTcTMQHgnikofRP" Name="Position" Kind="InputPin" />
+                  <Pin Id="UfdG0Giiyl9P7ugEw7FboD" Name="PosGaussianOffset" Kind="InputPin" />
+                  <Pin Id="VcRPjTdKnaHNpaunNEZk2n" Name="Radius" Kind="InputPin" />
                   <Pin Id="CBLJBf6GSHCMwLpyRho3tH" Name="Strength" Kind="InputPin" DefaultValue="100">
                     <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                       <Choice Kind="TypeFlag" Name="Float32" />
@@ -12972,11 +13054,13 @@
                       <Choice Kind="TypeFlag" Name="Float32" />
                     </p:TypeAnnotation>
                   </Pin>
+                  <Pin Id="JGJLc7fHPqDMb71bC1nnob" Name="VectorRotation" Kind="InputPin" />
                   <Pin Id="U1rWSZjiYSOPLvqAcwIQPO" Name="RandomRotationAmount" Kind="InputPin" DefaultValue="0.13">
                     <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                       <Choice Kind="TypeFlag" Name="Float32" />
                     </p:TypeAnnotation>
                   </Pin>
+                  <Pin Id="QRmQrcuQa60PRzVdAWYNOv" Name="Output" Kind="StateOutputPin" />
                 </Node>
               </Patch>
               <ControlPoint Id="Qve5mxY7m2ML50h96sb6Pb" Bounds="2690,2" Alignment="Top" />
@@ -13012,11 +13096,13 @@
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Cymatics_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Cymatics_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="SxS1RJzazi5OcPM0euV17n" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="DdPSKQeOf5QP6f7448COIU" Name="Input" Kind="InputPin" />
               <Pin Id="IgY1dRoUzYkQAw2qNm1MGj" Name="Enable" Kind="InputPin" />
+              <Pin Id="KI3itGWiNulObqjqMHyXvQ" Name="TargetGroup" Kind="InputPin" />
               <Pin Id="J5PsCPdKl0CMQZ2uqqXZX3" Name="CymaticPoints_M" Kind="InputPin" />
+              <Pin Id="SxS1RJzazi5OcPM0euV17n" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="2362,425,58,22" Id="AtQFKe1YkkvOPHeCrEpr4A">
               <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
@@ -13042,15 +13128,16 @@
                   <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.CymaticPoint_M" LastSymbolSource="Gea.NaiveGPU.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="RecordType" Name="CymaticPoint_M" />
-                    <Choice Kind="OperationCallFlag" Name="Create" />
+                    <Choice Kind="OperationCallFlag" Name="Update" />
                   </p:NodeReference>
-                  <Pin Id="NLCZOtUqpBWLiFOP8g9hYb" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="Jf0PTErNhLXPrL5riOYwaG" Name="Input" Kind="InputPin" />
                   <Pin Id="AS99LaVpxKWNJEcTHflhsS" Name="Position" Kind="InputPin" />
                   <Pin Id="O8WEQkxXU2ELrw4RPe47Oi" Name="Radius" Kind="InputPin" DefaultValue="4">
                     <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                       <Choice Kind="TypeFlag" Name="Float32" />
                     </p:TypeAnnotation>
                   </Pin>
+                  <Pin Id="VC3zijjD5sLO4HKUPQI6yR" Name="Gamma" Kind="InputPin" />
                   <Pin Id="HAIZ0wVZWH9LXyo0YMayBc" Name="Strength" Kind="InputPin" DefaultValue="5">
                     <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                       <Choice Kind="TypeFlag" Name="Float32" />
@@ -13061,6 +13148,8 @@
                       <Choice Kind="TypeFlag" Name="Float32" />
                     </p:TypeAnnotation>
                   </Pin>
+                  <Pin Id="BmuEsSFx8LpQNMXeqWCLaQ" Name="Phase" Kind="InputPin" />
+                  <Pin Id="NLCZOtUqpBWLiFOP8g9hYb" Name="Output" Kind="StateOutputPin" />
                 </Node>
               </Patch>
               <ControlPoint Id="RIzkLHs33reOfHNuosh7w3" Bounds="2435,277" Alignment="Top" />
@@ -13191,9 +13280,9 @@
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Group_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Group_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="Qgk7p87KOalOnsqVfjeg4f" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="C3nnlTLzxlOMpSNmT1uMUn" Name="Input" Kind="InputPin" />
               <Pin Id="GitvLvRdR72POGZ74xgtge" Name="Name" Kind="InputPin" DefaultValue="Cloth">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="String" />
@@ -13201,40 +13290,59 @@
               </Pin>
               <Pin Id="Dn0F3CopID1PjlVZK4NvsM" Name="Construct_M" Kind="InputPin" />
               <Pin Id="S6p3J73H2YGP5gIYEJv2PD" Name="Simulation_M" Kind="InputPin" />
+              <Pin Id="Qgk7p87KOalOnsqVfjeg4f" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="987,316,85,22" Id="UQGbol202LqMd9Ab52baQV">
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Construct_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Construct_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="OfW41GiYQErL6AceLA3URg" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="NLAMecTwXJGQN2Hg2jypbl" Name="Input" Kind="InputPin" />
               <Pin Id="KiYYelu9etWQRiYhtYszZ3" Name="Type" Kind="InputPin" DefaultValue="2">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Integer32" />
                 </p:TypeAnnotation>
               </Pin>
+              <Pin Id="QiMKMIB7BESLurXjHzCcgH" Name="Count" Kind="InputPin" />
               <Pin Id="H9R07aSkCTfNFFSVUo1Lw6" Name="Resolution" Kind="InputPin" />
               <Pin Id="DKJwBh3Z08tPZARp1b3wYy" Name="Size" Kind="InputPin" />
               <Pin Id="KkdDTww4HTSO2ztU3XQlGz" Name="Body_M" Kind="InputPin" />
+              <Pin Id="OfW41GiYQErL6AceLA3URg" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="1068,273,85,22" Id="BZypHuCxIpoQKScbHRlrfF">
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Body_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Body_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="RMqsnUV7ErcMfydo6pDXP5" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="BgrzB8g0DK2NFZrUh9fkst" Name="Input" Kind="InputPin" />
+              <Pin Id="FIYDrpEzlUULk44va1hNeC" Name="Mass" Kind="InputPin" />
+              <Pin Id="HQepNVAhy7cP7ifjrHJk3S" Name="Drag" Kind="InputPin" />
               <Pin Id="IxTiaFBYpzfNaGdrNVrn3A" Name="Thickness" Kind="InputPin" />
+              <Pin Id="VQVfya3H8u1Mlk0Vcmvurk" Name="Enable Unfold Springs" Kind="InputPin" />
+              <Pin Id="CnyVoX7ytP5PfuclHQLaSU" Name="Unfold Mate Distance" Kind="InputPin" />
+              <Pin Id="RMqsnUV7ErcMfydo6pDXP5" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Node Bounds="1103,317,205,22" Id="NKXSpaAL3TkMdeQ3VcnUrq">
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Simulation_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Simulation_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="DonV6y7lOocLoMKmjeGmOE" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="UNnXjc3Hlb1MUMH90HRYpG" Name="Input" Kind="InputPin" />
+              <Pin Id="THM4P6Tcm5PMyeEL4L8Lqz" Name="Enable" Kind="InputPin" />
+              <Pin Id="QUAChWtcJbsLHuWkmQvebK" Name="Reset" Kind="InputPin" />
+              <Pin Id="Sk8FXjlwn1fOtnKziHw46g" Name="ResetPos" Kind="InputPin" />
+              <Pin Id="N9WWVlqZhNrPmzdlFnMVsq" Name="tStepMult" Kind="InputPin" />
+              <Pin Id="Muw8pYLURfzMxWldzxgL6n" Name="DragMult" Kind="InputPin" />
+              <Pin Id="SFPg5YZO8MNLb2RhmTzFkI" Name="MassMult" Kind="InputPin" />
+              <Pin Id="SgJzUApgGEkQXGdpASdO4A" Name="RestLengthMult" Kind="InputPin" />
+              <Pin Id="EYcrJwwDxQDL2iZCPusc03" Name="RndLength" Kind="InputPin" />
+              <Pin Id="AYJyfrGMQCpP6v3tCthvMI" Name="StiffnessMult" Kind="InputPin" />
+              <Pin Id="ByYPz3T2YEINFCQgKgDzzS" Name="UnfoldStiffnessMult" Kind="InputPin" />
               <Pin Id="KWvQJTiUw6eLK9Zc97R0nx" Name="SpringsIterationsCount" Kind="InputPin" />
+              <Pin Id="DonV6y7lOocLoMKmjeGmOE" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Pad Id="PEIdnp34wXfPJoykDpc5Ba" Comment="Resolution" Bounds="1028,229,39,38" ShowValueBox="true" isIOBox="true" Value="32, 32">
               <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
@@ -13274,9 +13382,9 @@
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.PinsCtrlTexture_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="PinsCtrlTexture_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="NxzXff2R2yYP5YFz65lO85" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="JNljhc3Vq4FO7CwD8BSW9a" Name="Input" Kind="InputPin" />
               <Pin Id="Rn2QjiF8IFCPXR3s4tr3mQ" Name="Enable" Kind="InputPin" />
               <Pin Id="RqgSa06sl3fMQ1hI3YpWUv" Name="TargetGroup" Kind="InputPin" DefaultValue="3">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -13284,6 +13392,8 @@
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="RJFtKsOrpTGOaLVbxQFRkU" Name="PinsTextureName" Kind="InputPin" />
+              <Pin Id="HlFds7KzDx6L2rwYY9NEBg" Name="Strength" Kind="InputPin" />
+              <Pin Id="NxzXff2R2yYP5YFz65lO85" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Pad Id="Rhq0simxKjMPUMWuk43wlP" Comment="PinsTextureName" Bounds="3759,352,69,20" ShowValueBox="true" isIOBox="true" Value="Cloth2">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -13313,13 +13423,15 @@
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Construct_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Construct_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="JLpZR4r4ygQMpfYGfqIP88" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="IvzFacA6m5tNMg2o0UotyG" Name="Input" Kind="InputPin" />
               <Pin Id="CafqnRTTreePOQnDRaXKOA" Name="Type" Kind="InputPin" />
               <Pin Id="L4kSYtJADugMH8VyDXZR8A" Name="Count" Kind="InputPin" />
               <Pin Id="Cy0Orv2FQ9lLl51jEdQp3L" Name="Resolution" Kind="InputPin" />
               <Pin Id="KHp6DmUECAkLngzaqIOvc2" Name="Size" Kind="InputPin" />
+              <Pin Id="CWIWWnlMe6vOZNjLpQvSAd" Name="Body_M" Kind="InputPin" />
+              <Pin Id="JLpZR4r4ygQMpfYGfqIP88" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Pad Id="GCvAtg54MpULjphXRFYdOG" Comment="Type" Bounds="-203,-766,18,19" ShowValueBox="true" isIOBox="true" Value="0">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -13372,9 +13484,9 @@
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Body_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Body_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
-              <Pin Id="EndfTQoktxYQWcbrtQIf5Z" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="C8stqtb6NP1NCpnPPj88pt" Name="Input" Kind="InputPin" />
               <Pin Id="Gaz5SaZuTliMbP6tblB4sN" Name="Mass" Kind="InputPin" />
               <Pin Id="R0DbVZY2AP9LUTjckIvGuu" Name="Drag" Kind="InputPin" />
               <Pin Id="HqCSQa7Xw5DN3t1Ycm0T6a" Name="Thickness" Kind="InputPin" />
@@ -13384,6 +13496,7 @@
                 </p:TypeAnnotation>
               </Pin>
               <Pin Id="JEyZdiBdDCfLU0mFsOBbUE" Name="Unfold Mate Distance" Kind="InputPin" />
+              <Pin Id="EndfTQoktxYQWcbrtQIf5Z" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Pad Id="Mw8xo1UehzyQWPlYuzgBg2" Comment="Mass" Bounds="-204,-502,33,19" ShowValueBox="true" isIOBox="true" Value="1">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -13432,8 +13545,20 @@
               <p:NodeReference LastCategoryFullName="Gea.NaiveGPU.Model.Simulation_M" LastSymbolSource="Gea.NaiveGPU.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="RecordType" Name="Simulation_M" />
-                <Choice Kind="OperationCallFlag" Name="Create" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
               </p:NodeReference>
+              <Pin Id="GP98vTjc0LWPqmvLYQqctR" Name="Input" Kind="InputPin" />
+              <Pin Id="LLUnYfPL9M4Nj9XKYagOaO" Name="Enable" Kind="InputPin" />
+              <Pin Id="G3CfQGKe192MhUjCSjxoiu" Name="Reset" Kind="InputPin" />
+              <Pin Id="GCKzJucfqgVQdS2tzk6e0j" Name="ResetPos" Kind="InputPin" />
+              <Pin Id="PHsIdKYiFXtPOG2qaUYyzD" Name="tStepMult" Kind="InputPin" />
+              <Pin Id="UFmaHtGC2cwMoLmvh2hwFQ" Name="DragMult" Kind="InputPin" />
+              <Pin Id="Ng4EKwpSy52MjKruHhtBaN" Name="MassMult" Kind="InputPin" />
+              <Pin Id="NHXfaXNDdYvPDn7q0LU8RV" Name="RestLengthMult" Kind="InputPin" />
+              <Pin Id="M6QBM52ATuWLI1AijgpmHz" Name="RndLength" Kind="InputPin" />
+              <Pin Id="R6GIZ5EKiwWLBLMz9WtXNe" Name="StiffnessMult" Kind="InputPin" />
+              <Pin Id="EjNeFhXn2ElPKu2NIjpWrR" Name="UnfoldStiffnessMult" Kind="InputPin" />
+              <Pin Id="VvIeitx1AUoN8K8Kv5CDMC" Name="SpringsIterationsCount" Kind="InputPin" />
               <Pin Id="AMZm642iN22NuBsAkVlLYO" Name="Output" Kind="StateOutputPin" />
             </Node>
             <Pad Id="UksfadCOPMVPfUJq2AxvqZ" Bounds="10,-277,294,22" ShowValueBox="true" isIOBox="true" Value="here you can modify in runtime the properties of the objects">
@@ -18340,6 +18465,7 @@
                 <Choice Kind="OperationCallFlag" Name="Split" />
               </p:NodeReference>
               <Pin Id="UHiSesPy6QdQLE0rp6HqwV" Name="Input" Kind="StateInputPin" />
+              <Pin Id="OzDdHEnABInPOtB0pKhy0d" Name="Output" Kind="OutputPin" />
               <Pin Id="HtdXDGPh2UqLxOc437bQzA" Name="Type" Kind="OutputPin" />
               <Pin Id="EsLn6nIs9VDLpvBFnA27TO" Name="Count" Kind="OutputPin" />
               <Pin Id="SthVpGFXs54L3RvRQnikdN" Name="Resolution" Kind="OutputPin" />
@@ -18505,6 +18631,7 @@
                 <Choice Kind="OperationCallFlag" Name="Split" />
               </p:NodeReference>
               <Pin Id="SDAu9pk6sY2OYLvvLE6CLn" Name="Input" Kind="StateInputPin" />
+              <Pin Id="SuC3pzufzdoOZbSba58ul3" Name="Output" Kind="OutputPin" />
               <Pin Id="M3WtkxTTNEjPcy1gDf5ylr" Name="Type" Kind="OutputPin" />
               <Pin Id="TSppITfzj2wM5ObaQKcrSd" Name="Count" Kind="OutputPin" />
               <Pin Id="Ui9jMviKBHeP086pvV4nyW" Name="Resolution" Kind="OutputPin" />
@@ -20266,6 +20393,7 @@
                 <Choice Kind="OperationCallFlag" Name="Split" />
               </p:NodeReference>
               <Pin Id="D7X8fLOKtjsMVwc7P6eVEX" Name="Input" Kind="StateInputPin" />
+              <Pin Id="J9v4240teObNe9nANJe2C0" Name="Output" Kind="OutputPin" />
               <Pin Id="GBWmVzi2IsvNv5nsHfV8dT" Name="Type" Kind="OutputPin" />
               <Pin Id="DAfqMIMSEYyNLCw04Pa9de" Name="Count" Kind="OutputPin" />
               <Pin Id="Ou23PLGdMf5NODX5Hau4EA" Name="Resolution" Kind="OutputPin" />

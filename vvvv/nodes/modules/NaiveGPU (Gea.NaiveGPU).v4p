@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.1.dtd" >
-   <PATCH nodename="C:\Users\conature\Documents\REPOS\VVVV.Gea.NaiveGPU\vvvv\nodes\modules\NaiveGPU (Gea.NaiveGPU).v4p" systemname="NaiveGPU (Gea.NaiveGPU)" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\NaiveGPU (Gea.NaiveGPU).v4p" scrollx="0" scrolly="360">
+   <PATCH nodename="C:\Users\conature\Documents\REPOS\VVVV.Gea.NaiveGPU\vvvv\nodes\modules\NaiveGPU (Gea.NaiveGPU).v4p" systemname="NaiveGPU (Gea.NaiveGPU)" filename="D:\REPOS\_packs\Gea.NaiveGPU\nodes\modules\NaiveGPU (Gea.NaiveGPU).v4p" scrollx="90" scrolly="-360">
    <BOUNDS type="Window" left="5160" top="270" width="11760" height="12555">
    </BOUNDS>
    <PACK Name="dx11" Version="1.3.1">
