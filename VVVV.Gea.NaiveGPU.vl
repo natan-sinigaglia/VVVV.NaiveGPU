@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="IkNBQjwK6vtO0dt9W6UAdF" Version="0.94">
+  <Patch Id="T8KxRmqrgKPQRh6mNjUStY">
+    <Canvas Id="UoLcERfYGAaNlEOXSqMUO9" DefaultCategory="Gea" CanvasType="FullCategory" />
+  </Patch>
+  <NugetDependency Id="Gw2Mq30yGLxL97E8tUzRy2" Location="VL.Core" Version="0.94.50-gf563f1b382" />
+  <NugetDependency Id="Pr13UBB7wYZO79oQR4pPgZ" Location="VL.CoreLib" Version="0.94.50-gf563f1b382" />
+  <NugetDependency Id="FEcge8G2ihXOLFkt1uOAHH" Location="VL.CoreLib.VVVV" Version="0.94.50-gf563f1b382" />
+  <DocumentDependency Id="PBUGp4JxHHtNyH7wxkrnoi" Location="./vvvv/nodes/vl/Gea.NaiveGPU.vl" IsForward="true" />
+</Document>
